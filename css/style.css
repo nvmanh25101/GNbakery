@@ -227,7 +227,7 @@ b {
 	left: 0;
 
 }
-#main-menu ul.sub-menu li: hover>a{
+#main-menu ul.sub-menu li:hover>a{
 	border-bottom: 1px solid white;
 	transition: 0.25s;
 }
