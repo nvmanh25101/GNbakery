@@ -595,6 +595,37 @@
 		<a href="" class="btn-more">Xem Them</a>
 	</div>
 </div>
+
+<div id="order">
+	<div class="contact-order">
+		<div class="contact">
+			<div class="order-form">
+				<div class="order-form-text">
+					<h3>DAT ONLINE NGAY!</h3>
+					<h4>KHÔNG CÒN PHAỈ CHỜ ĐỢI NỮA </h4>
+				</div>
+				<div class="order-form-content">
+					<form accept-charset="utf-8" action="/contact" class="contact" method="post">
+						<input name="form" type="hidden" value="contact">
+						<input type="hidden" name="utf-8" value="">
+						<label for="contact-username">Họ Tên của bạn</label><br>
+						<input name="Name" type="text" class="input-name" placeholder="Họ tên của bạn" value="contact"><br>
+						<label for="contact-email" >Địa chỉ email của bạn</label><br>
+						<input type="email" name="email" class="input-email" placeholder="Địa chỉ email của bạn"><br>
+						<label for="contact-phone">Số điện thoại của bạn</label><br>
+						<input type="tel" name="phone" class="contact-phone" pattern="[0-9\-]*" value="" placeholder="Số điện thoại của bạn"><br>
+						<label for="contact-content">Nội dung<br><br>
+						<textarea rows="5" class="input-content" name="content" placeholder="nội dung"></textarea><br>
+						<div class="submit-text">
+							<button type="submit" class="btnType1" value="gửi"> Đặt Ngay</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script >
 	$(document).ready(function(){
