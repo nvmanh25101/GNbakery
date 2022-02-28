@@ -26,14 +26,16 @@ $(document).ready(function(){
       });
   });
 
-  function	validateForm() {
-    var x = document.forms["myForm"]["contact[email]"].value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Thông tin nhập chưa chính xác!");
-        return false;
-    }else{
-        alert('Bạn đã đăng ký thành công');		
-    }
-}
+  $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop()){
+            $('#backtop').faceIn();
+
+        }else{
+            $('#backtop').faceOut();
+        }
+      });
+      $('#backtop').click(function(){
+          $('html, body').animate({scrollTop: 0}, 400);
+      });
+  });
