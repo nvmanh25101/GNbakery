@@ -1002,4 +1002,25 @@ footer .footer-top {
 	   #backtop:hover {
 		opacity: 1;
 		background: #c0c906; }
-		
+
+@keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.9);
+		-moz-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9); }
+	70% {
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+		box-shadow: 0 0 0 50px rgba(15, 117, 188, 0); 
+	}
+	100% {
+		-webkit-transform: scale(0.9);
+		-moz-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+		box-shadow: 0 0 0 0 rgba(15, 117, 188, 0); 
+	} 
+}
