@@ -129,7 +129,7 @@
 <div class="product">
     <div class="product-content">
          <div class = "product-content-left">
-              <img class="image-img" src = "img/pic1.jpg" />
+              <img class="image-img" src = "img/pic1.jpg" data-zoom-image="img/pic1.jpg"/>
          </div>
      
      <div class="product-content-right">
@@ -875,8 +875,15 @@ Nơi cấp: Sở Kế hoạch và Đầu tư Tp. Hà Nội
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 ></script>
-
-
+<script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
+<script>
+  $(".image-img").ezPlus({
+    zoomWindowFadeIn: 500,
+    zoomWindowFadeOut: 500,
+    lensFadeIn: 500,
+    lensFadeOut: 500
+  });
+</script>
 </body>
 
 </html>

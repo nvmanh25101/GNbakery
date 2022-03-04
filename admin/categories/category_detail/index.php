@@ -1,9 +1,9 @@
 <?php
-    require_once '../check_super_admin_signin.php';
+    require_once '../../check_super_admin_signin.php';
     $page = "categories";
-    require_once '../navbar-vertical.php';
+    require_once '../../navbar-vertical.php';
 
-    require_once '../../database/connect.php';
+    require_once '../../../database/connect.php';
 
     $page_current = 1;
     if(isset($_GET['page'])) {
@@ -47,7 +47,7 @@
                     <button type="submit" class="form__btn btn btn-dark mb-4">Thêm</button>
                 </form>
 
-                <?php include '../error_success.php' ?>
+                <?php include '../../error_success.php' ?>
                 
                 <div class="row gx-5">
                     <div class="col-12">
@@ -89,4 +89,4 @@
         </div>
     </div>
 
-<?php require_once '../footer.php';?>
+<?php require_once '../../footer.php';?>

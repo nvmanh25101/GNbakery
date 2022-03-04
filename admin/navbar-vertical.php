@@ -63,7 +63,7 @@
                                 <a class="sub-navbar__link list-group-item-action text-decoration-none" href="#">Thể loại chính</a>
                             </li>
                             <li class="sub-navbar__item">
-                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="">Thể loại phụ</a>
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories/category_detail">Thể loại phụ</a>
                             </li>
                         </ul>
                     </div>
