@@ -21,13 +21,9 @@ body{
 header{
 	position: relative;
 	display: block;
-	width: 1300px;
+	max-width: 100%;
 }
- #site-header{
-	padding: 5px 0;
-	background: #FFFFF0;
-	height: 134px;
-}
+
 
  #site-header .bg-index{
 	position: relative;
@@ -45,7 +41,7 @@ a{
 }
 .wrapper{
 	*zoom:  1;
-	max-width: 1200px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -79,7 +75,7 @@ a{
 
 
 .mg-left-15{
-	margin-left: -15px !important;
+	margin-left: 25px !important;
 }
 .pd-left0 {
 	width: 100px;
@@ -284,8 +280,8 @@ b {
 }
 /*showslide*/
 .slider{
-		width: 1300px;
-	height: 300px;
+		max-width: 100%;
+	max-height: 100%;
 	border-radius: 10px;
 	overflow: hidden;
 	margin: 0;
@@ -311,13 +307,13 @@ b {
 	margin-right: 0;
 	margin-top: 0;
 	margin-left: 0;
-	width: 1300px;
-	height: 300px;
+	max-width: 100%;
+	max-height: 100%;
 }
 /*manual slide*/
 .navigation-manual{
    position: absolute;
-  width: 1300px;
+  width: 100%;
    margin-top: -40px;
    display: flex;
    justify-content: center;
@@ -353,7 +349,7 @@ b {
 .navigation-auto{
 	position: absolute;
 	display: flex;
-	width: 1300px;
+	width: 100%;
 	justify-content: center;
 	margin-top: 260px;
 }
@@ -513,84 +509,6 @@ ul.products li .product-info .product-name{
 
 
 
-/*order*/
-#order{
-	margin-top: 20px;
-	background-image: url(../img/footer.png);
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 50px 0px;
- 
-}
-#order .contact-order{
-	max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 15px;
-    height: 500px;
-}
-#order .contact-order .contact{
-	margin-left: 0;
-}
-#order .contact-order .contact .order-form{
-        background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 10px;
-    width: 50%;
-}
-#order .contact-order .contact .order-form .order-form-text{
-	text-align: center;
-
-}
-#order .contact-order .contact .order-form .order-form-text h3{
-	
-	font-weight: 700;
-	font-size: 32px;
-    color: #c0c906;
-    margin-bottom: 0;
-}
-#order .contact-order .contact .order-form .order-form-text h4{
-	color: white;
-}
-#order .contact-order .contact .order-form .order-form-content{
-	margin-top: 11px;
-	padding: 14px;
-}
-#order .contact-order .contact .order-form .order-form-content label {
-	color: white;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	display: block;
-}
-#order .contact-order .contact .order-form .order-form-content input{
-	width: 60%;
-	outline: 0;
-
-}
-#order .contact-order .contact .order-form .order-form-content textarea{
-	width: 60%;
-	outline: 0px;
-  
-    min-height: 80%;
-}
-label[for] {
-    cursor: pointer;
-    }
-
-  #order .contact-order .contact .order-form .order-form-content .submit-text{
-    margin-left: 20%;
-  }
-  #order .contact-order .contact .order-form .order-form-content .submit-text button {
-  	padding: 10px 15px;
-    color: #fff;
-    background: #3d1a1a;
-    border-radius: 10px;
-    font-weight: bolder;
-  }
-  #order .contact-order .contact .order-form .order-form-content .submit-text button:hover{
-  	color: white;
-  	     background: #c0c906; 
-  }
 
   /*notice*/
   #notice-collection{
@@ -680,13 +598,13 @@ label[for] {
    	margin-right: 30px;
 
    	position: absolute;
-   	transform: translateY(-50%);
+   	
    	background-color: #746262;
    	color: white;
    	border: none;
    	z-index: 2px;
    	width: 30px;
-   	padding: 10px 20px;
+   	padding: 10px 10px;
    }
    .slick-next:hover{
       background-color: #3d1a1a;

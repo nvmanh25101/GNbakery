@@ -27,6 +27,20 @@ $(document).ready(function(){
   });
 
   $(document).ready(function(){
+    $('.productss').slick({
+     
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        infinite: true,
+        arrow:true,
+        autoplaySpeed: 2000,
+        autoplay: true,
+            prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+            nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"       
+      });
+  });
+
+  $(document).ready(function(){
       $(window).scroll(function(){
         if($(this).scrollTop()){
             $('#backtop').faceIn();
@@ -39,6 +53,8 @@ $(document).ready(function(){
           $('html, body').animate({scrollTop: 0}, 400);
       });
   });
+
+  
 
   
 
