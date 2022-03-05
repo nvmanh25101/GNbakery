@@ -2,7 +2,7 @@
     require_once '../check_admin_signin.php';
 
 if(empty($_GET['id'])) {
-    $_SESSION['error'] = 'Phải chọn để xóa';
+    $_SESSION['error'] = 'Phải chọn bánh để mở bán';
     header('location:index.php');
     exit();
 }
@@ -18,7 +18,7 @@ $admin_id = $_GET['admin_id'];
 require_once '../../database/connect.php';
 
 $sql = "update products
-set status = 0
+set status = 1
 where id = '$id'";
 // and admin_id = '$admin_id'
 mysqli_query($connect, $sql);
