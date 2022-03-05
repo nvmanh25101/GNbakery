@@ -87,7 +87,7 @@
                     <?= $page == 'orders'?'Đơn hàng':'' ?>
                 </a>
                 <form action="">
-                    <input type="search" name="search" class="form__search" value="<?php $search?? '' ?>" placeholder="Nhập để tìm kiếm">
+                    <input type="search" name="search" class="form__search" value="<?php $search?? '' ?>" placeholder="Nhập tên để tìm kiếm">
                 </form>
                 <div class="header__user d-flex align-items-center">
                     <img class="header__user-img" src="../../assets/images/admin/<?= $_SESSION['image'] ?>" alt="avt-user">

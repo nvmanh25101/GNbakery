@@ -8,15 +8,15 @@
     $sql = "select count(*) from admin where level = '0'";
     $admin = mysqli_query($connect, $sql);
     $admin_quantity = mysqli_fetch_array($admin)['count(*)'];
-    $sql = "select count(*) from users";
-    $user = mysqli_query($connect, $sql);
-    $user_quantity = mysqli_fetch_array($user)['count(*)'];
+    $sql = "select count(*) from customers";
+    $customer = mysqli_query($connect, $sql);
+    $customer_quantity = mysqli_fetch_array($customer)['count(*)'];
     $sql = "select count(*) from categories";
     $category = mysqli_query($connect, $sql);
     $category_quantity = mysqli_fetch_array($category)['count(*)'];
-    $sql = "select count(*) from songs";
-    $song = mysqli_query($connect, $sql);
-    $song_quantity = mysqli_fetch_array($song)['count(*)'];
+    $sql = "select count(*) from products";
+    $product = mysqli_query($connect, $sql);
+    $product_quantity = mysqli_fetch_array($product)['count(*)'];
 ?>
 
         <div class="main__container">
@@ -29,7 +29,7 @@
                         <div class="card d-flex flex-row">
                             <div class="card__content d-flex flex-column justify-content-between">
                                 <h5 class="card__name">SỐ LƯỢNG BÀI HÁT</h5> 
-                                <span class="card__quantity"><?= $song_quantity ?></span>
+                                <span class="card__quantity"><?= $product_quantity ?></span>
                             </div>
                             <div class="card__icon d-flex flex-fill">
                                 <i class="bi bi-vinyl-fill"></i>
@@ -62,7 +62,7 @@
                         <div class="card d-flex flex-row">
                             <div class="card__content d-flex flex-column justify-content-between">
                                 <h5 class="card__name">SỐ LƯỢNG NGƯỜI DÙNG</h5>
-                                <span class="card__quantity"><?= $user_quantity ?></span>
+                                <span class="card__quantity"><?= $customer_quantity ?></span>
                             </div>
                             <div class="card__icon d-flex flex-fill">
                                 <i class="bi bi-people-fill"></i>

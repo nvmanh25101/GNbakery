@@ -21,7 +21,7 @@ $path = $image['name'];
 $file_extension = pathinfo($path, PATHINFO_EXTENSION);
 $file_type = array("jpg", "jpeg", "png");
 
-if ($image["size"] > 500000) {
+if ($image["size"] > 1000000) {
     $_SESSION['error'] = 'File của bạn quá lớn!'; 
     header('location:form_insert.php');
     exit();

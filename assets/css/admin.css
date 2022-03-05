@@ -181,7 +181,7 @@ body {
 
 .card {
     min-height: 100px;
-    background-color: #231b2e;
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
 }
@@ -245,15 +245,15 @@ body {
 .form__search {
     outline: none;
     border: none;
-    background-color: #2f2739;
-    color: #ffff;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 8px;
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
 }
 
 .form__search:focus {
-    background-color: #432275;
+    background-color: #ffffff;
 }
 
 .products__audio {
