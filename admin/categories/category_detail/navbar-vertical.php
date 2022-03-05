@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
     <title>GN Bakery</title>
 </head>
 <body>
@@ -31,39 +31,39 @@
                     </g>
                 </g>
             </svg> -->
-            <img src="../../source (1).gif" alt="" style="width: 200px; height: 100px;">
+            <img src="../../../source (1).gif" alt="" style="width: 200px; height: 100px;">
             </a>
             <ul class="nav navbar__list flex-column">
                 <li class="nav-item navbar__item">
-                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'root'?'active':'' ?>" href="../root">
+                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'root'?'active':'' ?>" href="../../root">
                         <i class="navbar__link-icon bi bi-speedometer2"></i>
                         <span>Trang chủ</span> 
                     </a>
                 </li>
                 <li class="nav-item navbar__item">
-                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../playlists">
+                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../../playlists">
                         <i class="navbar__link-icon bi bi-music-note-list"></i>
                         <span>Đơn hàng</span> 
                     </a>
                 </li>
                 <li class="nav-item navbar__item">
-                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'products'?'active':'' ?>" href="../products">
+                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'products'?'active':'' ?>" href="../../products">
                         <i class="navbar__link-icon bi bi-vinyl"></i>
                         <span>Sản phẩm</span> 
                     </a>
                 </li>
                 <li class="nav-item navbar__item">
-                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../categories">
+                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../">
                         <i class="navbar__link-icon bi bi-slack"></i>
                         <span>Thể loại</span> 
                     </a>
                     <div class="sub-navbar">
                         <ul class="list-group">
                             <li class="sub-navbar__item">
-                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories">Thể loại chính</a>
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../">Thể loại chính</a>
                             </li>
                             <li class="sub-navbar__item">
-                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories/category_detail">Thể loại phụ</a>
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="./">Thể loại phụ</a>
                             </li>
                         </ul>
                     </div>

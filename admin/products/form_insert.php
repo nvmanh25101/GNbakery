@@ -54,11 +54,11 @@
                                 <?php } ?>
                             </select>
 
-                            <select class="form__select form-select d-none" name="category_id" id="category_detail">
+                            <select class="form__select form-select d-none" name="category" id="category_detail">
                                 <option value="" selected disabled hidden>Choose here</option>
                             </select>
 
-                        <input type="hidden" name="admin_id" value="1">
+                        <input type="hidden" name="admin_id" value="2">
                         </div>
 
                         <button type="submit" class="form__btn btn-primary mb-4">Thêm</button>

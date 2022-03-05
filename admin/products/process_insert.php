@@ -1,7 +1,7 @@
 <?php
 require_once '../check_admin_signin.php';
 
-if(empty($_POST['name']) || empty($_POST['size']) || empty($_POST['price']) || empty($_POST['category_id']) || empty($_POST['admin_id']) || $_FILES['image']['size'] == 0) {
+if(empty($_POST['name']) || empty($_POST['size']) || empty($_POST['price']) || empty($_POST['category']) || empty($_POST['admin_id']) || $_FILES['image']['size'] == 0) {
     $_SESSION['error'] = 'Phải điền đầy đủ thông tin';
     header('location:form_insert.php');
     exit();
@@ -12,7 +12,7 @@ $size = $_POST['size'];
 $price = $_POST['price'];
 $image = $_FILES['image'];
 $description = $_POST['description'];
-$category_id = $_POST['category_id'];
+$category = $_POST['category'];
 $admin_id = $_POST['admin_id'];
 
 // Ảnh
@@ -44,7 +44,7 @@ values(?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($connect, $sql);
 if($stmt) {
-    mysqli_stmt_bind_param($stmt, 'ssiisii', $name, $file_name, $size, $price, $description, $category_id, $admin_id);
+    mysqli_stmt_bind_param($stmt, 'ssiisii', $name, $file_name, $size, $price, $description, $category, $admin_id);
     mysqli_stmt_execute($stmt);
 
     $_SESSION['success'] = 'Đã thêm thành công';
