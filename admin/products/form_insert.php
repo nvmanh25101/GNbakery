@@ -23,8 +23,11 @@
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="image">Ảnh</label>
-                            <input type="file" name="image" id="image" accept=".jpg, .png" class="form__input form-control"/>
+                        <label class="form-label fs-4" for="image" role="button">
+                            Ảnh bánh
+                            <img id="product__img" class="ms-4" src="../../assets/images/products/no-image.jpg" alt="Ảnh bánh" width="200" height="200"/>
+                        </label>
+                            <input type="file" hidden name="image" id="image" accept=".jpg, .png" class="form__input form-control"/>
                         </div>
                         <div class="mb-4 fs-4">
                             <label class="form-label" for="image">Kích thước(cm)</label>
@@ -92,6 +95,9 @@
                 }
             })
          
+        });
+        $('#image').change(function(e) {
+            $('#product__img').attr('src', URL.createObjectURL(e.target.files[0]));
         });
     });
 </script>
