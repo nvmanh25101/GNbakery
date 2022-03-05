@@ -11,34 +11,16 @@ body{
 *{
 	box-sizing: border-box;
 }
-header{
-	position: relative;
-	display: block;
-	width: 100%;
-}
- #site-header{
-	padding: 5px 0;
-	background: #FFFFF0;
-	height: 134px;
-}
 
- #site-header .bg-index{
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	height: 400px;
-}
+
+
 a {
 	text-decoration: none;
-	font-weight: inherit;
-	color: #3d1a1a;
-	background: transparent;
+	
 }
 .wrapper{
 	*zoom:  1;
-	max-width: 1200px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
 }
@@ -171,7 +153,7 @@ input{
 
 	}
 	.list-item a i {
-		background: pink;
+		background: white;
 		color: #FF1493;
 		width: 36px;
 		border-radius: 100%;

@@ -15,7 +15,7 @@ var counter = 1;
 $(document).ready(function(){
     $('.row').slick({
      
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 2,
         infinite: true,
         arrow:true,
