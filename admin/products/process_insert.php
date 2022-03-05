@@ -33,7 +33,7 @@ if(!in_array("$file_extension", $file_type)) {
     exit();
 }
 
-$file_name = time() . '.' . $file_extension;
+$file_name = 'cake_' . time() . '.' . $file_extension;
 $path_file = $folder . $file_name;
 move_uploaded_file($image['tmp_name'], $path_file);
 

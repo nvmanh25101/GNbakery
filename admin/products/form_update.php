@@ -1,6 +1,6 @@
 <?php 
     require_once '../check_admin_signin.php';
-    $page = 'songs';
+    $page = 'products';
     
     if(empty($_GET['id'])) {
         $_SESSION['error'] = 'Phải chọn để sửa!';
@@ -8,22 +8,30 @@
         exit();
     }
 
-    if($_GET['admin_id'] != $_SESSION['id'] || $_SESSION['level'] != 1) {
-        $_SESSION['error'] = 'Bạn không có quyền để truy cập';
-        header('location:index.php');
-        exit();
-    }
+    // if($_GET['admin_id'] != $_SESSION['id'] || $_SESSION['level'] != 1) {
+    //     $_SESSION['error'] = 'Bạn không có quyền để truy cập';
+    //     header('location:index.php');
+    //     exit();
+    // }
     
     $id = $_GET['id'];
     require_once '../../database/connect.php';
     
-    $sql = "select * from songs where id = '$id'";
+    $sql = "select products.*, categories.id as category_id from products
+    join category_detail
+    on category_detail.id = products.category_detail_id
+    join categories
+    on categories.id = category_detail.category_id
+    where products.id = '$id'";
     $result = mysqli_query($connect, $sql);
     $each = mysqli_fetch_array($result);
     
     $sql = "select * from categories";
     $categories = mysqli_query($connect, $sql);
-    
+
+    $sql = "select * from category_detail where category_id = '$each[category_id]'";
+    $category_detail = mysqli_query($connect, $sql);
+
     require_once '../navbar-vertical.php';
 ?>
     <div class="main__form">
@@ -35,62 +43,61 @@
 
                      <form action="process_update.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $each['id'] ?>">
-
                         <div class="mb-4 fs-4">
                             <label class="form-label" for="name">Tên</label>
                             <input type="text" name="name" value="<?= $each['name'] ?>" id="name" class="form__input form-control" autocomplete="off"/>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Ảnh cũ</label>
-                            <img src="../../assets/images/songs/<?= $each['image']?>" class="img-thumbnail" alt="">
+                        <label class="form-label fs-4" for="image" role="button">
+                            Ảnh bánh
+                            <img id="product__img" class="ms-4" src="../../assets/images/products/<?= $each['image'] ?>" alt="Ảnh bánh" width="200" height="200"/>
+                        </label>
                             <input type="hidden" name="image_old" value="<?= $each['image'] ?>" />
+                            <input type="file" hidden name="image_new" id="image" accept=".jpg, .png" class="form__input form-control"/>
+                        </div>
+                        <div class="mb-4 fs-4">
+                            <label class="form-label" for="image">Kích thước(cm)</label>
+                            <input type="number" name="size" value="<?= $each['size'] ?>" id="size" class="form__input form-control"/>
+                        </div>
+                        <div class="mb-4 fs-4">
+                            <label class="form-label" for="image">Giá(vnđ)</label>
+                            <input type="number" name="price" value="<?= $each['price'] ?>" id="price" class="form__input form-control"/>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Đổi ảnh mới</label>
-                            <input type="file" name="image_new" accept="image/*" class="form__input form-control"/>
+                            <label class="form-label">Mô tả</label>
+                            <textarea name="description" rows="6" class="form__input form-control"><?= $each['description'] ?></textarea>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="audio">Nhạc cũ</label>
-                            <input type="hidden" name="audio_old" value="<?= $each['audio'] ?>" id="audio" accept=".mp3" class="form__input form-control"/>
-                            <audio controls class="song__audio-update">
-                                <source src="../../assets/audio/<?= $each['audio'] ?>" type="audio/mpeg">
-                            </audio>
-                        </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label" for="audio">Đổi nhạc mới</label>
-                            <input type="file" name="audio_new" id="audio" accept=".mp3" class="form__input form-control"/>
-                        </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label">Lời bài hát</label>
-                            <textarea name="lyric" class="form__input form-control"><?= $each['lyric'] ?></textarea>
-                        </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label" for="vocalist">Ca sĩ</label>
-                            <input type="text" name="vocalist" value="<?= $each['vocalist'] ?>" id="vocalist" class="form__input form-control"/>
-                        </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label">Thể loại</label>
-                            <select class="form__select form-select" name="category_id">
+                            <label class="form-label">Loại bánh</label>
+                            <select class="form__select form-select" id="category">
                                 <?php foreach ($categories as $category) { ?>
-                                    <option value="<?php echo $category['id'] ?>"
+                                    <option 
                                         <?php if($each['category_id'] == $category['id']) { ?>
                                             selected
-                                        <?php } ?>
+                                        <?php    } ?>
+                                        value="<?= $category['id'] ?>"
                                     >
-                                        <?php echo $category['name'] ?>
+                                        <?= $category['name'] ?>
                                     </option>
                                 <?php } ?>
                             </select>
 
-                        <input type="hidden" name="admin_id" value="<?= $_SESSION['id']?>">
-                        </div>
+                            <select class="form__select form-select" name="category" id="category_detail">
+                                <?php foreach ($category_detail as $category_child) { ?>
+                                    <option 
+                                        <?php if($each['category_detail_id'] == $category_child['id']) { ?>
+                                            selected
+                                        <?php    } ?>
+                                        value="<?= $category_child['id'] ?>"
+                                        class="category_detail"
+                                    >
+                                        <?= $category_child['name'] ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
 
                         <button type="submit" class="form__btn btn btn-dark mb-4">Sửa</button>
                     </form>
@@ -103,22 +110,36 @@
 </div>
     
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    // let image = document.getElementById('image').value;
-    
-    function validate() {
-        let name = document.getElementById('name').value;
+    $(document).ready(function() {
+        $('#category').change(function() {
+            let category_id = $(this).val();
+            $.ajax({
+                url: './get_category_detail.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {category_id}
+            })
 
-        let check_error = false;
-        if(name.length === 0) {
-            document.getElementById('error').innerHTML = 'Tên không được để trống';
+            .done(function(res) {
+                const arrId = Object.keys(res);
+                const arrName = Object.values(res);
 
-            check_error = true;
-        }
+                $(".category_detail").remove();
+                $('#category_detail').append('<option value="" selected disabled hidden>Choose here</option>');
+                for (let i = 0; i < arrId.length; i++) {
+                    $('#category_detail').append(`
+                        <option class="category_detail" value="${arrId[i]}">${arrName[i]}</option>
+                    `);
+                }
+            })
+         
+        });
+        $('#image').change(function(e) {
+            $('#product__img').attr('src', URL.createObjectURL(e.target.files[0]));
+        });
 
-        if(check_error) {
-            return false;
-        }
-    }
+    });
 </script>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+session_start();
 // // empty kiểm tra trống, = 0
 // if(empty($_SESSION['level'])) {
 //     $_SESSION['error'] = 'Bạn không đủ quyền để truy cập';
