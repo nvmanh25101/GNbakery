@@ -1,5 +1,4 @@
 
-
 /* MAIN */
 .page_container{
     background-color: #F8F2E8;
@@ -21,7 +20,7 @@
     background-color: white;
 
 }
-.box_left_signup{
+.box_left_signin{
     float: left;
     background: #FFE5D9;
     height: 400px;
@@ -37,7 +36,7 @@ h2{
     font-weight: 400;
     font-style: normal;
 }
-.box_left_signup>h2{
+.box_left_signin>h2{
     padding-top: 59px;
     font-size: 35px;
     line-height: 47px;
@@ -51,20 +50,18 @@ h2{
     border-radius: 0px;
 
 }
-.box_left_signup label{
-    margin: 14px 0 0 67px;
+.box_left_signin label{
+    margin: 14px 0 0 90px;
     font-family: Playfair Display;
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: 23px;
-    letter-spacing: 0em;
-    text-align: center;
     color: #FF1493;
 }
-.btnSignup{
+.btnSignin{
     height: 45px;
-    margin: 15px 0 0 79px ;
+    margin: 14px 0 0 79px ;
     border-radius: 30px;
     background: #FFFFFF;
     border: 1px solid #FF1493    ;
@@ -76,44 +73,37 @@ h2{
     letter-spacing: 0em;
     text-align: center;
     color: #FF1493;
+    width: 161px;
 
 }
-.box_right_signin{
+.box_right_signup{
     float: left;
 }
-.box_right_signin>h2{
-    height: 37px;
-    margin: 42px 0 0 33px;
+.box_right_signup>h2{
+    margin: 22px 0 0 22px;
     font-size: 28px;
     line-height: 37px;
 }
 .form-floating{
     width: 369px;
-    margin: 30px 0 0px 56px;
+    margin: 25px 0 0px 56px;
 }
 .form-floating input{
     border-radius: 30px;
     border: 1px solid #FF1493;
-	height: 45px !important;
+    height: 45px !important;
 }
 .form-floating label {
     padding-top: 10px !important;
 }
-.box_right_signin .checkbox{
-    margin-left: 68px;
-    margin-top: 10px;
-}
-.box_right_signin .remember_text{
-	margin-top: 15px;
-}
-.box_right_signin button{
+.box_right_signup button{
     background-color: white;
     color: #FF1493;
     border: 1px solid #FF1493;
     border-radius: 30px;
-    margin: 15px 0 0 56px;
-    height: 45px;
-    width: 369px;
+    margin: 35px 0 0 148px;
+    height: 45px ;
+    width: 165px;
     font-family: Playfair Display;
     font-size: 20px;
     font-style: normal;
@@ -121,5 +111,4 @@ h2{
     line-height: 27px;
     letter-spacing: 0em;
     text-align: center;
-    color: #FF1493;
 }

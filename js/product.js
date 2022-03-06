@@ -55,3 +55,4 @@ $('.js-filter').on('click', function(){
     filtered = false;
   }
 });
+
