@@ -32,7 +32,8 @@
                     </g>
                 </g>
             </svg> -->
-            <img src="../../source (1).gif" alt="" style="width: 200px; height: 100px;">
+            <!-- <img src="../../source (1).gif" alt="" style="width: 200px; height: 100px;"> -->
+            <img src="../../8f554a44aec8cd5a8b4689876d4a4f01.gif" alt="" style="width: 200px; height: 80px;">
             </a>
             <ul class="nav navbar__list flex-column">
                 <li class="nav-item navbar__item">
@@ -52,6 +53,19 @@
                         <i class="navbar__link-icon bi bi-vinyl"></i>
                         <span>Sản phẩm</span> 
                     </a>
+                    <div class="sub-navbar">
+                        <ul class="list-group">
+                            <li class="sub-navbar__item">
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../products/form_insert.php">Thêm sản phẩm</a>
+                            </li>
+                            <li class="sub-navbar__item">
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../products?search_status=1">Đang bán</a>
+                            </li>
+                            <li class="sub-navbar__item">
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../products?search_status=0">Ngừng bán</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item navbar__item">
                     <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../categories">
@@ -81,8 +95,8 @@
 
     <header class="header d-flex justify-content-between align-items-center">
               <a class="header-text" href="">GNBakery</a>
-                <form action="">
-                    <input type="search" name="search" class="form__search" value="<?php $search?? '' ?>" placeholder="Nhập tên để tìm kiếm">
+                <form action="" class="form__search">
+                    <input type="search" name="search" class="input__search" value="<?php $search?? '' ?>" placeholder="Nhập tên để tìm kiếm">
                 </form>
                 <div class="header__user d-flex align-items-center">
                     <img class="header__user-img" src="../../img/logo.png<?= $_SESSION['image'] ?>" alt="avt-user">

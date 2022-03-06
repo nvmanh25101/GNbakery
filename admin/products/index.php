@@ -4,6 +4,7 @@
 
     require_once '../../database/connect.php';
 
+    $where = '1';
     $page_current = 1;
     if(isset($_GET['page'])) {
         $page_current = $_GET['page'];
@@ -11,16 +12,21 @@
 
     $search = '';
     if(isset($_GET['search'])) {
-        $search = $_GET['search'];
+        $search = htmlspecialchars($_GET['search'], ENT_QUOTES);
+        $where = "products.name like '%$search%' or products.id like '%$search%'";
+    }
+
+    if(isset($_GET['search_status'])) {
+        $where = 'products.status like ' . $_GET['search_status'];
     }
 
     $sql_num_product = "select count(*) from products 
-                    where name like '%$search%'";
+                    where $where";
     $arr_num_product = mysqli_query($connect, $sql_num_product);
     $result_num_product = mysqli_fetch_array($arr_num_product);
     $num_product = $result_num_product['count(*)'];
 
-    $num_product_per_page = 5;
+    $num_product_per_page = 10;
 
     $num_page = ceil($num_product / $num_product_per_page);
     $skip_page = $num_product_per_page * ($page_current - 1);
@@ -31,10 +37,11 @@
     on category_detail.id = products.category_detail_id
     join admin
     on admin.id = products.admin_id
-    where products.name like '%$search%'
-    order by products.id desc
+    where $where
+    order by products.status desc, products.id desc
     limit $num_product_per_page offset $skip_page
     ";
+    
     $result = mysqli_query($connect, $sql);
 
     require_once '../navbar-vertical.php';
@@ -74,7 +81,9 @@
                     <tbody>
                         <?php foreach ($result as $each) { ?>
                             <tr>
-                                <th scope="row"><?= $each['id'] ?></th>
+                                <th scope="row">
+                                    <a href="show.php?id=<?= $each['id'] ?>" class="text-decoration-none"><?= $each['id'] ?></a>
+                                </th>
                                 <td>
                                     <a href="show.php?id=<?= $each['id'] ?>" class="text-decoration-none"><?= $each['name'] ?></a>
                                 </td>
@@ -99,7 +108,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                        <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
                                         <i class="bi bi-trash-fill"></i>
                                         </a>
                                     </td>

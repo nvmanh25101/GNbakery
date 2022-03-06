@@ -14,7 +14,7 @@
             <?php include '../error_success.php' ?>
         
             <div class="row gx-5">
-                <div class="col-12 text-white">
+                <div class="col-12">
 
                     <form action="process_insert.php" method="post" enctype="multipart/form-data">
                         <div class="mb-4 fs-4">
@@ -44,9 +44,9 @@
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Thể loại</label>
+                            <label class="form-label">Loại bánh</label>
                             <select class="form__select form-select" id="category">
-                                <option value="" selected disabled hidden>Choose here</option>
+                                <option value="" selected disabled hidden>Chọn</option>
                                 <?php foreach ($result as $each) { ?>
                                     <option value="<?= $each['id'] ?>">
                                         <?= $each['name'] ?>
@@ -54,14 +54,14 @@
                                 <?php } ?>
                             </select>
 
-                            <select class="form__select form-select d-none" name="category" id="category_detail">
-                                <option value="" selected disabled hidden>Choose here</option>
+                            <select class="form__select form-select d-none mt-4" name="category" id="category_detail">
+                                <option value="" selected disabled hidden>Chọn</option>
                             </select>
 
                         <input type="hidden" name="admin_id" value="2">
                         </div>
 
-                        <button type="submit" class="form__btn btn-primary mb-4">Thêm</button>
+                        <button type="submit" class="form__btn btn mb-4">Thêm</button>
                     </form>
                 </div>
                 
@@ -96,6 +96,7 @@
             })
          
         });
+        
         $('#image').change(function(e) {
             $('#product__img').attr('src', URL.createObjectURL(e.target.files[0]));
         });

@@ -312,34 +312,25 @@ body {
 .playlist__table a:hover {
     color: #EE9595;
 }
+
 .form__search {
+    width: 220px;
+}
+
+.input__search {
     outline: none;
     border: none;
     background-color: #ffffff;
-    color: #ffff;
     padding: 8px;
-
-
     width: 100%;
     float: left;
-
     color: rgb(0, 0, 0);
-    padding: 8px;
-    width: 100%;
-
     border-radius: 5px;
-    
+    font-size: 1.4rem;
 }
 
-.form__search:focus {
-
-    background-color: #fff;
-
-
-    background-color: #fff;
-
-    background-color: #ffffff;
-
+.input__search:focus {
+    border: 2px solid #EE9595;
 }
 
 .form__input,
@@ -367,6 +358,12 @@ body {
     width: 100%;
     padding: 8px;
     font-size: 1.8rem;
+    background-color: var(--navbar-color);
+}
+
+.form__btn:hover {
+    color: #fff;
+    background-color: #EE9595;
 }
 
 .error {
@@ -503,7 +500,7 @@ body {
 .pagination-item__link {
     display: inline-block;
     padding: 8px 16px;
-    border: 1px solid #432275;
+    border: 1px solid #ffbfbf;
     border-radius: 50%;
     font-size: 1.6rem;
     color: var(--text-color);
@@ -513,7 +510,7 @@ body {
 
 .pagination-item__link:hover {
     color: var(--text-color);
-    background-color: #432275;
+    background-color: #ffbfbf;
 }
 
 .pagination-item--active .pagination-item__link {
@@ -542,6 +539,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
 .fs-3{
     background-color: var(--navbar-color);
     color: #ffffff;
@@ -549,12 +547,13 @@ input[type=number] {
     font-weight: 500;
     margin-bottom: 20px;
     font-family: 'League Spartan', sans-serif;
-
 }
+
 .fs-3:hover{
     background-color: #c0c906;
     color: #dee4eb;
 }
+
 .table-sm>:not(caption)>*>* {
      padding: 8px;
      font-size: 15px;
