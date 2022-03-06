@@ -3,11 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-	<title>GNBAKERY - BANH NGOT HUONG VI PHAP</title>
-=======
 	<title>SIGNIN-GNBAKERY</title>
->>>>>>> c14b9dc0065720aca5c85f6e0636fc23f720e00f
 	<link rel="shortcut icon" type="image" href="img/logo.png">
     <link rel="stylesheet" href="css/signin.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -132,25 +128,37 @@
                     <h2>WELCOME TO GNBAKERY</h2>
                     <img class="main_logo" src="./img/logo.jpg" alt="">
                    <label  for="">Bạn đã có tài khoản chưa ?</label>
-                   <button class="btnSignup" type="submit">ĐĂNG KÝ NGAY</button>
+                   <a href="signup.php">
+						<button class="btnSignup" type="submit">ĐĂNG KÝ NGAY</button>
+				   </a>
                 </div>
-                <div class="box_right_signin">
+                <form action="process-signin.php" method="post" class="box_right_signin">
                     <h2>ĐĂNG NHẬP</h2>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email</label>
                       </div>
                       <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingInput" placeholder="text">
+                        <input type="password" name="password" class="form-control" id="floatingInput" placeholder="text">
                         <label for="floatingInput">Mật khẩu</label>
+						<small style="color:red;">
+                            <?php
+                                if(isset($_GET['error'])){
+                                    echo "{$_GET['error']}";
+                                }else{
+                                    echo "";
+                                }
+                            ?>
+                    	</small>
                       </div>
+					  
                       <div class="checkbox mb-3">
                         <label>
                           <input class="remember_text" type="checkbox" value="remember-me"> Nhớ mật khẩu
                         </label>
                       </div>
-                      <button class="btnSignin" type="submit">ĐĂNG NHẬP</button>
-                </div>
+                      <button class="btnSignin" name="btnSignin" type="submit">ĐĂNG NHẬP</button>
+                </form>
             </div>
         </div>
     </div>

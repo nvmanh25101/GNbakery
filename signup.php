@@ -126,24 +126,44 @@
                     <h2>WELCOME TO GNBAKERY</h2>
                     <img class="main_logo" src="./img/logo.jpg" alt="">
                    <label  for="">Bạn đã có tài khoản ?</label>
-                   <button class="btnSignin" type="submit">ĐĂNG NHẬP</button>
+                   <a href="signin.php">
+						<button class="btnSignin" type="submit">ĐĂNG NHẬP</button>
+				   </a>
                 </div>
-                <div class="box_right_signup">
+                <form action="process-signup.php" method="post" class="box_right_signup">
                     <h2>Tạo tài khoản</h2>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="text">
+                        <input type="text" name="name" class="form-control" id="floatingInput" placeholder="text" required>
                         <label for="floatingInput">Họ và tên</label>
                       </div>
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                         <label for="floatingInput">Email</label>
+						<small style="color:red;">
+                            <?php
+                                if(isset($_GET['error'])){
+                                    echo "{$_GET['error']}";
+                                }else{
+                                    echo "";
+                                }
+                            ?>
+                    	</small>
                       </div>
                       <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingInput" placeholder="text">
+                        <input type="password" name="password" class="form-control" id="floatingInput" placeholder="text" required>
                         <label for="floatingInput">Mật khẩu</label>
+						<small style="color:red;">
+                            <?php
+                                if(isset($_GET['errorpass'])){
+                                    echo "{$_GET['errorpass']}";
+                                }else{
+                                    echo "";
+                                }
+                            ?>
+                    	</small>
                       </div>
-                      <button class=btnSignup" type="submit">ĐĂNG KÝ</button>
-                </div>
+                      <button class="btnSignup" type="submit">ĐĂNG KÝ</button>
+                </form>
             </div>
         </div>
     </div>
