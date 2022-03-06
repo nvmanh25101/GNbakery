@@ -122,23 +122,17 @@ body {
     display: block;
     padding: 8px 58px;
 }
+.sub-navbar__link:hover{
+    color: #FFB6C1;
 
+}
 .header {
     height: 70px;
     margin-left: var(--navbar-vertical-width);
     background-color:var(--navbar-color);
-   display: flex;
-   width: 100%;
+  
    }
 
-.header-intro{
-    margin-top: 15px;
-    display: flex;
-    margin-left: 15px;
-
-    width: 100%;
-   
-}
 .header__name {
     color: black;
 
@@ -154,17 +148,15 @@ body {
     color: #FFB6C1;
 
 }
-.header__name:hover{
-    color: #FFB6C1;
-}
+
 
 
 
 .header__user {
     
     cursor: pointer;
-   display: flex;
-   margin-left: 49%;
+   
+   
     
 }
 
@@ -187,7 +179,7 @@ body {
 .header__signout {
     
     top: calc(100% + 8px);
-    margin-bottom: 15px;
+    
     width: 112px;
     background-color: #3d1a1a;
     z-index: 1;
@@ -209,7 +201,7 @@ body {
     text-decoration: none;
     color: var(--text-color);
     display: block;
-   padding-top: 3px;
+   padding: 8px;
     border-radius: 4px;
     text-align: center;
 }
@@ -359,8 +351,9 @@ body {
     background-color: #ffffff;
     padding-top: 8px;
     padding-bottom: 8px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: rgb(0, 0, 0);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .form__input:focus {
@@ -379,6 +372,7 @@ body {
     width: 100%;
     padding: 8px;
     font-size: 1.8rem;
+
 }
 
 .error {
@@ -515,17 +509,17 @@ body {
 .pagination-item__link {
     display: inline-block;
     padding: 8px 16px;
-    border: 1px solid #432275;
+    border: 1px solid #FF1493;
     border-radius: 50%;
     font-size: 1.6rem;
-    color: var(--text-color);
+    color: #FF1493;
     text-decoration: none;
     margin: 0 4px;
 }
 
 .pagination-item__link:hover {
     color: var(--text-color);
-    background-color: #432275;
+    background-color: #EE9595;
 }
 
 .pagination-item--active .pagination-item__link {
@@ -578,6 +572,10 @@ input[type=number] {
     border-radius:10px;
 
 }
+
+.form__btn:hover{
+    background-color: #c0c906;
+}
 .bi-pencil-fill,
 .bi-trash-fill{
     color: #FF1493;
@@ -593,4 +591,11 @@ input[type=number] {
     --bs-table-hover-color: #000;
     color: #000;
     border-color: #dfe0e1;
+}
+.text-center{
+    font-family:'Times New Roman', Times, serif;
+}
+.text-center:hover {
+    color:#EE9595;
+    cursor: pointer;
 }

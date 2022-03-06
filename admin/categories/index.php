@@ -39,7 +39,7 @@
                 <form action="process_insert.php" method="post" enctype="multipart/form-data" class="col-4">
                     <h2 class="text-center">Thêm thể loại</h2>
                     <div class="mb-4 fs-4">
-                        <label class="form-label" for="name">Tên</label>
+                        <label class="form-label" for="name"><a style="color:#3d1a1a;font-weight:bolder;">Tên</a></label>
                         <input type="text" name="name" id="name" class="form__input form-control" autocomplete="off"/>
                         <span id="error" class="error_input"></span>
                     </div>

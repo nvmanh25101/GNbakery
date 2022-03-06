@@ -44,34 +44,34 @@
                      <form action="process_update.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $each['id'] ?>">
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="name">Tên</label>
+                            <label class="form-label" for="name"><a style="color:#3d1a1a;font-weight:bolder;">Tên</a></label>
                             <input type="text" name="name" value="<?= $each['name'] ?>" id="name" class="form__input form-control" autocomplete="off"/>
                         </div>
 
                         <div class="mb-4 fs-4">
-                        <label class="form-label fs-4" for="image" role="button">
-                            Ảnh bánh
+                        <label class="form-label fs-4" for="image" role="button"><a style="color:#3d1a1a;font-weight:bolder;">
+                            Ảnh bánh</a>
                             <img id="product__img" class="ms-4" src="../../assets/images/products/<?= $each['image'] ?>" alt="Ảnh bánh" width="200" height="200"/>
                         </label>
                             <input type="hidden" name="image_old" value="<?= $each['image'] ?>" />
                             <input type="file" hidden name="image_new" id="image" accept=".jpg, .png" class="form__input form-control"/>
                         </div>
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="image">Kích thước(cm)</label>
+                            <label class="form-label" for="image"><a style="color:#3d1a1a;font-weight:bolder;">Kích thước(cm)</a></label>
                             <input type="number" name="size" value="<?= $each['size'] ?>" id="size" class="form__input form-control"/>
                         </div>
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="image">Giá(vnđ)</label>
+                            <label class="form-label" for="image"><a style="color:#3d1a1a;font-weight:bolder;">Giá(vnđ)</a></label>
                             <input type="number" name="price" value="<?= $each['price'] ?>" id="price" class="form__input form-control"/>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Mô tả</label>
+                            <label class="form-label"><a style="color:#3d1a1a;font-weight:bolder;">Mô tả</a></label>
                             <textarea name="description" rows="6" class="form__input form-control"><?= $each['description'] ?></textarea>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Loại bánh</label>
+                            <label class="form-label"><a style="color:#3d1a1a;font-weight:bolder;">Loại bánh</a></label>
                             <select class="form__select form-select" id="category">
                                 <?php foreach ($categories as $category) { ?>
                                     <option 

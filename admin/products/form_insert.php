@@ -18,33 +18,33 @@
 
                     <form action="process_insert.php" method="post" enctype="multipart/form-data">
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="name">Tên</label>
+                            <label class="form-label" for="name"><a style="color:#3d1a1a;font-weight:bolder;">Tên</a></label>
                             <input type="text" name="name" id="name" class="form__input form-control" autocomplete="off"/>
                         </div>
 
                         <div class="mb-4 fs-4">
-                        <label class="form-label fs-4" for="image" role="button">
-                            Ảnh bánh
+                        <label class="form-label fs-4" for="image" role="button"><a style="color:#3d1a1a;font-weight:bolder;">
+                            Ảnh bánh</a>
                             <img id="product__img" class="ms-4" src="../../assets/images/products/no-image.jpg" alt="Ảnh bánh" width="200" height="200"/>
                         </label>
                             <input type="file" hidden name="image" id="image" accept=".jpg, .png" class="form__input form-control"/>
                         </div>
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="image">Kích thước(cm)</label>
+                            <label class="form-label" for="image"><a style="color:#3d1a1a;font-weight:bolder;">Kích thước(cm)</a></label>
                             <input type="number" name="size" id="size" class="form__input form-control"/>
                         </div>
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="image">Giá(vnđ)</label>
+                            <label class="form-label" for="image"><a style="color:#3d1a1a;font-weight:bolder;">Giá(vnđ)</a></label>
                             <input type="number" name="price" id="price" class="form__input form-control"/>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Mô tả</label>
+                            <label class="form-label"><a style="color:#3d1a1a;font-weight:bolder;">Mô tả</a></label>
                             <textarea name="description" class="form__input form-control"></textarea>
                         </div>
 
                         <div class="mb-4 fs-4">
-                            <label class="form-label">Thể loại</label>
+                            <label class="form-label"><a style="color:#3d1a1a;font-weight:bolder;">Thể loại</a></label>
                             <select class="form__select form-select" id="category">
                                 <option value="" selected disabled hidden>Choose here</option>
                                 <?php foreach ($result as $each) { ?>
@@ -61,7 +61,7 @@
                         <input type="hidden" name="admin_id" value="2">
                         </div>
 
-                        <button type="submit" class="form__btn btn-primary mb-4">Thêm</button>
+                        <button type="submit"  class="form__btn btn-dark btn-primary mb-4">Thêm</button>
                     </form>
                 </div>
                 
