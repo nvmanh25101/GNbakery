@@ -79,12 +79,21 @@
         </div>
     </nav>
 
+<<<<<<< HEAD
+    <header class="header">
+        <div class="header-intro">
+=======
     <header class="header d-flex justify-content-between align-items-center">
+>>>>>>> c14b9dc0065720aca5c85f6e0636fc23f720e00f
               <a class="header-text" href="">GNBakery</a>
                 <form action="">
                     <input type="search" name="search" class="form__search" value="<?php $search?? '' ?>" placeholder="Nhập tên để tìm kiếm">
                 </form>
+<<<<<<< HEAD
+                <div class="header__user ">
+=======
                 <div class="header__user d-flex align-items-center">
+>>>>>>> c14b9dc0065720aca5c85f6e0636fc23f720e00f
                     <img class="header__user-img" src="../../img/logo.png<?= $_SESSION['image'] ?>" alt="avt-user">
                     <!-- <span class="header__user-name"><?= $_SESSION['name'] ?></span> -->
 
@@ -95,5 +104,6 @@
                         </a>
                     </div>
                 </div>
+</div>
     </header>
 
