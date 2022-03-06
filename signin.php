@@ -150,8 +150,52 @@
 			</div>
 		</div>
 	</div>
+</header>
 
-	<footer>
+
+    <div class="page_container">
+        <div class="main_content">
+            <div class="wrap_lightbox">
+                <div class="box_left_signup">
+                    <h2>WELCOME TO GNBAKERY</h2>
+                    <img class="main_logo" src="./img/logo.jpg" alt="">
+                   <label  for="">Bạn đã có tài khoản chưa ?</label>
+                   <a href="signup.php">
+						<button class="btnSignup" type="submit">ĐĂNG KÝ NGAY</button>
+				   </a>
+                </div>
+                <form action="process-signin.php" method="post" class="box_right_signin">
+                    <h2>ĐĂNG NHẬP</h2>
+                    <div class="form-floating">
+                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" name="password" class="form-control" id="floatingInput" placeholder="text">
+                        <label for="floatingInput">Mật khẩu</label>
+						<small style="color:red;">
+                            <?php
+                                if(isset($_GET['error'])){
+                                    echo "{$_GET['error']}";
+                                }else{
+                                    echo "";
+                                }
+                            ?>
+                    	</small>
+                      </div>
+					  
+                      <div class="checkbox mb-3">
+                        <label>
+                          <input class="remember_text" type="checkbox" value="remember-me"> Nhớ mật khẩu
+                        </label>
+                      </div>
+                      <button class="btnSignin" name="btnSignin" type="submit">ĐĂNG NHẬP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
 		<div class="footer-top">
 			<div class="footer-top-overlay"></div>
 			<div class="wrapper">
