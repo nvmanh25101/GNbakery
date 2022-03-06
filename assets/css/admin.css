@@ -29,9 +29,9 @@ li.navbar__item:hover{
 }
 
 :root {
-    --text-color: #ffffff;
+    --text-color: #FF1493;
     --background-color: #f8f2e8;
-    --navbar-color: #EE9595;
+    --navbar-color: #ffbfbf;
     --navbar-vertical-width : 240px;
 }
 
@@ -46,7 +46,7 @@ body {
 
   /* Track   */
 ::-webkit-scrollbar-track {
-    background-color: #000;
+    background-color: #ffa2a2;
   }
    
   /* Handle   */
@@ -98,7 +98,7 @@ body {
 
 .navbar__link.active {
     color: #fdffff;
-    background-color: #FFB6C1;
+    background-color: #ff9fad;
     border-left: 4px solid #f8f2e8;
 }
 
@@ -127,9 +127,7 @@ body {
     height: 70px;
     margin-left: var(--navbar-vertical-width);
     background-color:var(--navbar-color);
-   display: flex;
-   width: 100%;
-   }
+}
 
 .header-intro{
     margin-top: 15px;
@@ -286,7 +284,7 @@ body {
     margin: auto;
 }
 
-.song__table,
+.product__table,
 .category__table,
 .employee__table,
 .playlist__table {
@@ -300,7 +298,7 @@ body {
     height: 80px;
 }
 
-.song__table a,
+.product__table a,
 .category__table a,
 .employee__table a,
 .playlist__table a {
@@ -308,7 +306,7 @@ body {
     display: block;
 }
 
-.song__table a:hover,
+.product__table a:hover,
 .category__table a:hover,
 .employee__table a:hover,
 .playlist__table a:hover {
@@ -342,16 +340,6 @@ body {
 
     background-color: #ffffff;
 
-}
-
-.products__audio {
-    width: 200px;
-    height: 40px;
-}
-
-.products__audio-update {
-    width: 100%;
-    height: 50px;
 }
 
 .form__input,
@@ -391,7 +379,7 @@ body {
     color: rgb(46, 241, 7);
 }
 
-.song__img img,
+.product__img img,
 .playlist__img img,
 .category__img img {
     width: 300px;
@@ -399,7 +387,7 @@ body {
     border-radius: 5px;
 }
 
-.song__name,
+.product__name,
 .playlist__name,
 .category__name {
     color: var(--text-color);
@@ -407,52 +395,52 @@ body {
     margin-top: 12px;
 }
 
-.song__media {
+.product__media {
     display: flex;
     align-items: center;
     border-radius: 5px;
     padding: 8px;
 }
 
-.song__media:hover {
+.product__media:hover {
     background-color: #2f2739;
 }
 
 
-.song__media-img {
+.product__media-img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
 }
 
-.song__media-content {
+.product__media-content {
     margin-left: 8px;
     flex: 1;
 }
 
-.song__media-name {
+.product__media-name {
     font-size: 1.6rem;
     color: var(--text-color);
     font-weight: 600;
 }
 
-.song__media-vocalist {
+.product__media-vocalist {
     font-size: 1.2rem;
     color: #726d79;
 }
 
-.song__add-to-playlist {
+.product__add-to-playlist {
     position: relative;
 }
 
-.song__add-to-playlist:hover .song__add-to-playlist-icon,
-.song__delete-from-playlist-btn:hover {
+.product__add-to-playlist:hover .product__add-to-playlist-icon,
+.product__delete-from-playlist-btn:hover {
     color: var(--text-color);
     background-color: #4c4555;
 }
 
-.song__add-to-playlist-icon,
-.song__delete-from-playlist-btn {
+.product__add-to-playlist-icon,
+.product__delete-from-playlist-btn {
     color: var(--text-color);
     font-size: 1.4rem;
     padding: 8px 4px;
@@ -461,17 +449,17 @@ body {
     text-decoration: none;
 }
 
-.song__delete-from-playlist-btn {
+.product__delete-from-playlist-btn {
     background-color: transparent;
     outline: none;
     border: none;
 }
 
-.song__add-to-playlist:hover .song__playlist {
+.product__add-to-playlist:hover .product__playlist {
     display: block;
 }
 
-.song__playlist {
+.product__playlist {
     position: absolute;
     top: 100%;
     right: 0;
@@ -480,13 +468,13 @@ body {
     display: none;
 }
 
-.song__playlist-list {
+.product__playlist-list {
     padding: 8px 0;
     margin: 0;
     list-style: none;
 }
 
-.song__playlist-btn {
+.product__playlist-btn {
     font-size: 1.4rem;
     color: var(--text-color);
     text-decoration: none;
@@ -498,15 +486,15 @@ body {
     text-align: left;
 }
 
-.song__playlist-btn i {
+.product__playlist-btn i {
     margin-right: 8px;
 }
 
-.song__playlist-btn:hover {
+.product__playlist-btn:hover {
     background-color: #563983;
 }
 
-.song__lyric {
+.product__lyric {
     font-size: 1.6rem;
     color: var(--text-color);
     margin-top: 16px;
@@ -555,9 +543,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 .fs-3{
-    background-color: #3d1a1a;
-    color: #dee4eb;
-    font-size: 13px;
+    background-color: var(--navbar-color);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
     margin-bottom: 20px;
     font-family: 'League Spartan', sans-serif;
 
@@ -567,7 +556,7 @@ input[type=number] {
     color: #dee4eb;
 }
 .table-sm>:not(caption)>*>* {
-     padding: 18px;
+     padding: 8px;
      font-size: 15px;
      font-family: 'PT Serif', serif;
      background-color: #d3afaf40;
@@ -593,4 +582,207 @@ input[type=number] {
     --bs-table-hover-color: #000;
     color: #000;
     border-color: #dfe0e1;
+}
+
+/* SHOW */
+.product-content{
+    background: #f8f2e8;
+    padding: 20px 30px;
+    display: flex;
+}
+
+.product-content-left{
+    margin-left: 50px;
+    width: 50%;
+}
+
+.image-img{
+    border: 10px solid white;
+}
+
+.product-content-right{
+    margin-left: 50px;
+    padding: 28px 23px;
+    background: #fff;
+    border-radius: 10px;
+    border: solid 1px #ddd;
+    width: 80%;
+}
+
+.product-content-right-name h1{
+    font-size: 22px;
+    color: #3d1a1a;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.product-content-right-name p {
+    margin-top: 4px;
+    font-size: 1.6rem;
+}
+
+.product-content-right hr {
+    clear: both;
+    border-top:1px solid black;
+    border-width: 1px 0 0;
+    margin: 30px 0;
+    height: 0;
+}
+
+.line-price {
+    font-size: 1.6rem;
+}
+
+.ProductPrice {
+    font-weight: bolder;
+}
+
+.product-select-swatch{
+    margin-top: 25px;
+}
+
+.product-select-swatch-text p{
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.select-swap{
+    display: flex;
+}
+
+.data-one{
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+
+.input-opt {
+    display: none;
+}
+
+.data-one label{
+    border-radius: 10px;
+    float: left;
+    width: 130%;
+    height: 35px;
+    margin: 0;
+    text-align: center;
+    line-height: 35px;
+    white-space: nowrap;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
+.data-one .crossed-out {
+    display: none;
+}
+
+.crossed-out {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.img-check {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.data-one label.sd {
+    border: 1px solid #e4393c; 
+}
+
+.data-one label span {
+color: #3d1a1a;
+font-size: 13px;
+line-height: normal;
+vertical-align: middle; }
+
+.buttons_added {
+    border-radius: 10px;
+    margin-left: 15px;
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+}
+
+.product-actions {
+    margin-top: 15px;
+}
+
+.product-actions #AddToCart,
+.product-actions #buy-now {
+    background: var(--navbar-color);
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.product-actions #AddToCart:hover,
+.product-actions #buy-now:hover {
+    background: #c0c906; 
+}
+
+/*tab*/
+.product-tab {
+    margin: 0 16px 32px;
+}
+
+.tab {
+    margin-left:50px;
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    border: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: black;
+    font-weight: bolder;
+    padding: 10px 35px;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.content-product-tab{
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1.4rem;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background: #3d1a1a;
+    color: #c0c906;
+}
+
+/* Style the tab content */
+.tabcontent {
+    margin-top: 15px;
+    padding: 10px;
+    display: none;
+    padding: 6px 12px;
+    background:white;
 }
