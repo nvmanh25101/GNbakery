@@ -129,8 +129,8 @@ body {
     background-color:var(--navbar-color);
    display: flex;
    width: 100%;
-   
-}
+   }
+
 .header-intro{
     margin-top: 15px;
     display: flex;
@@ -141,16 +141,23 @@ body {
 }
 .header__name {
     color: black;
-    
+
+
     font-size: 2rem;
     margin-left: 16px;
     margin-top: 5px;
     font-family: 'Merriweather', serif;
 
+
+}
+.header__name:hover{
+    color: #FFB6C1;
+
 }
 .header__name:hover{
     color: #FFB6C1;
 }
+
 
 
 .header__user {
@@ -189,7 +196,9 @@ body {
    
 }
 .header .header-text{
+
     margin-right: 15px;
+
     text-decoration: none;
     color: white;
     font-size: 25px;
@@ -245,7 +254,7 @@ body {
 
 .card {
     min-height: 100px;
-    background-color: #231b2e;
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
 }
@@ -311,13 +320,28 @@ body {
     background-color: #ffffff;
     color: #ffff;
     padding: 8px;
-   
+
+
+    width: 100%;
+    float: left;
+
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    width: 100%;
+
     border-radius: 5px;
     
 }
 
 .form__search:focus {
+
     background-color: #fff;
+
+
+    background-color: #fff;
+
+    background-color: #ffffff;
+
 }
 
 .products__audio {
@@ -552,6 +576,7 @@ input[type=number] {
     color: #fff;
     background-color: #3d1a1a;
     border-radius:10px;
+
 }
 .bi-pencil-fill,
 .bi-trash-fill{
