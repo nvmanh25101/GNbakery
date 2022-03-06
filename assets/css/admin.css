@@ -29,9 +29,9 @@ li.navbar__item:hover{
 }
 
 :root {
-    --text-color: #ffffff;
+    --text-color: #FF1493;
     --background-color: #f8f2e8;
-    --navbar-color: #EE9595;
+    --navbar-color: #ffbfbf;
     --navbar-vertical-width : 240px;
 }
 
@@ -46,7 +46,7 @@ body {
 
   /* Track   */
 ::-webkit-scrollbar-track {
-    background-color: #000;
+    background-color: #ffa2a2;
   }
    
   /* Handle   */
@@ -98,7 +98,7 @@ body {
 
 .navbar__link.active {
     color: #fdffff;
-    background-color: #FFB6C1;
+    background-color: #ff9fad;
     border-left: 4px solid #f8f2e8;
 }
 
@@ -263,7 +263,7 @@ body {
     margin: auto;
 }
 
-.song__table,
+.product__table,
 .category__table,
 .employee__table,
 .playlist__table {
@@ -277,7 +277,7 @@ body {
     height: 80px;
 }
 
-.song__table a,
+.product__table a,
 .category__table a,
 .employee__table a,
 .playlist__table a {
@@ -285,11 +285,11 @@ body {
     display: block;
 }
 
-.song__table a:hover,
+.product__table a:hover,
 .category__table a:hover,
 .employee__table a:hover,
 .playlist__table a:hover {
-    color: #ffffff;
+    color: #EE9595;
 }
 
 .form__search {
@@ -364,7 +364,7 @@ body {
     color: rgb(46, 241, 7);
 }
 
-.song__img img,
+.product__img img,
 .playlist__img img,
 .category__img img {
     width: 300px;
@@ -372,7 +372,7 @@ body {
     border-radius: 5px;
 }
 
-.song__name,
+.product__name,
 .playlist__name,
 .category__name {
     color: var(--text-color);
@@ -380,52 +380,52 @@ body {
     margin-top: 12px;
 }
 
-.song__media {
+.product__media {
     display: flex;
     align-items: center;
     border-radius: 5px;
     padding: 8px;
 }
 
-.song__media:hover {
+.product__media:hover {
     background-color: #2f2739;
 }
 
 
-.song__media-img {
+.product__media-img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
 }
 
-.song__media-content {
+.product__media-content {
     margin-left: 8px;
     flex: 1;
 }
 
-.song__media-name {
+.product__media-name {
     font-size: 1.6rem;
     color: var(--text-color);
     font-weight: 600;
 }
 
-.song__media-vocalist {
+.product__media-vocalist {
     font-size: 1.2rem;
     color: #726d79;
 }
 
-.song__add-to-playlist {
+.product__add-to-playlist {
     position: relative;
 }
 
-.song__add-to-playlist:hover .song__add-to-playlist-icon,
-.song__delete-from-playlist-btn:hover {
+.product__add-to-playlist:hover .product__add-to-playlist-icon,
+.product__delete-from-playlist-btn:hover {
     color: var(--text-color);
     background-color: #4c4555;
 }
 
-.song__add-to-playlist-icon,
-.song__delete-from-playlist-btn {
+.product__add-to-playlist-icon,
+.product__delete-from-playlist-btn {
     color: var(--text-color);
     font-size: 1.4rem;
     padding: 8px 4px;
@@ -434,17 +434,17 @@ body {
     text-decoration: none;
 }
 
-.song__delete-from-playlist-btn {
+.product__delete-from-playlist-btn {
     background-color: transparent;
     outline: none;
     border: none;
 }
 
-.song__add-to-playlist:hover .song__playlist {
+.product__add-to-playlist:hover .product__playlist {
     display: block;
 }
 
-.song__playlist {
+.product__playlist {
     position: absolute;
     top: 100%;
     right: 0;
@@ -453,13 +453,13 @@ body {
     display: none;
 }
 
-.song__playlist-list {
+.product__playlist-list {
     padding: 8px 0;
     margin: 0;
     list-style: none;
 }
 
-.song__playlist-btn {
+.product__playlist-btn {
     font-size: 1.4rem;
     color: var(--text-color);
     text-decoration: none;
@@ -471,15 +471,15 @@ body {
     text-align: left;
 }
 
-.song__playlist-btn i {
+.product__playlist-btn i {
     margin-right: 8px;
 }
 
-.song__playlist-btn:hover {
+.product__playlist-btn:hover {
     background-color: #563983;
 }
 
-.song__lyric {
+.product__lyric {
     font-size: 1.6rem;
     color: var(--text-color);
     margin-top: 16px;
@@ -528,9 +528,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 .fs-3{
-    background-color: #3d1a1a;
-    color: #dee4eb;
-    font-size: 13px;
+    background-color: var(--navbar-color);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
     margin-bottom: 20px;
     font-family: 'League Spartan', sans-serif;
 

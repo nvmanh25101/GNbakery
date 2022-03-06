@@ -56,7 +56,7 @@
                    <div class="col-12">
                     <table class="product__table table table-sm table-light table-bordered table-hover align-middle">
 
-                        <!-- <?php require_once '../error_success.php' ?> -->
+                        <?php require_once '../error_success.php' ?>
                         <thead>
                             <tr>
                             <th scope="col">Mã</th>

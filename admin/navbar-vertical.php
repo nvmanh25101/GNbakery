@@ -61,10 +61,10 @@
                     <div class="sub-navbar">
                         <ul class="list-group">
                             <li class="sub-navbar__item">
-                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories">Gateux Kem Tươi</a>
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories">Loại bánh chính</a>
                             </li>
                             <li class="sub-navbar__item">
-                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories/category_detail">Gateux Kem Bơ</a>
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories/category_detail">Loại bánh phụ</a>
                             </li>
                         </ul>
                     </div>
