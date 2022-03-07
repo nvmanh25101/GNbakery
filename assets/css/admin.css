@@ -281,7 +281,7 @@ body {
 .category__table a,
 .employee__table a,
 .playlist__table a {
-    color: var(--text-color);
+    color: black;
     display: block;
 }
 

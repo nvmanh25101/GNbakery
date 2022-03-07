@@ -22,34 +22,29 @@
 
 </head>
 <body>
-<header class="medium-down--hide">
-	<div id="site-header" class="medium-down--hide  bg-index">
-	<div class="wrapper">
-		<div class="inner">
-			<div class="grid mg-left-15">
-				<div class="grid__item large--one-twelfth pd-left0">
-					<div class="logo">
-						<h1>
-							<a href="#" >
-								<img style="margin-top:20px;" src="img/logo.png" >
-							</a>
-						</h1>
-					</div>
-				</div>
-             <div class="grid__item large--three-twelfths pd-left15 hd-searchbar">
-             	<form action="/search" method="get" class="input-search" role="search">
+<div class="header">
+	<div class="site-header">
+          <div class="header-left">
+	         <div class="logo">
+		        	<a href="#" >
+                        <img style="width:40%;height:auto;" src="img/logo.png"></a>
+          </div>
+          			
+            <div class="search">
+                <form action="/search" method="get" class="input-search" role="search">
              		<input type="hidden" name="type" value="product">
              		<input type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ...">
              		<span class="input-group-btn">
-<button type="submit" class="btn icon-fallback-text">
-      <i class="bi bi-search" aria-hidden="true"></i>
+                <button type="submit" class="btn icon-fallback-text">
+                 <i class="bi bi-search" aria-hidden="true"></i>
      
-    </button>
+                  </button>
 
              		</span>
              	</form>
              </div>
-             <div class="grid__item large--eight-twelfths pd-left15">
+             </div>
+             <div class="header-right">
              	<div class="list-item">
              		<a href="tel:0333135698">
              			<i class="bi bi-telephone-fill" aria-hidden="true"></i>
@@ -58,7 +53,7 @@
              		<a href="#">
              			<i class="bi bi-house-fill" aria-hidden="true"></i>
              			<span>
-             				Hệ Thống<b>14</b> 
+             				Hệ Thống 
              				Cửa hàng
              			</span>
              		</a>
@@ -77,10 +72,10 @@
 
 			</div>
             <nav class="container">
-			<ul id="main-menu">
+			<ul class="main-menu">
 				<li ><a href="">TRANG CHỦ</a></li>
-				<li><a href="">BÁNH SINH NHẬT</a>
-                  <ul class="sub-menu">
+			  <li><a href="">BÁNH SINH NHẬT</a>
+                        <ul class="sub-menu">
                   	<li><a href="">Gateaux Kem Tươi</a></li>
                   	<li><a href="">Gateaux Kem Bơ</a></li>
                   	<li><a href="">BánhMousse</a></li>
@@ -93,13 +88,13 @@
                   	<li><a href="">Bánh Sự Kiện</a></li>
                   	<li><a href="">Bánh SỰ KIỆN THEO YÊU CẦU</a></li>
                   	<li><a href="">Hộp Quà Tết Xuân Nhâm Dần 2022</a></li>
-                  </ul>
-				</li>
+                        </ul>
+		        </li>
 				<li><a href="">BÁNH MỲ & BÁNH MẶN</a>
-				<ul class="sub-menu">
+				  <ul class="sub-menu">
 					<li><a href="">Bánh mì</a></li>
-                  	<li><a href="">Bánh mặn</a></li>
-				</ul>
+                  	   <li><a href="">Bánh mặn</a></li>
+				   </ul>
 				</li>
 				<li><a href="">COOKIES & MINICAKE</a>
                   <ul class="sub-menu">
@@ -113,11 +108,8 @@
 				<li><a href="">KHUYẾN MÃI</a></li>
 			</ul>
           </nav>
-		</div>
-		
-	</div> 
-	</div>
-</header>
+	
+</div>
 
 
 
@@ -129,19 +121,19 @@
 		<input type="radio" name="radio-btn" id="radio3">
 		<input type="radio" name="radio-btn" id="radio4">
 		<div class="slide first">
-			<img src="img/logo1.jpg">
+			<img  src="img/logo1.jpg">
 
 		</div>
 		<div class="slide ">
-			<img  src="img/logo2.jpg">
+			<img   src="img/logo2.jpg">
 
 		</div>
 		<div class="slide ">
-			<img src="img/banner3.jpg">
+			<img  src="img/banner3.jpg">
 
 		</div>
 		<div class="slide ">
-			<img src="img/banner4.jpg">
+			<img  src="img/banner4.jpg">
 
 		</div>
 		<div class="navigation-auto">
@@ -164,13 +156,13 @@
 <div id="intro">
 	<div class="headline">
 		<h3>GATEAUX KEM TƯƠI</h3>
-		<img style="margin-top: 60px;margin-left: -130px;" src="img/icon.jpg" alt="">
+		<img style="max-width:100%;height:auto;" src="img/icon.jpg" alt="">
 	</div>
 	<ul class="products">
 		<li><div class="product-item">
 			<div class="product-top">
 				<a href="product.html" class="product-thumb">
-					<img src="img/pic1.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic1.jpg" alt="">
 
 				</a>
 			</div>
@@ -188,7 +180,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="product.html" class="product-thumb">
-					<img src="img/pic2.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic2.jpg" alt="">
 
 				</a>
 			</div>
@@ -206,7 +198,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic3.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic3.jpg" alt="">
 
 				</a>
 			</div>
@@ -224,7 +216,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic4.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic4.jpg" alt="">
 
 				</a>
 			</div>
@@ -242,7 +234,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic5.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic5.jpg" alt="">
 
 				</a>
 			</div>
@@ -260,7 +252,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic6.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic6.jpg" alt="">
 
 				</a>
 			</div>
@@ -278,7 +270,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic7.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic7.jpg" alt="">
 
 				</a>
 			</div>
@@ -296,7 +288,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic8.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic8.jpg" alt="">
 
 				</a>
 			</div>
@@ -314,7 +306,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic9.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic9.jpg" alt="">
 
 				</a>
 			</div>
@@ -332,7 +324,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic10.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic10.jpg" alt="">
 
 				</a>
 			</div>
@@ -350,7 +342,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic11.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic11.jpg" alt="">
 
 				</a>
 			</div>
@@ -368,7 +360,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic12.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic12.jpg" alt="">
 
 				</a>
 			</div>
@@ -386,7 +378,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic13.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic13.jpg" alt="">
 
 				</a>
 			</div>
@@ -404,7 +396,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic14.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic14.jpg" alt="">
 
 				</a>
 			</div>
@@ -422,7 +414,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic15.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic15.jpg" alt="">
 
 				</a>
 			</div>
@@ -440,7 +432,7 @@
 			<li ><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic16.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic16.jpg" alt="">
 
 				</a>
 			</div>
@@ -458,7 +450,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic17.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic17.jpg" alt="">
 
 				</a>
 			</div>
@@ -476,7 +468,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic18.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic18.jpg" alt="">
 
 				</a>
 			</div>
@@ -494,7 +486,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic19.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic19.jpg" alt="">
 
 				</a>
 			</div>
@@ -512,7 +504,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic20.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic20.jpg" alt="">
 
 				</a>
 			</div>
@@ -530,7 +522,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic21.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic21.jpg" alt="">
 
 				</a>
 			</div>
@@ -548,7 +540,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic22.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic22.jpg" alt="">
 
 				</a>
 			</div>
@@ -566,7 +558,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic23.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic23.jpg" alt="">
 
 				</a>
 			</div>
@@ -584,7 +576,7 @@
 			<li><div class="product-item">
 			<div class="product-top">
 				<a href="" class="product-thumb">
-					<img src="img/pic24.jpg" alt="">
+					<img style="max-width:100%;height:auto;" src="img/pic24.jpg" alt="">
 
 				</a>
 			</div>
