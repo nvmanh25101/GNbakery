@@ -61,69 +61,72 @@
             <a href="form_insert.php" class="btn btn-light btn-lg fs-3">Thêm</a>
             <div class="row gx-5">
                 <div class="col-12">
-                <table class="product__table table table-sm table-light table-bordered table-hover align-middle">
+                    <div class="table-responsive-sm">
+                        <table class="product__table table table-sm table-light table-bordered table-hover align-middle">
 
-                    <?php require_once '../error_success.php' ?>
-                    <thead>
-                        <tr>
-                        <th scope="col">Mã</th>
-                        <th scope="col">Tên bánh</th>
-                        <th scope="col">Ảnh</th>
-                        <th scope="col">Kích thước</th>
-                        <th scope="col">Giá</th>
-                        <th scope="col">Thể loại</th>
-                        <th scope="col">Trạng thái</th>
-                        <th scope="col">Người thêm</th>
-                        <th scope="col">Sửa</th>
-                        <th scope="col">Xóa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($result as $each) { ?>
-                            <tr>
-                                <th scope="row">
-                                    <a href="show.php?id=<?= $each['id'] ?>" class="text-decoration-none"><?= $each['id'] ?></a>
-                                </th>
-                                <td>
-                                    <a href="show.php?id=<?= $each['id'] ?>" class="text-decoration-none"><?= $each['name'] ?></a>
-                                </td>
-                                <td>
-                                    <img class="products__img" src="../../assets/images/products/<?= $each['image'] ?>" alt="">
-                                </td>
-                                <td><?= $each['size'] ?> cm</td>
-                                <td><?= number_format($each['price'], 0, '.', ' ') ?>&#8363</td>
-                                <td><?= $each['category_name'] ?></td>
-                                <td><?php 
-                                    if($each['status'] === '1') { ?>
-                                        Đang bán
-                                    <?php } else { ?>
-                                        Ngừng bán
-                                    <?php } ?>
-                                </td>
-                                <td><?= $each['admin_name'] ?></td>
-                                <?php if($each['status'] === '1') { ?>
-                                    <td>
-                                        <a href="form_update.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
-                                            <i class="bi bi-pencil-fill"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
-                                        <i class="bi bi-trash-fill"></i>
-                                        </a>
-                                    </td>
-                                <?php } else { ?>
-                                    <td colspan="2">
-                                        <a href="update_status.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
-                                            Mở bán
-                                        </a>
-                                    </td>
+                            <?php require_once '../error_success.php' ?>
+                            <thead>
+                                <tr>
+                                <th scope="col">Mã</th>
+                                <th scope="col">Tên bánh</th>
+                                <th scope="col">Ảnh</th>
+                                <th scope="col">Kích thước</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Loại bánh</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Người thêm</th>
+                                <th scope="col">Sửa</th>
+                                <th scope="col">Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($result as $each) { ?>
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="show.php?id=<?= $each['id'] ?>" class="text-decoration-none"><?= $each['id'] ?></a>
+                                        </th>
+                                        <td>
+                                            <a href="show.php?id=<?= $each['id'] ?>" class="text-decoration-none"><?= $each['name'] ?></a>
+                                        </td>
+                                        <td>
+                                            <img class="products__img" src="../../assets/images/products/<?= $each['image'] ?>" alt="">
+                                        </td>
+                                        <td><?= $each['size'] ?> cm</td>
+                                        <td><?= number_format($each['price'], 0, '.', ' ') ?>&#8363</td>
+                                        <td><?= $each['category_name'] ?></td>
+                                        <td><?php 
+                                            if($each['status'] === '1') { ?>
+                                                Đang bán
+                                            <?php } else { ?>
+                                                Ngừng bán
+                                            <?php } ?>
+                                        </td>
+                                        <td><?= $each['admin_name'] ?></td>
+                                        <?php if($each['status'] === '1') { ?>
+                                            <td>
+                                                <a href="form_update.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                                <i class="bi bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        <?php } else { ?>
+                                            <td colspan="2">
+                                                <a href="update_status.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                                    Mở bán
+                                                </a>
+                                            </td>
+                                        <?php } ?>
+                                    </tr>
                                 <?php } ?>
-                            </tr>
-                        <?php } ?>
-                        
-                    </tbody>
-                    </table>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    
                 </div>
             </div>
         </div>
