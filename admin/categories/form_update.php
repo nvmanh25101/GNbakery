@@ -27,18 +27,6 @@
                             <input type="text" name="name" id="name" value="<?= $each['name'] ?>" class="form__input form-control" autocomplete="off"/>
                             <span id="error" class="error_input"></span>
                         </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label">Ảnh cũ</label>
-                            <img src="../../assets/images/categories/<?= $each['image']?>" class="img-thumbnail" alt="">
-                            <input type="hidden" name="image_old" value="<?= $each['image'] ?>" />
-                        </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label">Đổi ảnh mới</label>
-                            <input type="file" name="image_new" accept=".jpg, .png" class="form__input form-control"/>
-                        </div>
-
                         <button type="submit" class="form__btn btn btn-dark mb-4">Sửa</button>
                     </form>
                 </div>

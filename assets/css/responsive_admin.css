@@ -1,0 +1,18 @@
+@media (max-width: 63.9375em) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .main__container,
+    .header,
+    .header__user {
+        margin: 0;
+    }
+
+    .header__mobile-icon,
+    .header__mobile-btn {
+        display: flex;
+    }
+
+}
+

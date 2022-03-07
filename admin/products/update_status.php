@@ -25,5 +25,5 @@ mysqli_query($connect, $sql);
 
 mysqli_close($connect);
 
-$_SESSION['success'] = 'Đã xóa thành công';
+$_SESSION['success'] = 'Đã mở bán thành công';
 header('location:index.php');

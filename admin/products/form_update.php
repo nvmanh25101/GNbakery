@@ -35,11 +35,11 @@
     require_once '../navbar-vertical.php';
 ?>
     <div class="main__form">
-        <div class=" container-fluid px-4">
+        <div class="container-fluid px-4">
             <?php include '../error_success.php' ?>
           
             <div class="row gx-5">
-                <div class="col-12 text-white">
+                <div class="col-12">
 
                      <form action="process_update.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $each['id'] ?>">
@@ -85,7 +85,7 @@
                                 <?php } ?>
                             </select>
 
-                            <select class="form__select form-select" name="category" id="category_detail">
+                            <select class="form__select form-select mt-4" name="category" id="category_detail">
                                 <?php foreach ($category_detail as $category_child) { ?>
                                     <option 
                                         <?php if($each['category_detail_id'] == $category_child['id']) { ?>
@@ -99,7 +99,7 @@
                                 <?php } ?>
                             </select>
 
-                        <button type="submit" class="form__btn btn btn-dark mb-4">Sửa</button>
+                        <button type="submit" class="form__btn btn mt-4 mb-4">Sửa</button>
                     </form>
                 </div>
                 
@@ -127,7 +127,7 @@
                 const arrName = Object.values(res);
 
                 $(".category_detail").remove();
-                $('#category_detail').append('<option value="" selected disabled hidden>Choose here</option>');
+                $('#category_detail').append('<option value="" selected disabled hidden>Chọn</option>');
                 for (let i = 0; i < arrId.length; i++) {
                     $('#category_detail').append(`
                         <option class="category_detail" value="${arrId[i]}">${arrName[i]}</option>
