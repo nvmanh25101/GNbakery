@@ -384,14 +384,14 @@ ul.products li .product-info .product-name{
     color: #fff;
    
     border-top-right-radius: 10px;
-    position: relative;
+    
     z-index: 2;
 
 	}
 	ul.products li .product-info .product-price-action .product-action{
 		display: inline-block;
    
-    position: relative;
+   
     z-index: 1;
 	}
    ul.products li .product-info .product-price-action .product-action button{
@@ -451,9 +451,7 @@ ul.products li .product-info .product-name{
 
 
   			}
-  			.slick-track{
-  				width: 100%;
-  			}
+  			
   			.row{
   				width: 100%;
   			}
@@ -880,7 +878,7 @@ footer .footer-top {
   
    font-weight: bolder;
     color: white;
-    boder: #FF1493;
+    border: #FF1493;
     width: 36px;
     border-radius: 100%;
    
@@ -915,7 +913,7 @@ footer .footer-top {
 	display: none;
 
 }
-.#main-menu ul.sub-menu{
+#main-menu ul.sub-menu{
 	width: 190px;
 }
 .input-field{
@@ -981,7 +979,7 @@ li{
 }
 .dropdown-container {
   display: none;
-  background-color: ;
+  background-color: pink;
   padding-left: 8px;
 }
 
