@@ -13,14 +13,14 @@
             $row = mysqli_fetch_assoc($result);
             $id = $row['id'];
             $name = $row['name'];
-            $img = $row['image'];
+            $image = $row['image'];
             $level = $row['level'];
             $pass_hash = $row['password'];
             if(password_verify($pass,$pass_hash)){
                 $_SESSION['id'] = $id;
                 $_SESSION['name'] = $name;
                 $_SESSION['level'] = $level;
-                $_SESSION['img'] = $img;
+                $_SESSION['image'] = $image;
                 header("location:./products/index.php");
             }else{
                 $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";

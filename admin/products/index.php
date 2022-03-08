@@ -110,7 +110,7 @@
                                             </td>
                                             <td>
                                                 <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
-                                                <i class="bi bi-trash-fill"></i>
+                                                    <i class="bi bi-trash-fill"></i>
                                                 </a>
                                             </td>
                                         <?php } else { ?>

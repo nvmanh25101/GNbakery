@@ -1,6 +1,7 @@
 <?php 
     require_once '../check_admin_signin.php';
 
+    $admin_id = $_SESSION['id'];
     $page = 'products-insert';
     require_once '../navbar-vertical.php';
 
@@ -63,7 +64,7 @@
                                 <option value="" selected disabled hidden>Chọn</option>
                             </select>
 
-                        <input type="hidden" name="admin_id" value="2">
+                        <input type="hidden" name="admin_id" value="<?= $admin_id ?>">
                         </div>
 
                         <button type="submit" class="form__btn btn mb-4">Thêm</button>
