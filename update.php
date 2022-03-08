@@ -119,12 +119,31 @@
         </div> 
         </div>
     </header>
-    <form action="">
+    <form action="process-update.php" method = "post">
         <div class="page_container">
                 <div class="main_content">
-                        <form action="process-update.php" method = "post">
+                        
                             <h2>Thông tin</h2>
                             Email:<span name = "email"> <?php echo $row['email'] ?></span>
+                            <input type="text" name="id" style="display:none;" value = "<?php echo $row['id']?>">
+                            <small style="color:green;">
+                                    <?php
+                                        if(isset($_GET['error'])){
+                                            echo "{$_GET['error']}";
+                                        }else{
+                                            echo "";
+                                        }
+                                    ?>
+                    	        </small>
+                            <small style="color:red;">
+                                    <?php
+                                        if(isset($_GET['error1'])){
+                                            echo "{$_GET['error1']}";
+                                        }else{
+                                            echo "";
+                                        }
+                                    ?>
+                    	        </small>
                             <div class="form_name">
                                 <label for="">Họ và tên</label>
                                 <input type="text" name = "name" class="form-control" placeholder = "Nhập họ tên" value ="<?php echo $row['name']?>" required>
@@ -132,29 +151,40 @@
                             <div class="form_name">
                                 <label for="">Password</label>
                                 <input type="password" name = "password" class="form-control" placeholder="Nhập mật khẩu mới">
+                                <small style="color:red;">
+                                    <?php
+                                        if(isset($_GET['errorpass'])){
+                                            echo "{$_GET['errorpass']}";
+                                        }else{
+                                            echo "";
+                                        }
+                                    ?>
+                    	        </small>
                               </div>
                             <div class="form_address">
                                 <label for="">Địa chỉ</label>
-                                <input type="text" name = "address" class="form-control" placeholder="Thêm địa chỉ" value = <?php
+                                <input type="" name = "address" class="form-control" placeholder="Thêm địa chỉ" value = "<?php
                                                                                                                 if($row['address']==NULL){
                                                                                                                     echo "";
                                                                                                                 }else{
                                                                                                                     echo $row['address'];
                                                                                                                 }
-                                                                                                            ?>>
+                                                                                                            ?>">
                               </div>
                             <div class="form_phone">
                                   <label for="">Số điện thoại</label>
-                                <input type="" name = "phone" class="form-control" placeholder="Thêm số điện thoại" value = <?php
+                                <input type="" name = "phone" class="form-control" placeholder="Thêm số điện thoại" value = "<?php
                                                                                                                 if($row['phone']==NULL){
                                                                                                                     echo "";
                                                                                                                 }else{
                                                                                                                     echo $row['phone'];
                                                                                                                 }
-                                                                                                            ?>>
+                                                                                                            ?>">
                               </div>
-                              <button class="btnUpdate" name="btnUpdate" type="submit">Cập nhật</button>
-                        </form>
+                            <div style="display:flex;">
+                                <button class="btnUpdate" name="btnUpdate" type="submit">Cập nhật</button>
+                                <a href=""><button style="magin-right:50px;" class="btnUpdate">Quay lại</button></a>
+                            </div>
                 </div>
         </div>
     </form>
