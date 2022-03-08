@@ -94,7 +94,7 @@
                 <li class="nav-item navbar__item">
                     <a class="nav-link d-flex align-items-center navbar__link" href="../signout.php">
                         <i class="navbar__link-icon bi bi-box-arrow-in-right"></i>
-                        <span>Đăng xuất</span> 
+                        <span>Đăng xuất khỏi Trái Đất</span> 
                     </a>
                 </li>
             </ul>
@@ -108,6 +108,7 @@
                 <!-- <img src="../../source (1).gif" alt="" style="width: 200px; height: 100px;"> -->
                 <img src="../../8f554a44aec8cd5a8b4689876d4a4f01.gif" alt="" style="width: 200px; height: 80px;">
             </a>
+            <i class="btn-close btn-menu bi bi-x-lg"></i>
         </div>
 
         <ul class="nav navbar__list-mobile flex-column">

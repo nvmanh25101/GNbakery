@@ -28,7 +28,7 @@
                     <div class="col-md-3">
                         <div class="card d-flex flex-row">
                             <div class="card__content d-flex flex-column justify-content-between">
-                                <h5 class="card__name">SỐ LƯỢNG BÀI HÁT</h5> 
+                                <h5 class="card__name">SỐ LƯỢNG BÁNH</h5> 
                                 <span class="card__quantity"><?= $product_quantity ?></span>
                             </div>
                             <div class="card__icon d-flex flex-fill">
@@ -39,7 +39,7 @@
                     <div class="col-md-3">
                         <div class="card d-flex flex-row">
                             <div class="card__content d-flex flex-column justify-content-between">
-                                <h5 class="card__name">SỐ LƯỢNG THỂ LOẠI</h5>
+                                <h5 class="card__name">SỐ LƯỢNG LOẠI CHÍNH</h5>
                                 <span class="card__quantity"><?= $category_quantity ?></span>
                             </div>
                             <div class="card__icon d-flex flex-fill">

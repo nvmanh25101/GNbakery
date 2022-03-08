@@ -1,7 +1,7 @@
 <?php 
     require_once '../check_admin_signin.php';
 
-    $page = 'products';
+    $page = 'products-insert';
     require_once '../navbar-vertical.php';
 
     require_once '../../database/connect.php';
@@ -10,6 +10,11 @@
     $result = mysqli_query($connect, $sql);
 ?>
     <div class="main__form">
+        <div class="main-container-text d-flex align-items-center">
+            <a class="header__name text-decoration-none" href="#">
+                Thêm sản phẩm
+            </a>
+        </div>
         <div class=" container-fluid px-4">
             <?php include '../error_success.php' ?>
         
@@ -99,6 +104,11 @@
         
         $('#image').change(function(e) {
             $('#product__img').attr('src', URL.createObjectURL(e.target.files[0]));
+        });
+
+        $('.btn-menu').click(function() {
+            $('.navbar-vertical-mobile').toggle("fast");
+            $('.header__navbar-overlay').toggle("fast");
         });
     });
 </script>
