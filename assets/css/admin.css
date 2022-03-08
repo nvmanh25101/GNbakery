@@ -73,12 +73,10 @@ body {
     height: 70px;
 }
 
-.navbar__brand-img {
-    width: 120px;
-    height: 40px;
-    margin-top: 9px;
+.navbar-brand__img {
+    width: 100%;
+    height: 100px;
 }
-
 
 .navbar__link:focus {
     color: #F08080;
@@ -192,31 +190,21 @@ body {
 }
 .header__name {
     color: black;
-
-
     font-size: 2rem;
     margin-left: 16px;
     margin-top: 5px;
     font-family: 'Merriweather', serif;
-
-
 }
-.header__name:hover{
-    color: #FFB6C1;
 
-}
 .header__name:hover{
     color: #FFB6C1;
 }
-
-
 
 .header__user {
-    
+    position: relative;
     cursor: pointer;
-   display: flex;
-   margin-left: 49%;
-    
+    margin-left: 48%;
+    margin-right: 32px;
 }
 
 .header__user-img {
@@ -236,38 +224,38 @@ body {
 }
 
 .header__signout {
-    
+    position: absolute;
     top: calc(100% + 8px);
     margin-bottom: 15px;
     width: 112px;
-    background-color: #3d1a1a;
+    background-color: var(--navbar-color);
     z-index: 1;
     padding: 6px 0;
     border-radius: 9px;
-   
+    display: none;
 }
+
 .header .header-text{
-
     margin-right: 15px;
-
     text-decoration: none;
     color: white;
     font-size: 25px;
     font-family:  'Smooch Sans', sans-serif;
 }
+
 .header__signout a {
     font-size: 14px;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
-   padding-top: 3px;
+    padding: 8px;
     border-radius: 4px;
     text-align: center;
 }
 
 .header__signout a:hover {
-    background-color: #c0c906;
-    color: #dee4eb;
+    background-color: #ffbe68;
+    color: #000000;
 }
 
 .header__signout::before {
@@ -443,105 +431,6 @@ body {
     color: var(--text-color);
     text-align: center;
     margin-top: 12px;
-}
-
-.product__media {
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    padding: 8px;
-}
-
-.product__media:hover {
-    background-color: #2f2739;
-}
-
-
-.product__media-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-}
-
-.product__media-content {
-    margin-left: 8px;
-    flex: 1;
-}
-
-.product__media-name {
-    font-size: 1.6rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.product__media-vocalist {
-    font-size: 1.2rem;
-    color: #726d79;
-}
-
-.product__add-to-playlist {
-    position: relative;
-}
-
-.product__add-to-playlist:hover .product__add-to-playlist-icon,
-.product__delete-from-playlist-btn:hover {
-    color: var(--text-color);
-    background-color: #4c4555;
-}
-
-.product__add-to-playlist-icon,
-.product__delete-from-playlist-btn {
-    color: var(--text-color);
-    font-size: 1.4rem;
-    padding: 8px 4px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.product__delete-from-playlist-btn {
-    background-color: transparent;
-    outline: none;
-    border: none;
-}
-
-.product__add-to-playlist:hover .product__playlist {
-    display: block;
-}
-
-.product__playlist {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 228px;
-    background-color: #432275;
-    display: none;
-}
-
-.product__playlist-list {
-    padding: 8px 0;
-    margin: 0;
-    list-style: none;
-}
-
-.product__playlist-btn {
-    font-size: 1.4rem;
-    color: var(--text-color);
-    text-decoration: none;
-    width: 100%;
-    padding: 8px 16px;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    text-align: left;
-}
-
-.product__playlist-btn i {
-    margin-right: 8px;
-}
-
-.product__playlist-btn:hover {
-    background-color: #563983;
 }
 
 .product__lyric {
@@ -772,6 +661,7 @@ vertical-align: middle; }
     border-radius: 10px;
     border: none;
     font-size: 1.4rem;
+    text-decoration: none;
 }
 
 .product-actions #AddToCart:hover,
