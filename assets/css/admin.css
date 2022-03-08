@@ -258,7 +258,7 @@ body {
 .header__signout a {
     font-size: 14px;
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
     display: block;
    padding-top: 3px;
     border-radius: 4px;
