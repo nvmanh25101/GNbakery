@@ -121,38 +121,6 @@
 	</header>
 
 
-	<div class="page_container">
-		<div class="main_content">
-			<div class="wrap_lightbox">
-				<div class="box_left_signup">
-					<h2>WELCOME TO GNBAKERY</h2>
-					<img class="main_logo" src="./img/logo.jpg" alt="">
-					<label for="">Bạn đã có tài khoản chưa ?</label>
-					<button class="btnSignup" type="submit">ĐĂNG KÝ NGAY</button>
-				</div>
-				<div class="box_right_signin">
-					<h2>ĐĂNG NHẬP</h2>
-					<div class="form-floating">
-						<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-						<label for="floatingInput">Email</label>
-					</div>
-					<div class="form-floating">
-						<input type="password" class="form-control" id="floatingInput" placeholder="text">
-						<label for="floatingInput">Mật khẩu</label>
-					</div>
-					<div class="checkbox mb-3">
-						<label>
-							<input class="remember_text" type="checkbox" value="remember-me"> Nhớ mật khẩu
-						</label>
-					</div>
-					<button class="btnSignin" type="submit">ĐĂNG NHẬP</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-
     <div class="page_container">
         <div class="main_content">
             <div class="wrap_lightbox">

@@ -1,5 +1,11 @@
 
-
+.ft-contact-logo a ,
+.ft-contact-address a ,
+.ft-contact-tel a ,
+.ft-contact-email a
+{
+    text-decoration: none;
+}
 /* MAIN */
 .page_container{
     background-color: #F8F2E8;

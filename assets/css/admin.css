@@ -41,7 +41,8 @@ body {
 
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
+    height: 10px;
 }
 
   /* Track   */
@@ -53,11 +54,12 @@ body {
 ::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 10px;
+    background: #d68989;
   }
   
   /* Handle on hover   */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(177, 177, 177, 0.6);
+    background: #da8383;
 }
 
 .navbar-vertical {
@@ -171,6 +173,15 @@ body {
     height: 20px;
 }
 
+.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
 .header-intro{
     margin-top: 15px;
     display: flex;
@@ -247,7 +258,7 @@ body {
 .header__signout a {
     font-size: 14px;
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
     display: block;
    padding-top: 3px;
     border-radius: 4px;
@@ -602,12 +613,7 @@ input[type=number] {
      font-family: 'PT Serif', serif;
      background-color: #d3afaf40;
 }
-.btn-dark {
-    color: #fff;
-    background-color: #3d1a1a;
-    border-radius:10px;
 
-}
 .bi-pencil-fill,
 .bi-trash-fill{
     color: #FF1493;

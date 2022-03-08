@@ -12,21 +12,30 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content rounded-5 shadow">
             <div class="modal-header p-5 pb-4 border-bottom-0">
-              <!-- <h5 class="modal-title">Modal title</h5> -->
               <h2 class="fw-bold mb-0">Đăng nhập Admin </h2>
             </div>
       
             <div class="modal-body p-5 pt-0">
-              <form class="">
+              <?php include './error_success.php'; ?>
+              <form action="signin-admin.php" method = "post" class="">
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                    <input name = "email" type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Email</label>
                   </div>
                 <div class="form-floating mb-3">
-                  <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                  <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
                   <label for="floatingPassword">Password</label>
+                  <small style="color:red;">
+                            <?php
+                                if(isset($_GET['error'])){
+                                    echo "{$_GET['error']}";
+                                }else{
+                                    echo "";
+                                }
+                            ?>
+                    	</small>
                 </div>
-                <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Đăng nhập</button>
+                <button name = "btnSignin" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Đăng nhập</button>
                 <div class="box_more_option">
                     <span class="box-checkbox">
                          <input id="rememberpass" checked="checked" type="checkbox" name="isRemember">

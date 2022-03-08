@@ -48,7 +48,7 @@
 ?>
 
     <div class="main__container">
-        <div class="main-container-text">
+        <div class="main-container-text d-flex align-items-center">
             <a class="header__name text-decoration-none" href="#">
                 <?= $page == 'root'?'Trang chủ':'' ?>
                 <?= $page == 'employees'?'Nhân viên':'' ?>
