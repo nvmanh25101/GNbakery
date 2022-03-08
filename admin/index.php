@@ -17,7 +17,7 @@
       
             <div class="modal-body p-5 pt-0">
               <?php include './error_success.php'; ?>
-              <form action="signin-admin.php" method = "post" class="">
+              <form action="process_signin.php" method = "post" class="">
                   <div class="form-floating mb-3">
                     <input name = "email" type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Email</label>
