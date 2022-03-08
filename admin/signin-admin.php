@@ -24,12 +24,12 @@
                 header("location:./products/index.php");
             }else{
                 $error = "Incorrect account or password ";
-                header("location:signin.php?error=$error");
+                header("location:index.php?error=$error");
             }
         }
         else{
             $error = "Incorrect account or password ";
-            header("location:signin.php?error=$error");
+            header("location:index.php?error=$error");
         }
     }else{
         header("location: signin.php");
