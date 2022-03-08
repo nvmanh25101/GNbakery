@@ -35,6 +35,11 @@
     require_once '../navbar-vertical.php';
 ?>
     <div class="main__form">
+        <div class="main-container-text d-flex align-items-center">
+            <a class="header__name text-decoration-none" href="#">
+                Sửa sản phẩm
+            </a>
+        </div>
         <div class="container-fluid px-4">
             <?php include '../error_success.php' ?>
           
@@ -140,6 +145,10 @@
             $('#product__img').attr('src', URL.createObjectURL(e.target.files[0]));
         });
 
+        $('.btn-menu').click(function() {
+            $('.navbar-vertical-mobile').toggle("fast");
+            $('.header__navbar-overlay').toggle("fast");
+        });
     });
 </script>
 </html>

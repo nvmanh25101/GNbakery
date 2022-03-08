@@ -4,6 +4,7 @@
     }
 
     .main__container,
+    .main__form,
     .header,
     .header__user {
         margin: 0;
