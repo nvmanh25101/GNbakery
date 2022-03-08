@@ -30,16 +30,18 @@ header{
 display: flex;
 align-items: center;
 justify-content: space-between;
-flex-wrap: wrap;
+
 }
 .header-left{
 	display: flex;
 	justify-content: left;
 	align-items: center;
 
+
 }
 .header-right{
 	margin-bottom: 30px;
+
 }
 .logo {
 	width: 30%;
@@ -49,7 +51,7 @@ flex-wrap: wrap;
 	width: 80px;
 }
  .search{
- 	width: 60%;
+ 	width: 50%;
  }
 a{
 	text-decoration: none;
@@ -110,7 +112,7 @@ input{
 	justify-content: space-around;
 	align-items: center;
 	padding-top: 35px;
-	margin-left: 20px;
+	
 	
 
 }
@@ -118,7 +120,7 @@ input{
 	color: white;
 	font-weight: bolder;
 	font-size: 14px;
-	margin-right: 50px;
+	margin-right: 16px;
 
 
 	}
@@ -384,14 +386,14 @@ ul.products li .product-info .product-name{
     color: #fff;
    
     border-top-right-radius: 10px;
-    position: relative;
+    
     z-index: 2;
 
 	}
 	ul.products li .product-info .product-price-action .product-action{
 		display: inline-block;
    
-    position: relative;
+   
     z-index: 1;
 	}
    ul.products li .product-info .product-price-action .product-action button{
@@ -451,9 +453,7 @@ ul.products li .product-info .product-name{
 
 
   			}
-  			.slick-track{
-  				width: 100%;
-  			}
+  			
   			.row{
   				width: 100%;
   			}
@@ -880,7 +880,7 @@ footer .footer-top {
   
    font-weight: bolder;
     color: white;
-    boder: #FF1493;
+    border: #FF1493;
     width: 36px;
     border-radius: 100%;
    
@@ -915,7 +915,7 @@ footer .footer-top {
 	display: none;
 
 }
-.#main-menu ul.sub-menu{
+#main-menu ul.sub-menu{
 	width: 190px;
 }
 .input-field{
@@ -981,7 +981,7 @@ li{
 }
 .dropdown-container {
   display: none;
-  background-color: ;
+  background-color: pink;
   padding-left: 8px;
 }
 
