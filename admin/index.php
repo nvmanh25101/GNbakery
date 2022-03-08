@@ -12,11 +12,11 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content rounded-5 shadow">
             <div class="modal-header p-5 pb-4 border-bottom-0">
-              <!-- <h5 class="modal-title">Modal title</h5> -->
               <h2 class="fw-bold mb-0">Đăng nhập Admin </h2>
             </div>
       
             <div class="modal-body p-5 pt-0">
+              <?php include './error_success.php'; ?>
               <form action="signin-admin.php" method = "post" class="">
                   <div class="form-floating mb-3">
                     <input name = "email" type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">

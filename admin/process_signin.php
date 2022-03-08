@@ -23,16 +23,16 @@
                 $_SESSION['img'] = $img;
                 header("location:./products/index.php");
             }else{
-                $error = "Incorrect account or password ";
-                header("location:index.php?error=$error");
+                $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
+                header("location:index.php");
             }
         }
         else{
-            $error = "Incorrect account or password ";
-            header("location:index.php?error=$error");
+            $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
+            header("location:index.php");
         }
     }else{
-        header("location: signin.php");
+        header("location:index.php");
     }
     
 ?>

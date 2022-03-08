@@ -17,7 +17,7 @@
             if(password_verify($pass,$pass_hash)){
                 $_SESSION['id'] = $id;
                 $_SESSION['name'] = $name;
-                header("location:update.php");
+                header("location:index.php");
             }else{
                 $error = "Incorrect account or password ";
                 header("location:signin.php?error=$error");
