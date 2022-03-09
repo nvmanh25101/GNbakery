@@ -54,7 +54,7 @@ $result_category = mysqli_query($connect, $sql);
    margin-bottom: 15px;" src="img/logo.png"></a>
           </div>
 
-          <a href="Home-user.html">Trang chủ</a>
+          <a href="/">Trang chủ</a>
 
           <button class="dropdown-btn">Bánh sinh nhật<i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
