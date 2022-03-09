@@ -90,9 +90,8 @@
     <div class="header__navbar-overlay btn-menu"></div>
     <nav class="navbar navbar-vertical-mobile position-fixed top-0 start-0 bottom-0 p-0 navbar-collapse">
         <div class="navbar-logo">
-            <a class="navbar-mobile-brand px-5 d-block" href="#">
-                <!-- <img src="../../source (1).gif" alt="" style="width: 200px; height: 100px;"> -->
-                <img src="../../8f554a44aec8cd5a8b4689876d4a4f01.gif" alt="" style="width: 200px; height: 80px;">
+            <a class="navbar-mobile-brand d-block" href="#">
+                <img src="../../source (1).gif" alt="" class="navbar-brand__img">
             </a>
             <i class="btn-close btn-menu bi bi-x-lg"></i>
         </div>
@@ -166,10 +165,7 @@
                 <i class="bi bi-list"></i>
             </button>
             <button class="header__mobile-btn align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search-heart">
-                    <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
-                    <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/>
-                </svg>
+                <i class="bi bi-search"></i>
             </button>
         </div>
         <a class="header-text" href="">GNBakery</a>

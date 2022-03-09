@@ -3,10 +3,8 @@
     if(isset($_POST['btnSignin'])){
         $email = $_POST['email'];
         $pass = $_POST['password']; 
-        $connect = mysqli_connect('localhost','root','','GNbakery');
-        if(!$connect){
-            die("Kết nốt thất bại. Vui lòng kiểm tra lại các thông tin máy chủ.");
-        };
+        
+        require '../database/connect.php';
         $sql = "SELECT * FROM admin where email = '$email'";
         $result = mysqli_query($connect,$sql);
         if(mysqli_num_rows($result) > 0){

@@ -33,6 +33,7 @@ li.navbar__item:hover{
     --background-color: #f8f2e8;
     --navbar-color: #ffbfbf;
     --navbar-vertical-width : 240px;
+    --header-height: 70px;
 }
 
 body {
@@ -88,6 +89,7 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 23px;
 }
+
 .navbar__link:hover{
     color: white;
 }
@@ -123,8 +125,12 @@ body {
     padding: 8px 58px;
 }
 
+.navbar-mobile-brand {
+    padding-right: 50px;
+}
+
 .header {
-    height: 70px;
+    height: var(--header-height);
     margin-left: var(--navbar-vertical-width);
     background-color:var(--navbar-color);
 }
@@ -163,12 +169,12 @@ body {
 }
 
 .header__mobile-btn i {
-    font-size: 2rem;
+    font-size: 3.8rem;
 }
 
 .header__mobile-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 38px;
+    height: 38px;
 }
 
 .btn-close {
@@ -176,7 +182,7 @@ body {
     top: 0;
     right: 0;
     padding: 16px;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     cursor: pointer;
 }
 
@@ -235,11 +241,11 @@ body {
     display: none;
 }
 
-.header .header-text{
+.header-text {
     margin-right: 15px;
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-family:  'Smooch Sans', sans-serif;
 }
 
@@ -329,7 +335,7 @@ body {
 .category__table,
 .employee__table,
 .playlist__table {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .products__img,
@@ -482,23 +488,23 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.fs-3{
+.btn-insert {
     background-color: var(--navbar-color);
     color: #ffffff;
-    font-size: 14px;
+    font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 20px;
     font-family: 'League Spartan', sans-serif;
+    border-radius: 5px;
 }
 
-.fs-3:hover{
+.btn-insert:hover {
     background-color: #c0c906;
     color: #dee4eb;
 }
 
 .table-sm>:not(caption)>*>* {
      padding: 8px;
-     font-size: 15px;
      font-family: 'PT Serif', serif;
      background-color: #d3afaf40;
 }

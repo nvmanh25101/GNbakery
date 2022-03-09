@@ -58,7 +58,7 @@
             </a>
         </div>
         <div class="container-fluid px-4">
-            <a href="form_insert.php" class="btn btn-light btn-lg fs-3">Thêm</a>
+            <a href="form_insert.php" class="btn-insert btn btn-light btn-lg">Thêm</a>
             <div class="row gx-5">
                 <div class="col-12">
                     <div class="table-responsive-sm">

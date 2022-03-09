@@ -78,6 +78,12 @@
     zoomWindowWidth: 200,
     zoomWindowHeight: 200
   });
+ 
+    $('.btn-menu').click(function() {
+        $('.navbar-vertical-mobile').toggle("fast");
+        $('.header__navbar-overlay').toggle("fast");
+    });
+
 </script>
 </body>
 
