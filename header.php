@@ -57,8 +57,8 @@
           </div>
           <a href="#">Tin tức</a>
           <a href="#">Khuyến mãi</a>
-          <a href="#">Đăng Nhập</a>
-          <a href="#">Đăng Ký</a>
+          <a href="./signin.php">Đăng Nhập</a>
+          <a href="./signup.php">Đăng Ký</a>
 
         </div>
 

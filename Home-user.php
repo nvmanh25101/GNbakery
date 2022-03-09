@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  if(empty($_SESSION['id'])){
+    header("location:signin.php");
+  }
+  require './database/connect.php';
+
+  $sql = "SELECT * FROM products
+  order by category_detail_id ASC, id desc";
+  $result = mysqli_query($connect, $sql);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -100,11 +111,11 @@
               Cửa hàng
             </span>
           </a>
-          <a class="item" href="user.html">
+          <a class="item" href="user.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Chào , userr
           </a>
-           <a class="item" href="#">
+           <a class="item" href="signout.php">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
             Đăng Xuất
           </a>

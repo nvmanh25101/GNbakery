@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(empty($_SESSION['id'])){
+  header("location:signin.php");
+}
 require_once './database/connect.php';
 
 $id = $_GET['id'];
