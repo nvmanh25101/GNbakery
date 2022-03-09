@@ -91,6 +91,11 @@ input{
 .btn {
 	height: 37px;
 }
+
+.icon-fallback-text {
+	width: 39px;
+	height: 39px;
+}
 .icon-fallback-text , 
 .bi {
 	display: inline-block;
@@ -162,7 +167,7 @@ b {
    font-weight: bolder;
    list-style: none;
    font-family: 'Roboto Condensed', sans-serif;
-
+	text-transform: uppercase;
 }
 #main-menu li a:hover{
 	color: white;
@@ -1002,8 +1007,8 @@ li{
 	font-weight: 900;
 	color: white;
 	text-align: center;
-	width: 36px;
-	height: 39px;
+	font-size: 1.4rem;
+	width: 100%;
 	border-radius: 3px;
 }
 
