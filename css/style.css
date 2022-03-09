@@ -19,9 +19,6 @@ body{
 	box-sizing: border-box;
 }
 header{
-	
-	
-	
 
 	background:  #FFBFBF;
 }
@@ -1004,7 +1001,7 @@ li{
 }
 
 .bi-search{
-	background: #FFC0CB;
+	background: #FF1493;
 	font-weight: 900;
 	color: white;
 	text-align: center;
