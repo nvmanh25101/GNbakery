@@ -1169,6 +1169,18 @@ li{
 	margin-left: 30px;
 }
 
+@media screen and (min-width: 1400px){
+    .header-right{
+    
+    margin-right: 20px;
+
+}
+.header-right .list-item .item{
+	
+    padding-right: 50px;
+}
+}
+
 
 
 
