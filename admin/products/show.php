@@ -59,7 +59,7 @@
     </div>
     <div class="product-tab">
         <div class="tab" >
-            <button class="tablinks">Mô tả chung</button>
+            <button class="tablinks" >Mô tả chung</button>
         </div>
         <div class="content-product-tab">
             <?= nl2br($each['description']) ?>
@@ -86,7 +86,7 @@
     });
 
 </script>
-
+<script src="../../js/product.js"></script>
 </body>
 
 </html>

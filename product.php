@@ -243,12 +243,12 @@ $result_category = mysqli_query($connect, $sql);
 
   <div class="product-tab">
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Content')">Mo ta chung</button>
-      <button class="tablinks" onclick="openCity(event, 'Comment')">Binh Luan</button>
+      <button class="tablinkss">Mo ta chung</button>
+      <button class="tablinks">Binh Luan</button>
 
     </div>
     <div class="content-product-tab">
-      <div id="Content" class="tabcontent">
+      <div id="Content" class="tablinks">
         <?= nl2br($each['description']) ?>
       </div>
 

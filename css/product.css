@@ -244,17 +244,34 @@ body, html {
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.tablinks{
+    border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+
+  font-weight: bolder;
+  padding: 10px 35px;
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: white;
+    color: black;
+}
+.tablinkss {
+    background: #3d1a1a;
+    color: #c0c906;
  
   border: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
-  color: black;
+
   font-weight: bolder;
   padding: 10px 35px;
-    background: #fff;
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -268,10 +285,7 @@ body, html {
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-    background: #3d1a1a;
-    color: #c0c906;
-}
+
 
 /* Style the tab content */
 .tabcontent {

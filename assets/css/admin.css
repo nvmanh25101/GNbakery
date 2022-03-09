@@ -704,7 +704,9 @@ vertical-align: middle; }
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+.text-decoration-none:hover {
+    color:#ffbfbf;
+}
 .content-product-tab{
     background: #fff;
     padding: 15px;
