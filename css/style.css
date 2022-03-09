@@ -555,7 +555,7 @@ ul.products li .product-info .product-name{
   
   .about-introduce {
     margin:30px 0;
-    width: 100%;
+    
 	padding: 0 30px;	
   }
 
@@ -996,10 +996,6 @@ li{
   padding: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 .bi-search{
 	background: #FF1493;
@@ -1098,6 +1094,10 @@ li{
 }
 
 /*reponsive product*/
+.zoomContainer{
+	display: none;
+}
+
 .hero-image {
     width: 100%;
     height: 250px;
@@ -1147,6 +1147,10 @@ li{
 		display: flex;
 		width: 100%;
 		height: 100%;
+	}
+	.tab .tablinkss{
+		font-size: 12px;
+		padding: 10px 15px;
 	}
 	.tab .tablinks{
 		font-size: 12px;
