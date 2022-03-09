@@ -1,3 +1,11 @@
+<?php
+ 
+  require './database/connect.php';
+
+  $sql = "SELECT * FROM products
+  order by category_detail_id ASC, id desc";
+  $result = mysqli_query($connect, $sql);
+?>
 <!DOCTYPE html>
 <html>
 

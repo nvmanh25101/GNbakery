@@ -23,7 +23,7 @@
                     <label for="floatingInput">Email</label>
                   </div>
                 <div class="form-floating mb-3">
-                  <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                  <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password" >
                   <label for="floatingPassword">Password</label>
                   <small style="color:red;">
                             <?php
