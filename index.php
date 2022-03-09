@@ -1,3 +1,10 @@
+<?php
+  require './database/connect.php';
+
+  $sql = "SELECT * FROM products
+  order by category_detail_id ASC, id desc";
+  $result = mysqli_query($connect, $sql);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -196,28 +203,30 @@
 
     </div>
     <ul class="products">
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="product.html" class="product-thumb">
-              <img src="img/pic1.jpg" alt="">
+      <?php foreach($result as $each) { ?>
+        <li>
+          <div class="product-item">
+            <div class="product-top">
+              <a href="./product.php?id=<?= $each['id'] ?>" class="product-thumb">
+                <img src="./assets/images/products/<?= $each['image'] ?>" alt="">
 
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="product.html" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
+              </a>
+            </div>
+            <div class="product-info">
+              <a href="./product.php?id=<?= $each['id'] ?>" class="product-cat"><?= $each['name'] ?></a>
+              <p class="product-name">GN<?= $each['id'] ?></p>
+              <div class="product-price-action">
+                <p class="product-price"><?= number_format($each['price'], 0, '.', ',') ?></p>
+                <div class="product-action">
+                  <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
+        </li>
+      <?php } ?>
+      <!-- <li>
         <div class="product-item">
           <div class="product-top">
             <a href="product.html" class="product-thumb">
@@ -699,7 +708,7 @@
             </div>
           </div>
         </div>
-      </li>
+      </li> -->
 
 
 
