@@ -58,13 +58,14 @@
         </div>
     </div>
     <div class="product-tab">
-        <div class="tab">
+        <div class="tab" >
             <button class="tablinks">Mô tả chung</button>
         </div>
         <div class="content-product-tab">
             <?= nl2br($each['description']) ?>
         </div>
     </div>
+
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -85,6 +86,7 @@
     });
 
 </script>
+
 </body>
 
 </html>

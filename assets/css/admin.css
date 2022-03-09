@@ -520,10 +520,15 @@ input[type=number] {
 }
 
 /* SHOW */
+.products{
+    width: 100%;
+}
 .product-content{
     background: #f8f2e8;
     padding: 20px 30px;
     display: flex;
+   width: 100%;
+
 }
 
 .product-content-left{
@@ -541,7 +546,7 @@ input[type=number] {
     background: #fff;
     border-radius: 10px;
     border: solid 1px #ddd;
-    width: 80%;
+    width: 70%;
 }
 
 .product-content-right-name h1{
@@ -707,7 +712,12 @@ vertical-align: middle; }
     border: 1px solid #ccc;
     font-size: 1.4rem;
 }
-
+.header__mobile-btn i{
+    color: white;
+}
+.header__mobile-btn i:hover{
+    color: #FF1493;
+}
 /* Create an active/current tablink class */
 .tab button.active {
     background: #3d1a1a;
@@ -721,4 +731,55 @@ vertical-align: middle; }
     display: none;
     padding: 6px 12px;
     background:white;
+}
+/*reponsive show*/
+
+
+@media (max-width: 700px) {
+
+   .product-content{
+    flex-wrap: wrap;
+    
+    }
+    .product-content .product-content-left {
+        width: 100%;
+     padding: 0;
+     margin: 0;
+    height: 250px;
+       
+    }
+    .product-content .product-content-right{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .product-content .product-content-right p{
+       font-size: 17px;
+       font-family: sans-serif;
+    }
+    .product-price .line-price span {
+        font-size: 12px;
+    
+    }
+    .product-select-swatch .product-select-swatch-text p{
+        font-size: 14px;
+
+    }
+    .product-actions #AddToCart, .product-actions #buy-now{
+        
+        font-size: 12px;
+    }
+    .product-tab .tab{
+        margin: 0px 30px;
+        padding: 0;
+        width: 120px;
+        height: 30px;
+    }
+    .product-tab .tab .tablinks{
+        font-size: 12px;
+
+       
+    }
+    .content-product-tab{
+       margin: 0 18px;
+    }
 }
