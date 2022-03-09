@@ -1,10 +1,3 @@
-<?php
-  require './database/connect.php';
-
-  $sql = "SELECT * FROM products
-  order by category_detail_id ASC, id desc";
-  $result = mysqli_query($connect, $sql);
-?>
 <!DOCTYPE html>
 <html>
 
@@ -107,7 +100,7 @@
               Cửa hàng
             </span>
           </a>
-          <a class="item" href="#">
+          <a class="item" href="signin.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Tài khoản
           </a>

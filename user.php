@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(empty($_SESSION['id'])){
+    header("location:signin.php");
+  }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -104,7 +110,7 @@
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Chào , user
           </a>
-           <a class="item" href="#">
+           <a class="item" href="signout.php">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
             Đăng Xuất
           </a>
@@ -180,7 +186,7 @@
          <br>
 
        </p>
-       <p class="text-address"><a href="">Xem địa chỉ</a></p>
+       <p class="text-address"><a href="update.php">Sửa thông tin</a></p>
      </div>
 
    </div>
