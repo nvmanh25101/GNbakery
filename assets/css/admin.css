@@ -540,6 +540,11 @@ input[type=number] {
     border: 10px solid white;
 }
 
+.image-img-mobile {
+    border: 10px solid white;
+    display: none;
+}
+
 .product-content-right{
     margin-left: 50px;
     padding: 28px 23px;

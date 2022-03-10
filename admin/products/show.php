@@ -15,7 +15,8 @@
     <div class="product">
         <div class="product-content">
             <div class="product-content-left">
-                <img class="image-img" src="../../assets/images/products/<?= $each['image'] ?>" data-zoom-image="../../assets/images/products/<?= $each['image'] ?>" />
+                <img class="image-img hide-on-mobile-tablet" src="../../assets/images/products/<?= $each['image'] ?>" data-zoom-image="../../assets/images/products/<?= $each['image'] ?>" />
+                <img class="image-img-mobile" src="../../assets/images/products/<?= $each['image'] ?>"/>
             </div>
 
             <div class="product-content-right">
