@@ -82,9 +82,9 @@ $result_category = mysqli_query($connect, $sql);
           </div>
           <div class="select-swap">
             <div class="data-one">
-              <input type="radio" name="option1" value="19cm" class="input-opt">
+              <input type="radio" name="option1" value="<?= $each['size'] ?>" class="input-opt">
               <label for="swatch-19" class="">
-                <?= $each['size'] ?>
+                <?= $each['size'] ?> cm
                 <img class="crossed-out" src="img/pro1.jpg">
                 <img class="img-check" src="img/pro2.jpg">
               </label>
