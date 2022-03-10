@@ -184,18 +184,7 @@ require './database/connect.php';
     </div>
   </div>
 
-  <footer>
-    <div class="footer-top">
-      <div class="footer-top-overlay"></div>
-      <div class="wrapper">
-        <div class="inner">
-          <div class="grid-item">
-            <div class="contact-item ">
-              <div class="ft-contact">
-
-                <div class="ft-contact-logo ">
-                  <a href="/"><img style="width: 50%;height:50%;" src="img/logo.png" alt="GN BAKERY - Bánh ngọt Pháp"></a>
-                </div>
+  
 
     <footer>
     <div class="footer-top">
