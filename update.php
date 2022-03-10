@@ -34,6 +34,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 <header class="medium-header">
     <div class="site-header">
       <div class="header-left">
@@ -120,6 +121,98 @@
             <div class="cart-total-price">
               <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
               <span id="CartCount">0</span>
+=======
+    <header class="medium-down--hide">
+        <div id="site-header" class="medium-down--hide  bg-index">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="grid mg-left-15">
+                    <div class="grid__item large--one-twelfth pd-left0">
+                        <div class="logo">
+                            <h1>
+                                <a href="#" >
+                                    <img style="margin-top:20px;" src="img/logo.png" >
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                 <div class="grid__item large--three-twelfths pd-left15 hd-searchbar">
+                     <form action="/search" method="get" class="input-search" role="search">
+                         <input type="hidden" name="type" value="product">
+                         <input type="search" name="q" value placeholder="Tìm kiếm ..." class="input-field" aria-label="Tim kiem ...">
+                         <span class="input-group-btn">
+                             <button type="submit" class="btn icon-fallback-text">
+                                 <i class="bi bi-search" ></i>
+                                 <span class="fallback-text">Tìm kiếm</span>
+                             </button>
+                         </span>
+                     </form>
+                 </div>
+                 <div class="grid__item large--eight-twelfths pd-left15">
+                     <div class="list-item">
+                         <a href="tel:0333135698">
+                             <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                             <span>0333135698</span>
+                         </a>
+                         <a href="#">
+                             <i class="bi bi-house-fill" aria-hidden="true"></i>
+                             <span>
+                                 Hệ Thống<b></b> 
+                                 Cửa hàng
+                             </span>
+                         </a>
+                         <a href="#">
+                             <i class="bi bi-people-fill" aria-hidden="true" ></i>
+                             Tài khoản
+                         </a>
+                         <a href="#">
+                             <div class="cart-total-price">
+                             <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
+                             <span id="CartCount">0</span>
+                         </div>
+                         </a>
+                     </div>
+                 </div>
+    
+                </div>
+                <nav class="container">
+                <ul id="main-menu">
+                    <li ><a href="">TRANG CHỦ</a></li>
+                    <li><a href="">BÁNH SINH NHẬT</a>
+                      <ul class="sub-menu">
+                          <li><a href="">Gateaux Kem Tươi</a></li>
+                          <li><a href="">Gateaux Kem Bơ</a></li>
+                          <li><a href="">BánhMousse</a></li>
+                          <li><a href="">Bộ Sưu Tập Bánh Phụ Kiện</a></li>
+                          <li><a href="">Bánh Valentine - Trái Tim</a></li>
+                          <li><a href="">Bánh Sinh Nhật Bé Trai</a></li>
+                          <li><a href="">Bánh Sinh Nhật Bé Gái</a></li>
+                          <li><a href="">Bánh In Ảnh</a></li>
+                          <li><a href="">Bánh Vẽ</a></li>
+                          <li><a href="">Bánh Sự Kiện</a></li>
+                          <li><a href="">Bánh SỰ KIỆN THEO YÊU CẦU</a></li>
+                          <li><a href="">Hộp Quà Tết Xuân Nhâm Dần 2022</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">BÁNH MỲ & BÁNH MẶN</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Bánh mì</a></li>
+                          <li><a href="">Bánh mặn</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="">COOKIES & MINICAKE</a>
+                      <ul class="sub-menu">
+                          <li><a href="">Cookies</a></li>
+                          <li><a href="">Mini Cake</a></li>
+                          <li><a href="">Tea Break</a></li>
+    
+                      </ul>
+                       </li>
+                    <li><a href="">TIN TỨC</a></li>
+                    <li><a href="">KHUYẾN MÃI</a></li>
+                </ul>
+              </nav>
+>>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
             </div>
           </a>
           <ul>
@@ -216,7 +309,11 @@
                               </div>
                             <div class="btnup">
                                 <button class="btnUpdate" name="btnUpdate" type="submit">Cập nhật</button>
+<<<<<<< HEAD
                                 <a href=""><button  class="btnUpdatet">Quay lại</button></a>
+=======
+                                <button style="margin-left:300px;" class="btnUpdate"><a style="text-decoration:none;color:#FF1493;" href="user.php">Quay lại</a></button>
+>>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
                             </div>
                 </div>
         </div>

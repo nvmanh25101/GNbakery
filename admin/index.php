@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
 <body style="background-image: url(../img/picsup.jpg);">
     <div class="modal modal-signin position-static d-block  py-5"  role="dialog" id="modalSignin">
@@ -23,6 +25,7 @@
                     <label for="floatingInput">Email</label>
                   </div>
                 <div class="form-floating mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD:admin/index.php
                   <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
 =======
@@ -38,14 +41,19 @@
                                 }
                             ?>
                     	</small>
+=======
+
+                  <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Mật khẩu</label>
+>>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
                 </div>
                 <button name = "btnSignin" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Đăng nhập</button>
-                <div class="box_more_option">
+                <!-- <div class="box_more_option">
                     <span class="box-checkbox">
-                         <input id="rememberpass" checked="checked" type="checkbox" name="isRemember">
+                         <input id="rememberpass" type="checkbox" name="isRemember">
                          <label for="checkbox1" style="font-size:14px; width:90px;">Nhớ mật khẩu</label>
                         </span>  
-                  </div>      
+                  </div>       -->
               </form>
             </div>
           </div>

@@ -702,9 +702,12 @@ li{
     font-size: 22px;
     font-family: sans-serif;
  }
+<<<<<<< HEAD
 
-
+=======
 }
+>>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
+
 
 .ft-copyright{
     margin-left: 30px;
@@ -715,8 +718,11 @@ li{
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
     
 
 
@@ -855,7 +861,8 @@ h2{
 .ft-contact-address a ,
 .ft-contact-tel a ,
 .ft-contact-email a
-{text-decoration: none;
+{
+    text-decoration: none;
 }
 
 
@@ -960,8 +967,8 @@ body{
     
     margin-right: 20px;
 
-   }
-.header-right .list-item .item{
+    }
+    .header-right .list-item .item{
     padding-right: 93px;
-  }
+    }
 }
