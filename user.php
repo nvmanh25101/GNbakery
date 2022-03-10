@@ -3,12 +3,6 @@
   if(empty($_SESSION['id'])){
     header("location:signin.php");
   }
-  require './database/connect.php';
-
-  $id = $_SESSION['id'];
-  $sqlUser = "SELECT * FROM customers WHERE id = $id";
-  $resultUser = mysqli_query($connect, $sqlUser);
-  $row = mysqli_fetch_assoc($resultUser);
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +29,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 
   <header class="medium-header">
     <div class="site-header">
@@ -155,9 +148,6 @@
     </div>
     </div>
   </header>
-=======
-<?php include './header.php' ?>
->>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
  <section id="page-content">
    <div class="content-header">
      <h1 >Tài Khoản Của Bạn</h1>

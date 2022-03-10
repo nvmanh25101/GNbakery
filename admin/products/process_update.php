@@ -2,7 +2,7 @@
 
 require_once '../check_admin_signin.php';
 
-if(empty($_POST['id'] || empty($_POST['admin_id']))) {
+if(empty($_POST['id'])) {
     $_SESSION['error'] = 'Không có dữ liệu để sửa!';
     header('location:index.php');
     exit();
@@ -10,12 +10,11 @@ if(empty($_POST['id'] || empty($_POST['admin_id']))) {
 
 if(empty($_POST['name']) || empty($_POST['size']) || empty($_POST['price']) || empty($_POST['category']) || empty($_POST['image_old'])) {
     $_SESSION['error'] = 'Phải điền đầy đủ thông tin';
-    header('location:form_update.php?id=' . $_POST['id'] . '&admin_id=' . $_POST['admin_id']);
+    header('location:form_insert.php?id=' . $_POST['id']);
     exit();
 }
 
 $id = $_POST['id'];
-$admin_id = $_POST['admin_id'];
 $name = $_POST['name'];
 $size = $_POST['size'];
 $price = $_POST['price'];
@@ -46,8 +45,8 @@ size = ?,
 price = ?,
 description = ?,
 category_detail_id = ?
-where id = '$id' and admin_id = '$admin_id'";
-
+where id = '$id'";
+// and admin_id = '$admin_id'
 $stmt = mysqli_prepare($connect, $sql);
 if($stmt) {
     mysqli_stmt_bind_param($stmt, 'ssiisi', $name, $file_name, $size, $price, $description, $category);
@@ -58,11 +57,11 @@ if($stmt) {
 }
 else {
     $_SESSION['error'] = 'Không thể chuẩn bị truy vấn!';
-    header("location:form_update.php?id=$id&admin_id=$admin_id");
+    header("location:form_update.php?id=$id");
     exit();
 }
 
 mysqli_stmt_close($stmt);
 mysqli_close($connect);
 
-header("location:form_update.php?id=$id&admin_id=$admin_id");
+header("location:form_update.php?id=$id");
