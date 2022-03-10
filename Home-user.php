@@ -5,6 +5,11 @@
   }
   require './database/connect.php';
 
+  $id = $_SESSION['id'];
+  $sqlUser = "SELECT * FROM customers WHERE id = $id";
+  $resultUser = mysqli_query($connect, $sqlUser);
+  $row = mysqli_fetch_assoc($resultUser);
+
   $sql = "SELECT * FROM products
   order by category_detail_id ASC, id desc";
   $result = mysqli_query($connect, $sql);
@@ -113,7 +118,7 @@
           </a>
           <a class="item" href="user.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
-            Chào , userr
+            Chào , <?php echo $row['name']?>
           </a>
            <a class="item" href="signout.php">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i>

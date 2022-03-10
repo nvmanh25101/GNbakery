@@ -1,5 +1,4 @@
 <?php
-
 require_once './database/connect.php';
 
 $id = $_GET['id'];
