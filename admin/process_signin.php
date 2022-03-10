@@ -21,7 +21,6 @@
                 $_SESSION['image'] = $image;
                 header("location:./products/index.php");
             }else{
-<<<<<<< HEAD
                 $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
                 header("location:index.php");
             }
@@ -29,16 +28,6 @@
         else{
             $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
             header("location:index.php");
-=======
-                
-                $error = "Sai tài khoản hoặc mật khẩu";
-                header("location:index.php?error=$error");
-            }
-        }
-        else{
-            $error = "Sai tài khoản hoặc mật khẩu";
-            header("location:index.php?error=$error");
->>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b
         }
     }else{
         header("location:index.php");

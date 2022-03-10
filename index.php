@@ -99,9 +99,9 @@
       <?php } ?>
     </ul>
 
-    <div class="btn-contentmore">
+    <!-- <div class="btn-contentmore">
       <a href="" class="btn-more">Xem Them</a>
-    </div>
+    </div> -->
   </div>
 
   <!-- new/notice -->

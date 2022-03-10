@@ -5,7 +5,7 @@
   }
   
   $id = $_SESSION['id'];
-  $connect = mysqli_connect('localhost','root','','GNbakery');
+  require './database/connect.php';
   $sql = "SELECT * FROM customers WHERE (id = '$id')" ;
   $result = mysqli_query($connect,$sql);
   $row = mysqli_fetch_assoc($result);
