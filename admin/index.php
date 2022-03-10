@@ -25,13 +25,6 @@
                     <label for="floatingInput">Email</label>
                   </div>
                 <div class="form-floating mb-3">
-<<<<<<< HEAD
-<<<<<<< HEAD:admin/index.php
-                  <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-=======
-                  <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password" >
->>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b:admin/index.php
-                  <label for="floatingPassword">Password</label>
                   <small style="color:red;">
                             <?php
                                 if(isset($_GET['error'])){
@@ -41,11 +34,11 @@
                                 }
                             ?>
                     	</small>
-=======
+
 
                   <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
                   <label for="floatingPassword">Mật khẩu</label>
->>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
+
                 </div>
                 <button name = "btnSignin" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Đăng nhập</button>
                 <!-- <div class="box_more_option">
