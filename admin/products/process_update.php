@@ -65,4 +65,4 @@ else {
 mysqli_stmt_close($stmt);
 mysqli_close($connect);
 
-header("location:form_update.php?id=$id");
+header("location:form_update.php?id=$id&admin_id=$admin_id");
