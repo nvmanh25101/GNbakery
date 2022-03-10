@@ -1,25 +1,4 @@
 
-  
-#breadcrumb-w-img {
-    height: 300px;
-    padding: 50px 0;
-    background-image:url(../img/pic14.jpg);
-   
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-}
-
-    
-      h2 {
-          margin-top:30px;
-          text-align: center;
-        font-size: 32px;
-        font-weight:bolder;
-        color: pink;
-        padding-bottom: 10px;
-         }
 /*product*/
 body, html {
     height: 100%;
@@ -33,6 +12,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     
   }
   
@@ -44,23 +24,26 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    
   }
   
 .product{
-    display: block;
-
+    
+    width: 100%;
 
 }
 .product-content{
         background: #f8f2e8;
-    padding: 60px 30px;
+    padding: 40px 20px;
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 
 }
 .product-content-left{
     
-    margin-left: 50px;
-    width: 50%;
+  margin-left: 30px;
+    width: 40%;
    
     
 }
@@ -74,12 +57,12 @@ body, html {
 }
 .product-content-right{
     
+    padding: 20px;
     margin-left: 50px;
-    padding: 28px 23px;
     background: #fff;
     border-radius: 10px;
     border: solid 1px #ddd;
-    width: 80%;
+    width: 50%;
 }
 .product-content-right-name h1{
     font-size: 22px;
@@ -250,28 +233,45 @@ body, html {
 
 /*tab*/
 .product-tab {
-    margin-left:40px
+    margin: 10px;
 
 }
 .tab {
 
-    margin-left:50px;
+   margin-left: 30px;
   overflow: hidden;
   
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.tablinks{
+    border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+
+  font-weight: bolder;
+  padding: 10px 35px;
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: white;
+    color: black;
+}
+.tablinkss {
+    background: #3d1a1a;
+    color: #c0c906;
  
   border: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
-  color: black;
+
   font-weight: bolder;
   padding: 10px 35px;
-    background: #fff;
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -285,10 +285,7 @@ body, html {
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-    background: #3d1a1a;
-    color: #c0c906;
-}
+
 
 /* Style the tab content */
 .tabcontent {
@@ -401,3 +398,11 @@ ul.productss li .product-info .product-name{
     outline: 0px;
     border-top-right-radius: 10px;
 }
+
+
+/*reponsive product*/
+
+
+
+
+

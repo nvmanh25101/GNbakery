@@ -23,22 +23,10 @@
                     <form action="process_update.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $each['id'] ?>">
                         <div class="mb-4 fs-4">
-                            <label class="form-label" for="name"><a style="color:#3d1a1a;font-weight:bolder;">Tên</a></label>
+                            <label class="form-label" for="name">Tên</label>
                             <input type="text" name="name" id="name" value="<?= $each['name'] ?>" class="form__input form-control" autocomplete="off"/>
                             <span id="error" class="error_input"></span>
                         </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label"><a style="color:#3d1a1a;font-weight:bolder;">Ảnh cũ</a></label>
-                            <img src="../../assets/images/categories/<?= $each['image']?>" class="img-thumbnail" alt="">
-                            <input type="hidden" name="image_old" value="<?= $each['image'] ?>" />
-                        </div>
-
-                        <div class="mb-4 fs-4">
-                            <label class="form-label"><a style="color:#3d1a1a;font-weight:bolder;">Đổi ảnh mới</a></label>
-                            <input type="file" name="image_new" accept=".jpg, .png" class="form__input form-control"/>
-                        </div>
-
                         <button type="submit" class="form__btn btn btn-dark mb-4">Sửa</button>
                     </form>
                 </div>
