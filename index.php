@@ -81,13 +81,13 @@
             <a href="product.html" class="product-thumb">
               <img src="img/pic2.jpg" alt="">
 
-    <!-- <div class="btn-contentmore">
+    <div class="btn-contentmore">
       <a href="" class="btn-more">Xem Them</a>
     </div> -->
   </div>
 
   <!-- new/notice -->
-  <div id="Home-notice">
+  <!-- <div id="Home-notice">
     <div class="latest-wrap">
       <div class="title-notice">
         <h3>TIN TỨC</h3>
@@ -286,7 +286,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <section class="about-introduce clearfix">
     <div class="title-text">
