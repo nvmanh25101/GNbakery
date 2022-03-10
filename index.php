@@ -287,7 +287,7 @@
   <section class="about-introduce clearfix">
     <div class="title-text">
       <h3>VỀ CHÚNG TÔI</h3>
-      <h2>chào mừng bạn đến Anhhoa Bakery</h2>
+      <h2>chào mừng bạn đến GN Bakery</h2>
     </div>
     <div class="introduce-content">
       <div class="image">
@@ -295,7 +295,7 @@
       </div>
       <div class="detail">
         <p class="info-text">
-          Các sản phẩm Anh Hòa Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
+          Các sản phẩm GNBakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
           Newzeland, Mỹ, Pháp, Bỉ. Với hương vị thơm ngon đặc trưng của các loại kem, bơ, sữa, phô mai, hạt hạnh nhân,
           chocolate... dưới bàn tay khéo léo của những người thợ làm bánh giàu kinh nghiệm.
 
@@ -306,7 +306,7 @@
         </p>
       </div>
 
-
+ 
 
     </div>
   </section>

@@ -56,7 +56,7 @@
             <a href="#">Link 3</a>
           </div>
 
-          <button class="dropdown-btn">Bánh my <i class="fa fa-caret-down"></i></button>
+          <button class="dropdown-btn">Bánh mỳ <i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -210,91 +210,8 @@
 
     </div>
     <ul class="products">
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="product.html" class="product-thumb">
-              <img src="img/pic1.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="product.html" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="product.html" class="product-thumb">
-              <img src="img/pic2.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="product.html" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic3.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic4.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
+    
+    <li>
         <div class="product-item">
           <div class="product-top">
             <a href="" class="product-thumb">
@@ -483,153 +400,13 @@
           </div>
         </div>
       </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic14.jpg" alt="">
+  
 
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic15.jpg" alt="">
+  
+ 
 
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic16.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic17.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic18.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic19.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic20.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
+ 
+  
 
 
 
@@ -848,7 +625,7 @@
   <section class="about-introduce clearfix">
     <div class="title-text">
       <h3>VỀ CHÚNG TÔI</h3>
-      <h2>chào mừng bạn đến Anhhoa Bakery</h2>
+      <h2>chào mừng bạn đến GNBakery</h2>
     </div>
     <div class="introduce-content">
       <div class="image">
@@ -856,7 +633,7 @@
       </div>
       <div class="detail">
         <p class="info-text">
-          Các sản phẩm Anh Hòa Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
+          Các sản phẩm gn Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
           Newzeland, Mỹ, Pháp, Bỉ. Với hương vị thơm ngon đặc trưng của các loại kem, bơ, sữa, phô mai, hạt hạnh nhân,
           chocolate... dưới bàn tay khéo léo của những người thợ làm bánh giàu kinh nghiệm.
 
@@ -866,7 +643,7 @@
           lượng nhất, đảm bảo tuyệt đối về an toàn vệ sinh thực phẩm.
         </p>
       </div>
-
+     
 
 
     </div>

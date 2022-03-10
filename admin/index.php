@@ -25,17 +25,9 @@
                     <label for="floatingInput">Email</label>
                   </div>
                 <div class="form-floating mb-3">
+
                   <input name = "password" type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
                   <label for="floatingPassword">Mật khẩu</label>
-                  <small style="color:red;">
-                            <?php
-                                if(isset($_GET['error'])){
-                                    echo "{$_GET['error']}";
-                                }else{
-                                    echo "";
-                                }
-                            ?>
-                    	</small>
                 </div>
                 <button name = "btnSignin" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Đăng nhập</button>
                 <!-- <div class="box_more_option">
