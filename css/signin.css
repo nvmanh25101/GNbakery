@@ -750,37 +750,37 @@ footer .footer-top {
 }
 @media (max-width:1024px){
 
-    #main{
-        display: block;
-        margin-right: 30px;
+ #main{
+    display: block;
+    margin-right: 30px;
 
-    }
-    .logo{
-        display: none;
-    }
-    #main-menu{
-        width: 100%;
-        margin-top: 10px;
-    }
-    #main-menu li{
-        padding-right: 10px;
-    }
-    #main-menu li a{
-        font-size: 11px;
-        padding-right: 10px;
-        margin: 0;
-    }
-    .header-right{
-        display: none;
+ }
+ .logo{
+    display: none;
+ }
+ #main-menu{
+    width: 100%;
+    margin-top: 10px;
+ }
+ #main-menu li{
+    padding-right: 10px;
+ }
+#main-menu li a{
+    font-size: 11px;
+    padding-right: 10px;
+    margin: 0;
+}
+.header-right{
+    display: none;
 
-    }
-    #main-menu ul.sub-menu{
-        width: 190px;
-    }
-    .input-field{
-        width: 170px;
-        height: 39px;
-    }
+}
+#main-menu ul.sub-menu{
+    width: 190px;
+}
+.input-field{
+    width: 170px;
+    height: 39px;
+}
 
 }
 
@@ -1014,6 +1014,8 @@ li{
 }
 
 
+
+
 @media only screen and (max-width: 700px){
     ul.products{
         justify-content: space-around;
@@ -1103,6 +1105,70 @@ li{
     margin-left: 30px;
 }
 
+/*reponsive product*/
+.hero-image {
+    width: 100%;
+    height: 250px;
+}
+.hero-text{
+    font-size: 23px;
+}
+.product-content{
+    padding: 0;
+    margin: 0;
+
+}
+    .product{
+        
+        margin: 0px;
+        padding: 0;
+    }
+    .product-content{
+        padding: 0;
+        margin: 0;
+    }
+    .product-content .product-content-left {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .product-content .product-content-right{
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+    .product-content-right-name h1{
+        font-size: 25px;
+    }
+    .product-actions #AddToCart,
+    .product-actions #buy-now{
+        height: 36px;
+        font-size: 12px;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .tab{
+        
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    .tab .tablinks{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .latest-wrap .title-notice h3{
+        font-size: 20px;
+    }
+    .latest-wrap .title-notice h2{
+        font-size: 12px;
+    }
+
+}
+
 .ft-copyright{
     margin-left: 30px;
 }
@@ -1115,7 +1181,7 @@ li{
 .input-group-btn .btn{
     padding: 0;
 }
-}
+
 
 
 
@@ -1128,12 +1194,14 @@ li{
 .header-right .list-item .item{
     padding-right: 93px;
 }
+}
 
     
-}
+
 
 
 
 /* ################################################## */
 
 /* light-box afmetingen aanpassen voor mobile  */
+

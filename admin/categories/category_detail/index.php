@@ -26,7 +26,7 @@
     $num_page = ceil($num_category / $num_category_per_page);
     $skip_page = $num_category_per_page * ($page_current - 1);
 
-    $sql = "select category_detail.id, category_detail.name, categories.name as category_name, categories.id as category_id from category_detail
+    $sql = "select category_detail.id, category_detail.name, categories.name as category_name from category_detail
     join categories 
     on category_detail.category_id = categories.id
     where category_detail.name like '%$search%'
@@ -89,12 +89,12 @@
                                     </td>
                                     <td> <?= $each['category_name'] ?></td>
                                     <td>
-                                        <a href="form_update.php?id=<?= $each['id'] ?>&<?= $each['category_id'] ?>">
+                                        <a href="form_update.php?id=<?= $each['id'] ?>">
                                             <i class="bi bi-pencil-fill"></i>
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="delete.php?id=<?= $each['id'] ?>&<?= $each['category_id'] ?>">
+                                        <a href="delete.php?id=<?= $each['id'] ?>">
                                         <i class="bi bi-trash-fill"></i>
                                         </a>
                                     </td>

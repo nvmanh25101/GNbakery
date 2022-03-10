@@ -3,10 +3,8 @@
         $email= $_POST['email'];
         $name = $_POST['name'];
         $pass = $_POST['password'];
-        $connect = mysqli_connect('localhost','root','','GNbakery');
-        if(!$connect){
-            die("Kết nốt thất bại. Vui lòng kiểm tra lại các thông tin máy chủ.");
-        };
+        require './database/connect.php';
+
         $sqlEmail = "SELECT * FROM customers WHERE email = '$email' ";
         $resultEmail = mysqli_query($connect,$sqlEmail);
         if(mysqli_num_rows($resultEmail) > 0){
