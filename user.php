@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(empty($_SESSION['id'])){
+    header("location:signin.php");
+  }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +20,7 @@
    <link rel="stylesheet" type="text/css" href="css/user.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="css/slick-style.css">
+ 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/app.js"></script>
@@ -45,14 +51,13 @@
             <a href="#">Link 3</a>
           </div>
 
-          <button class="dropdown-btn">Bánh my <i class="fa fa-caret-down"></i></button>
+          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
-          <a href="#">Tin tức</a>
-          <a href="#">Khuyến mãi</a>
+          
           <a href="#">Đăng Nhập</a>
           <a href="#">Đăng Ký</a>
 
@@ -96,15 +101,14 @@
           <a class="item" href="#">
             <i class="bi bi-house-fill" aria-hidden="true"></i>
             <span>
-              Hệ Thống<b>14</b>
-              Cửa hàng
+            90 Nguyễn Tuân Hà Nội
             </span>
           </a>
           <a class="item" href="user.html">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Chào , user
           </a>
-           <a class="item" href="#">
+           <a class="item" href="signout.php">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
             Đăng Xuất
           </a>
@@ -127,28 +131,17 @@
           <ul class="sub-menu">
             <li><a href="">Gateaux Kem Tươi</a></li>
             <li><a href="">Gateaux Kem Bơ</a></li>
-            <li><a href="">BánhMousse</a></li>
-            <li><a href="">Bộ Sưu Tập Bánh Phụ Kiện</a></li>
-            <li><a href="">Bánh Valentine - Trái Tim</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Trai</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Gái</a></li>
-            <li><a href="">Bánh In Ảnh</a></li>
-            <li><a href="">Bánh Vẽ</a></li>
-            <li><a href="">Bánh Sự Kiện</a></li>
-            <li><a href="">Bánh SỰ KIỆN THEO YÊU CẦU</a></li>
-            <li><a href="">Hộp Quà Tết Xuân Nhâm Dần 2022</a></li>
+            
           </ul>
         </li>
         <li>
-          <a href="">BÁNH MỲ & BÁNH MẶN</a>
+          <a href="">BÁNH Mì & BÁNH MẶN</a>
           <ul class="sub-menu">
             <li><a href="">Bánh mì</a></li>
             <li><a href="">Bánh mặn</a></li>
           </ul>
         </li>
-        <li><a href="">TIN TỨC</a></li>
-        <li><a href="">KHUYẾN MÃI</a></li>
-      </ul>
+       
     </nav>
     </div>
 
@@ -180,7 +173,7 @@
          <br>
 
        </p>
-       <p class="text-address"><a href="">Xem địa chỉ</a></p>
+       <p class="text-address"><a href="update.php">Sửa thông tin</a></p>
      </div>
 
    </div>
@@ -200,7 +193,7 @@
                 </div>
 
                 <div class="ft-contact-address">
-                  <i class="fa fa-home" aria-hidden="true"></i> 10 xx TP. Hà Nội
+                  <i class="fa fa-home" aria-hidden="true"></i> 90 Nguyễn Tuân TP. Hà Nội
                 </div>
                 <div class="ft-contact-tel">
                   <i class="fa fa-mobile" aria-hidden="true"></i> <a style="color: white; font-weight: bolder;"

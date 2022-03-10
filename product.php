@@ -1,4 +1,8 @@
 <?php
+// session_start();
+// if(empty($_SESSION['id'])){
+//   header("location:signin.php");
+// }
 require_once './database/connect.php';
 
 $id = $_GET['id'];
@@ -50,7 +54,7 @@ $result_category = mysqli_query($connect, $sql);
    margin-bottom: 15px;" src="img/logo.png"></a>
           </div>
 
-          <a href="Home-user.html">Trang chủ</a>
+          <a href="/">Trang chủ</a>
 
           <button class="dropdown-btn">Bánh sinh nhật<i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
@@ -59,14 +63,13 @@ $result_category = mysqli_query($connect, $sql);
             <a href="#">Link 3</a>
           </div>
 
-          <button class="dropdown-btn">Bánh my <i class="fa fa-caret-down"></i></button>
+          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
-          <a href="#">Tin tức</a>
-          <a href="#">Khuyến mãi</a>
+         
           <a href="#">Đăng Nhập</a>
           <a href="#">Đăng Ký</a>
 
@@ -110,8 +113,7 @@ $result_category = mysqli_query($connect, $sql);
           <a class="item" href="#">
             <i class="bi bi-house-fill" aria-hidden="true"></i>
             <span>
-              Hệ Thống<b>14</b>
-              Cửa hàng
+            90 Nguyễn Tuân Hà Nội
             </span>
           </a>
           <a class="item" href="user.html">
@@ -141,27 +143,17 @@ $result_category = mysqli_query($connect, $sql);
           <ul class="sub-menu">
             <li><a href="">Gateaux Kem Tươi</a></li>
             <li><a href="">Gateaux Kem Bơ</a></li>
-            <li><a href="">BánhMousse</a></li>
-            <li><a href="">Bộ Sưu Tập Bánh Phụ Kiện</a></li>
-            <li><a href="">Bánh Valentine - Trái Tim</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Trai</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Gái</a></li>
-            <li><a href="">Bánh In Ảnh</a></li>
-            <li><a href="">Bánh Vẽ</a></li>
-            <li><a href="">Bánh Sự Kiện</a></li>
-            <li><a href="">Bánh SỰ KIỆN THEO YÊU CẦU</a></li>
-            <li><a href="">Hộp Quà Tết Xuân Nhâm Dần 2022</a></li>
+            
           </ul>
         </li>
         <li>
-          <a href="">BÁNH MỲ & BÁNH MẶN</a>
+          <a href="">BÁNH Mì & BÁNH MẶN</a>
           <ul class="sub-menu">
             <li><a href="">Bánh mì</a></li>
             <li><a href="">Bánh mặn</a></li>
           </ul>
         </li>
-        <li><a href="">TIN TỨC</a></li>
-        <li><a href="">KHUYẾN MÃI</a></li>
+       
       </ul>
     </nav>
     </div>
@@ -243,8 +235,8 @@ $result_category = mysqli_query($connect, $sql);
 
   <div class="product-tab">
     <div class="tab">
-      <button class="tablinkss">Mo ta chung</button>
-      <button class="tablinks">Binh Luan</button>
+      <button class="tablinkss">Mô tả chung</button>
+    
 
     </div>
     <div class="content-product-tab">
@@ -253,19 +245,7 @@ $result_category = mysqli_query($connect, $sql);
       </div>
 
 
-      <div id="Comment" class="tabcontent">
-
-        <div class="cmt-comment">
-          <span> 0 comment</span>
-        </div>
-        <div class="text-comment">
-          <form action="" class="form-txt">
-
-            <input type="text" class="fname" id="fname" name="fname" placeholder="add comment"><br><br>
-
-          </form>
-        </div>
-      </div>
+  
     </div>
   </div>
 
@@ -576,7 +556,7 @@ $result_category = mysqli_query($connect, $sql);
                 </div>
 
                 <div class="ft-contact-address">
-                  <i class="fa fa-home" aria-hidden="true"></i> 10 xx TP. Hà Nội
+                  <i class="fa fa-home" aria-hidden="true"></i> 90 Nguyễn Tuân TP. Hà Nội
                 </div>
                 <div class="ft-contact-tel">
                   <i class="fa fa-mobile" aria-hidden="true"></i> <a style="color: white; font-weight: bolder;" href="tel:0333135698">0333135698</a>

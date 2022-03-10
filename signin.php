@@ -46,14 +46,13 @@
             <a href="#">Link 3</a>
           </div>
 
-          <button class="dropdown-btn">Bánh my <i class="fa fa-caret-down"></i></button>
+          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
-          <a href="#">Tin tức</a>
-          <a href="#">Khuyến mãi</a>
+        
           <a href="#">Đăng Nhập</a>
           <a href="#">Đăng Ký</a>
 
@@ -97,8 +96,7 @@
           <a class="item" href="#">
             <i class="bi bi-house-fill" aria-hidden="true"></i>
             <span>
-              Hệ Thống<b>14</b>
-              Cửa hàng
+              90 Nguyễn Tuân Hà Nội
             </span>
           </a>
           <a class="item" href="#">
@@ -124,27 +122,17 @@
           <ul class="sub-menu">
             <li><a href="">Gateaux Kem Tươi</a></li>
             <li><a href="">Gateaux Kem Bơ</a></li>
-            <li><a href="">BánhMousse</a></li>
-            <li><a href="">Bộ Sưu Tập Bánh Phụ Kiện</a></li>
-            <li><a href="">Bánh Valentine - Trái Tim</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Trai</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Gái</a></li>
-            <li><a href="">Bánh In Ảnh</a></li>
-            <li><a href="">Bánh Vẽ</a></li>
-            <li><a href="">Bánh Sự Kiện</a></li>
-            <li><a href="">Bánh SỰ KIỆN THEO YÊU CẦU</a></li>
-            <li><a href="">Hộp Quà Tết Xuân Nhâm Dần 2022</a></li>
+           
           </ul>
         </li>
         <li>
-          <a href="">BÁNH MỲ & BÁNH MẶN</a>
+          <a href="">BÁNH Mì & BÁNH MẶN</a>
           <ul class="sub-menu">
             <li><a href="">Bánh mì</a></li>
             <li><a href="">Bánh mặn</a></li>
           </ul>
         </li>
-        <li><a href="">TIN TỨC</a></li>
-        <li><a href="">KHUYẾN MÃI</a></li>
+       
       </ul>
     </nav>
 
@@ -211,7 +199,7 @@
                 </div>
 
                 <div class="ft-contact-address">
-                  <i class="fa fa-home" aria-hidden="true"></i> 10 xx TP. Hà Nội
+                  <i class="fa fa-home" aria-hidden="true"></i> 90 Nguyễn Tuân TP. Hà Nội
                 </div>
                 <div class="ft-contact-tel">
                   <i class="fa fa-mobile" aria-hidden="true"></i> <a style="color: white; font-weight: bolder;"

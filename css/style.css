@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Praise&family=Roboto:ital,wght@0,400;0,700;1,100&family=Ubuntu:wght@700&family=ZCOOL+QingKe+HuangYou&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Praise&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,700;1,100&family=Ubuntu:wght@700&family=ZCOOL+QingKe+HuangYou&display=swap');
 
 body{
 	line-height: normal !important;
 	font-size: 14px;
-
+ font-family: David Libre;
 	color: black;
 	background: #f8f2e8;
 	-webkit-font-smoothing: antialiased;
@@ -91,6 +86,11 @@ input{
 .btn {
 	height: 37px;
 }
+
+.icon-fallback-text {
+	width: 39px;
+	height: 39px;
+}
 .icon-fallback-text , 
 .bi {
 	display: inline-block;
@@ -161,8 +161,8 @@ b {
    color: white;
    font-weight: bolder;
    list-style: none;
-   font-family: 'Roboto Condensed', sans-serif;
-
+   
+	text-transform: uppercase;
 }
 #main-menu li a:hover{
 	color: white;
@@ -309,12 +309,12 @@ b {
 .headline h3{
 	
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: bold;
 	color: #3d1a1a;
 	padding: 10px 20px;
 	text-transform: uppercase;
 	display: inline-block;
-	font-family: 'PT Sans', sans-serif;
+	font-family: Roboto Condensed;
 }
 
 ul.products{
@@ -363,8 +363,8 @@ ul.products li .product-info a{
 ul.products li .product-info .product-cat{
 	text-align: center;
 	font-size: 19px;
-	font-weight: 600;
-	font-family:  'Roboto', sans-serif;
+	font-weight: bold;
+	font-family: David Libre;
 	text-transform: uppercase;
 	color: #333333;
 
@@ -572,7 +572,7 @@ ul.products li .product-info .product-name{
   .title-text h3{
 	  font-size: 35px;
 	  font-weight: bolder;
-	  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	 
 
 	  color:#c0c906; 
 
@@ -1002,8 +1002,8 @@ li{
 	font-weight: 900;
 	color: white;
 	text-align: center;
-	width: 36px;
-	height: 39px;
+	font-size: 1.4rem;
+	width: 100%;
 	border-radius: 3px;
 }
 
@@ -1069,7 +1069,7 @@ li{
   .ft-subscribe p{
   	font-size: 14px;
   	font-weight: 100;
-  	font-family: sans-serif;
+  	
   }
   .menu{
   	margin-top: 10px;
@@ -1086,7 +1086,7 @@ li{
  .connect p{
  	font-weight: bolder;
  	font-size: 22px;
- 	font-family: sans-serif;
+ 	
  }
 
 .ft-copyright{
@@ -1169,18 +1169,17 @@ li{
 	margin-left: 30px;
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1350px){
     .header-right{
     
-    margin-right: 20px;
+    margin-right: 5px;
 
 }
 .header-right .list-item .item{
 	
-    padding-right: 50px;
+    padding-right: 38px;
 }
 }
-
 
 
 

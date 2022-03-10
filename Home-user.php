@@ -1,10 +1,21 @@
+<?php
+  session_start();
+  if(empty($_SESSION['id'])){
+    header("location:signin.php");
+  }
+  require './database/connect.php';
+
+  $sql = "SELECT * FROM products
+  order by category_detail_id ASC, id desc";
+  $result = mysqli_query($connect, $sql);
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=device-width">
+  
   <title>TÀI KHOẢN - GNBAKERY BANH NGOT HUONG VI PHAP</title>
   <link rel="shortcut icon" type="image" href="img/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -45,14 +56,13 @@
             <a href="#">Link 3</a>
           </div>
 
-          <button class="dropdown-btn">Bánh my <i class="fa fa-caret-down"></i></button>
+          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
           <div class="dropdown-container">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
-          <a href="#">Tin tức</a>
-          <a href="#">Khuyến mãi</a>
+         
           <a href="#">Đăng Nhập</a>
           <a href="#">Đăng Ký</a>
 
@@ -96,15 +106,14 @@
           <a class="item" href="#">
             <i class="bi bi-house-fill" aria-hidden="true"></i>
             <span>
-              Hệ Thống<b>14</b>
-              Cửa hàng
+             90 Nguyễn Tuân Hà Nội
             </span>
           </a>
-          <a class="item" href="user.html">
+          <a class="item" href="user.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
-            Chào , userr
+            Chào , user
           </a>
-           <a class="item" href="#">
+           <a class="item" href="signout.php">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
             Đăng Xuất
           </a>
@@ -127,16 +136,7 @@
           <ul class="sub-menu">
             <li><a href="">Gateaux Kem Tươi</a></li>
             <li><a href="">Gateaux Kem Bơ</a></li>
-            <li><a href="">BánhMousse</a></li>
-            <li><a href="">Bộ Sưu Tập Bánh Phụ Kiện</a></li>
-            <li><a href="">Bánh Valentine - Trái Tim</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Trai</a></li>
-            <li><a href="">Bánh Sinh Nhật Bé Gái</a></li>
-            <li><a href="">Bánh In Ảnh</a></li>
-            <li><a href="">Bánh Vẽ</a></li>
-            <li><a href="">Bánh Sự Kiện</a></li>
-            <li><a href="">Bánh SỰ KIỆN THEO YÊU CẦU</a></li>
-            <li><a href="">Hộp Quà Tết Xuân Nhâm Dần 2022</a></li>
+            
           </ul>
         </li>
         <li>
@@ -146,8 +146,7 @@
             <li><a href="">Bánh mặn</a></li>
           </ul>
         </li>
-        <li><a href="">TIN TỨC</a></li>
-        <li><a href="">KHUYẾN MÃI</a></li>
+       
       </ul>
     </nav>
     </div>
@@ -199,91 +198,8 @@
 
     </div>
     <ul class="products">
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="product.html" class="product-thumb">
-              <img src="img/pic1.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="product.html" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="product.html" class="product-thumb">
-              <img src="img/pic2.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="product.html" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic3.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic4.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
+    
+    <li>
         <div class="product-item">
           <div class="product-top">
             <a href="" class="product-thumb">
@@ -472,153 +388,13 @@
           </div>
         </div>
       </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic14.jpg" alt="">
+  
 
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic15.jpg" alt="">
+  
+ 
 
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic16.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic17.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic18.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic19.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic20.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
+ 
+  
 
 
 
@@ -653,7 +429,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -676,7 +452,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -700,7 +476,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -722,7 +498,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -747,7 +523,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -770,7 +546,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -796,7 +572,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -818,7 +594,7 @@
                   <p><i class="bi bi-chat-dots"></i>0 bình luận</p>
                 </div>
                 <div class="acticle-author">
-                  <p><i class="bi bi-person"></i>Phan Thị Nga</p>
+                  <p><i class="bi bi-person"></i>Le Hong Ngan</p>
                 </div>
               </div>
               <p class="card-text">
@@ -837,7 +613,7 @@
   <section class="about-introduce clearfix">
     <div class="title-text">
       <h3>VỀ CHÚNG TÔI</h3>
-      <h2>chào mừng bạn đến Anhhoa Bakery</h2>
+      <h2>chào mừng bạn đến GNBakery</h2>
     </div>
     <div class="introduce-content">
       <div class="image">
@@ -845,7 +621,7 @@
       </div>
       <div class="detail">
         <p class="info-text">
-          Các sản phẩm GN Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
+          Các sản phẩm gn Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
           Newzeland, Mỹ, Pháp, Bỉ. Với hương vị thơm ngon đặc trưng của các loại kem, bơ, sữa, phô mai, hạt hạnh nhân,
           chocolate... dưới bàn tay khéo léo của những người thợ làm bánh giàu kinh nghiệm.
 
@@ -855,7 +631,7 @@
           lượng nhất, đảm bảo tuyệt đối về an toàn vệ sinh thực phẩm.
         </p>
       </div>
-
+     
 
 
     </div>
