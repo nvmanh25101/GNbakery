@@ -91,7 +91,7 @@ $result_category = mysqli_query($connect, $sql);
         <div class="search">
           <form action="/search" method="get" class="input-search" role="search">
             <input type="hidden" name="type" value="product">
-            <input type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ...">
+          
             <span class="input-group-btn">
               <button type="submit" class="btn icon-fallback-text">
                 <i class="bi bi-search" aria-hidden="true"></i>
@@ -605,11 +605,9 @@ $result_category = mysqli_query($connect, $sql);
 
 
                     <div class="input-group-intro">
-                      <input type="email" required="" value="" placeholder="Nhập email của bạn..." name="contact[email]" id="your-Email" class="input-group-field" aria-label="email@example.com">
+                   
                       <input type="hidden" name="contact[tags]" value="newsletter">
-                      <span class="input-group-intro-btn">
-                        <button type="submit" name="subscribe" id="subscribe-btn" value="GỬI"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                      </span>
+                     
                     </div>
 
                   </form>
@@ -618,23 +616,7 @@ $result_category = mysqli_query($connect, $sql);
 
                 </div>
               </div>
-              <div class="ft-social-network">
-
-                <a href="" target="_blank"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-twitter" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-google" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-
-              </div>
+            
             </div>
 
             <div class="connect">
