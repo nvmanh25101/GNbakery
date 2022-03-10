@@ -18,6 +18,7 @@ require './database/connect.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/signin.css">
   <script src="js/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -25,121 +26,7 @@ require './database/connect.php';
 </head>
 
 <body>
-	<header class="medium-header">
-
-    <div class="site-header">
-      <div class="header-left">
-
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-          <div class="drawer_header">
-            <a href="#"><img style="width:40%;height: 40%;  margin-bottom: 15px;" src="img/logo.png"></a>
-          </div>
-
-          <a href="#">Trang chủ</a>
-
-          <button class="dropdown-btn">Bánh sinh nhật<i class="fa fa-caret-down"></i></button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-
-          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        
-          <a href="#">Đăng Nhập</a>
-          <a href="#">Đăng Ký</a>
-
-        </div>
-
-        <div id="main">
-
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-        </div>
-
-        <div class="logo">
-          <h1>
-            <a href="#">
-              <img src="img/logo.png">
-            </a>
-          </h1>
-        </div>
-
-        <div class="search">
-          <form action="/search" method="get" class="input-search" role="search">
-            <input type="hidden" name="type" value="product">
-            <input type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ...">
-            <span class="input-group-btn">
-              <button type="submit" class="btn icon-fallback-text">
-                <i class="bi bi-search" aria-hidden="true"></i>
-
-              </button>
-
-            </span>
-          </form>
-        </div>
-      </div>
-
-
-      <div class="header-right">
-        <ul class="list-item">
-          <a class="item" href="tel:0333135698">
-            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
-            <span>0333135698</span>
-          </a>
-          <a class="item" href="#">
-            <i class="bi bi-house-fill" aria-hidden="true"></i>
-            <span>
-              90 Nguyễn Tuân Hà Nội
-            </span>
-          </a>
-          <a class="item" href="#">
-            <i class="bi bi-people-fill" aria-hidden="true"></i>
-            Tài khoản
-          </a>
-          <a class="item" href="#">
-            <div class="cart-total-price">
-              <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
-              <span id="CartCount">0</span>
-            </div>
-          </a>
-          </ul>
-
-      </div>
-
-    </div>
-    <nav class="container">
-      <ul id="main-menu">
-        <li><a href="">TRANG CHỦ</a></li>
-        <li>
-          <a href="">BÁNH SINH NHẬT</a>
-          <ul class="sub-menu">
-            <li><a href="">Gateaux Kem Tươi</a></li>
-            <li><a href="">Gateaux Kem Bơ</a></li>
-           
-          </ul>
-        </li>
-        <li>
-          <a href="">BÁNH Mì & BÁNH MẶN</a>
-          <ul class="sub-menu">
-            <li><a href="">Bánh mì</a></li>
-            <li><a href="">Bánh mặn</a></li>
-          </ul>
-        </li>
-       
-      </ul>
-    </nav>
-
-    
-
-    
-  </header>
+<?php require './header.php'; ?>
 
 
   <div class="page_container">
@@ -183,19 +70,6 @@ require './database/connect.php';
       </div>
     </div>
   </div>
-
-  <footer>
-    <div class="footer-top">
-      <div class="footer-top-overlay"></div>
-      <div class="wrapper">
-        <div class="inner">
-          <div class="grid-item">
-            <div class="contact-item ">
-              <div class="ft-contact">
-
-                <div class="ft-contact-logo ">
-                  <a href="/"><img style="width: 50%;height:50%;" src="img/logo.png" alt="GN BAKERY - Bánh ngọt Pháp"></a>
-                </div>
 
     <footer>
     <div class="footer-top">
@@ -356,38 +230,9 @@ require './database/connect.php';
     <i class="bi bi-chevron-compact-up"></i>
   </div>
 
-<<<<<<< HEAD
   <script src="js/app.js"></script>
-=======
 
-
-
-	<!-- Button trigger modal -->
-	<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-	Launch demo modal
-  </button>
-   -->
-	<!-- Modal -->
-	<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-		  ...
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		  <button type="button" class="btn btn-primary">Save changes</button>
-		</div>
-	  </div>
-	</div>
-<<<<<<< HEAD
-  </div> -->
 	 <script src="js/app.js"></script>
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
 

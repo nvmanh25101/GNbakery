@@ -119,7 +119,7 @@
     </div>
     <nav class="container">
       <ul id="main-menu">
-        <li><a href="/">TRANG CHỦ</a></li>
+        <li><a href="./index.php">TRANG CHỦ</a></li>
         <?php foreach($result as $each) { ?>
             <li>
                 <a href=""><?= $each['name'] ?></a>
