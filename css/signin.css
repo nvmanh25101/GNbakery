@@ -865,25 +865,17 @@ li{
     display: none;
 
   }
-<<<<<<< HEAD
+
  
  .container #main-menu li ul.sub-menu{
     display: none;
  }
-=======
+
   header{
     width: 100%;
     height: 135px;
   }
 
-  #mySidenav,
-  #main,
-  .logo h1,
-  .search ,
-  #main-menu li a{
-    display: none;
-  }
->>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b
   .wrap_lightbox{
     width: 100%;
     height: 600px;
@@ -966,7 +958,7 @@ li{
 }
 
 .bi-search{
-<<<<<<< HEAD
+
    background: #FF1493;
     font-weight: 900;
     color: white;
@@ -991,7 +983,7 @@ li{
 }
 
 
->>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b
+
 @media only screen and (max-width: 700px){
     ul.products{
         justify-content: space-around;
