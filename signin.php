@@ -71,6 +71,8 @@ require './database/connect.php';
     </div>
   </div>
 
+  
+
     <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
