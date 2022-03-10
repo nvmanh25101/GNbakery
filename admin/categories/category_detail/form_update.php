@@ -1,15 +1,15 @@
 <?php 
-    require_once '../../check_super_admin_signin.php';
+    require_once '../check_super_admin_signin.php';
     $page = 'categories';
-    require_once './navbar-vertical.php';
+    require_once '../navbar-vertical.php';
 
-    if(empty($_GET['id']) || empty($_GET['category_id'])) {
+    if(empty($_GET['id'])) {
         $_SESSION['error'] = 'Không có dữ liệu để sửa!';
         header('location:index.php');
     }
 
     $id = $_GET['id'];
-    require_once '../../../database/connect.php';
+    require_once '../../database/connect.php';
     $sql = "select * from categories where id = '$id'";
     $result = mysqli_query($connect, $sql);
     $each = mysqli_fetch_array($result);

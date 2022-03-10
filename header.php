@@ -1,7 +1,34 @@
 <?php 
-  $sql = "select * from categories";
-  $categories = mysqli_query($connect, $sql);
+    require './database/connect.php';
+    $sql = "select * from categories";
+    $result = mysqli_query($connect, $sql);
 ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width">
+  <title>GNBAKERY - BANH NGOT HUONG VI PHAP</title>
+  <link rel="shortcut icon" type="image" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="css/signin.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+
   <header class="medium-header">
     <div class="site-header">
       <div class="header-left">
@@ -10,9 +37,8 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
           <div class="drawer_header">
-            <a href="#">
-              <img style="width:40%;height: 40%; margin-bottom: 15px;" src="img/logo.png">
-            </a>
+            <a href="#"><img style="width:40%;height: 40%;
+   margin-bottom: 15px;" src="img/logo.png"></a>
           </div>
 
           <a href="/">Trang chủ</a>
@@ -36,6 +62,7 @@
         </div>
 
         <div id="main">
+
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         </div>
 
@@ -54,11 +81,14 @@
             <span class="input-group-btn">
               <button type="submit" class="btn icon-fallback-text">
                 <i class="bi bi-search" aria-hidden="true"></i>
+
               </button>
+
             </span>
           </form>
         </div>
       </div>
+
 
       <div class="header-right">
         <ul class="list-item">
@@ -72,57 +102,43 @@
               90 Nguyễn Tuân Hà Nội
             </span>
           </a>
-          <?php if(empty($_SESSION['id'])) { ?>
-            <a class="item" href="./signin.php">
-              <i class="bi bi-people-fill" aria-hidden="true"></i>
-              Tài khoản
-            </a>
-            
-          <?php } else { ?>
-            <a class="item" href="user.php">
-              <i class="bi bi-people-fill" aria-hidden="true"></i>
-              Chào , <?= $_SESSION['name']?>
-            </a>
-            <a class="item" href="./signout.php">
-              <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
-              Đăng Xuất
-            </a>
-          <?php } ?>
+          <a class="item" href="#">
+            <i class="bi bi-people-fill" aria-hidden="true"></i>
+            Tài khoản
+          </a>
           <a class="item" href="#">
             <div class="cart-total-price">
               <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
               <span id="CartCount">0</span>
             </div>
           </a>
-        <ul>
+          <ul>
 
       </div>
 
     </div>
-
     <nav class="container">
       <ul id="main-menu">
-        <li>
-          <a href="/">TRANG CHỦ</a>
-        </li>
-        <?php foreach($categories as $each_category) { ?>
+        <li><a href="">TRANG CHỦ</a></li>
+        <?php foreach($result as $each) { ?>
             <li>
-                <a href=""><?= $each_category['name'] ?></a>
+                <a href=""><?= $each['name'] ?></a>
                 <ul class="sub-menu">
-                  <?php  
-                      $sql = "select * from category_detail where category_id = '$each_category[id]'";
-                      $result_sub = mysqli_query($connect,$sql);
-                      foreach($result_sub as $each_sub) {
-                  ?>
-                    <li>
-                      <a href=""><?= $each_sub['name'] ?></a>
-                    </li>
-                  <?php } ?>
+                    <?php  
+                        $sql = "select * from category_detail where category_id = '$each[id]'";
+                        $result_sub = mysqli_query($connect,$sql);
+                        foreach($result_sub as $each_sub) {
+                    ?>
+                    <li><a href=""><?= $each_sub['name'] ?></a></li>
+                    <?php } ?>
                 </ul>
             </li>
-        <?php } ?>
+          <?php } ?>
        
       </ul>
     </nav>
+    </div>
 
+    </div>
+    </div>
   </header>

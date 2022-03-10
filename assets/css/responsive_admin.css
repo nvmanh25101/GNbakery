@@ -48,13 +48,9 @@
 
     .image-img-mobile {
         display: block;
-        width: 100%;
     }
 
     .zoomContainer {
         display: none;
     }
-
 }
-
-
