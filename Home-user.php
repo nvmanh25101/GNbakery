@@ -856,7 +856,11 @@
       </div>
       <div class="detail">
         <p class="info-text">
+<<<<<<< HEAD
           Các sản phẩm GN Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
+=======
+          Các sản phẩm Anh Hòa Bakery được làm từ các nguyên liệu nhập khẩu của các nước có truyền thống làm bánh như:
+>>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b
           Newzeland, Mỹ, Pháp, Bỉ. Với hương vị thơm ngon đặc trưng của các loại kem, bơ, sữa, phô mai, hạt hạnh nhân,
           chocolate... dưới bàn tay khéo léo của những người thợ làm bánh giàu kinh nghiệm.
 
