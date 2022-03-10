@@ -142,7 +142,6 @@ require './database/connect.php';
   </header>
 
 
-<<<<<<< HEAD
   <div class="page_container">
     <div class="main_content">
       <div class="wrap_lightbox">
@@ -182,48 +181,6 @@ require './database/connect.php';
           <button class="btnSignin" name="btnSignin" type="submit">ĐĂNG NHẬP</button>
         </form>
       </div>
-=======
-    <div class="page_container">
-        <div class="main_content">
-            <div class="wrap_lightbox">
-                <div class="box_left_signup">
-                    <h2>WELCOME TO GNBAKERY</h2>
-                    <img class="main_logo" src="./img/logo.jpg" alt="">
-                   <label  for="">Bạn đã có tài khoản chưa ?</label>
-                   <a href="signup.php">
-						<button class="btnSignup" type="submit">ĐĂNG KÝ NGAY</button>
-				   </a>
-                </div>
-                <form action="process-signin.php" method="post" class="box_right_signin">
-                    <h2>ĐĂNG NHẬP</h2>
-                    <div class="form-floating">
-                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email</label>
-                      </div>
-                      <div class="form-floating">
-                        <input type="password" name="password" class="form-control" id="floatingInput" placeholder="text">
-                        <label for="floatingInput">Mật khẩu</label>
-						<small style="color:red;">
-                            <?php
-                                if(isset($_GET['error'])){
-                                    echo "{$_GET['error']}";
-                                }else{
-                                    echo "";
-                                }
-                            ?>
-                    	</small>
-                      </div>
-					  
-                      <div class="checkbox mb-3">
-                        <label>
-                          <input class="remember_text" type="checkbox" value="remember-me"> Nhớ mật khẩu
-                        </label>
-                      </div>
-                      <button class="btnSignin" name="btnSignin" type="submit">ĐĂNG NHẬP</button>
-                </form>
-            </div>
-        </div>
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
     </div>
   </div>
 
@@ -240,16 +197,6 @@ require './database/connect.php';
                   <a href="/"><img style="width: 50%;height:50%;" src="img/logo.png" alt="GN BAKERY - Bánh ngọt Pháp"></a>
                 </div>
 
-<<<<<<< HEAD
-                <div class="ft-contact-address">
-                  <i class="fa fa-home" aria-hidden="true"></i> 10 xx TP. Hà Nội
-                </div>
-                <div class="ft-contact-tel">
-                  <i class="fa fa-mobile" aria-hidden="true"></i> <a style="color: white; font-weight: bolder;" href="tel:0333135698">0333135698</a>
-                </div>
-                <div class="ft-contact-email">
-                  <i class="fa fa-envelope" aria-hidden="true"></i> <a style="color: white;font-weight: bolder;" href="mailto:info@gnbakery.vn">info@gnbakery.vn</a>
-=======
     <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
@@ -274,7 +221,6 @@ require './database/connect.php';
                 <div class="ft-contact-email">
                   <i class="fa fa-envelope" aria-hidden="true"></i> <a style="color: white;font-weight: bolder;"
                     href="mailto:info@gnbakery.vn">info@gnbakery.vn</a>
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
                 </div>
               </div>
             </div>
@@ -310,29 +256,15 @@ require './database/connect.php';
 
                   </p>
 
-<<<<<<< HEAD
                   <form accept-charset="UTF-8" action="/account/contact" class="contact-form" method="post" name="myForm" onsubmit="validateForm()">
-=======
-                  <form accept-charset="UTF-8" action="/account/contact" class="contact-form" method="post"
-                    name="myForm" onsubmit="validateForm()">
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
                     <input name="form_type" type="hidden" value="customer">
                     <input name="utf8" type="hidden" value="✓">
 
                     <div class="input-group-intro">
-<<<<<<< HEAD
                       <input type="email" required="" value="" placeholder="Nhập email của bạn..." name="contact[email]" id="your-Email" class="input-group-field" aria-label="email@example.com">
                       <input type="hidden" name="contact[tags]" value="newsletter">
                       <span class="input-group-intro-btn">
                         <button type="submit" name="subscribe" id="subscribe-btn" value="GỬI"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-=======
-                      <input type="email" required="" value="" placeholder="Nhập email của bạn..." name="contact[email]"
-                        id="your-Email" class="input-group-field" aria-label="email@example.com">
-                      <input type="hidden" name="contact[tags]" value="newsletter">
-                      <span class="input-group-intro-btn">
-                        <button type="submit" name="subscribe" id="subscribe-btn" value="GỬI"><i
-                            class="fa fa-paper-plane" aria-hidden="true"></i></button>
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
                       </span>
                     </div>
 
@@ -363,19 +295,10 @@ require './database/connect.php';
               <p>Mỗi tháng chúng tôi đều có những đợt giảm giá dịch vụ và sản phẩm nhằm tri ân khách hàng. Để có thể cập
                 nhật kịp thời những đợt giảm giá này, vui lòng nhập địa chỉ email của bạn vào ô dưới đây
               <p>
-<<<<<<< HEAD
               <div id="owl-home-main-banners-slider-ft" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
 
                 <div class="owl-wrapper-outer">
                   <div class="owl-wrapper" style="width: 424px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-=======
-              <div id="owl-home-main-banners-slider-ft" class="owl-carousel owl-theme"
-                style="opacity: 1; display: block;">
-
-                <div class="owl-wrapper-outer">
-                  <div class="owl-wrapper"
-                    style="width: 424px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
                     <div class="owl-item" style="width: 212px;">
                       <div class="item">
 
@@ -418,18 +341,6 @@ require './database/connect.php';
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-      </div></div>
-
-    </footer>
-    <div id="hotline">
-      <a href="tel:0333135698" id="yBtn">
-        <i class="bi bi-telephone-fill"></i>
-      </a>
-      <div class="text-quotes">
-        <a href="tel:0333135698">0333135698</a>
->>>>>>> 235ba51d64512954e4cc1df92c59ee7d61b644bc
       </div>
     </div>
   </footer>

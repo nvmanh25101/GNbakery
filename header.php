@@ -102,7 +102,7 @@
               90 Nguyễn Tuân Hà Nội
             </span>
           </a>
-          <a class="item" href="#">
+          <a class="item" href="./signin.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Tài khoản
           </a>
@@ -119,7 +119,7 @@
     </div>
     <nav class="container">
       <ul id="main-menu">
-        <li><a href="">TRANG CHỦ</a></li>
+        <li><a href="/">TRANG CHỦ</a></li>
         <?php foreach($result as $each) { ?>
             <li>
                 <a href=""><?= $each['name'] ?></a>
