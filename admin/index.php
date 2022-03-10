@@ -28,12 +28,12 @@
 
                 </div>
                 <button name = "btnSignin" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Đăng nhập</button>
-                <div class="box_more_option">
+                <!-- <div class="box_more_option">
                     <span class="box-checkbox">
                          <input id="rememberpass" checked="checked" type="checkbox" name="isRemember">
                          <label for="checkbox1" style="font-size:14px; width:90px;">Nhớ mật khẩu</label>
                         </span>  
-                  </div>      
+                  </div>       -->
               </form>
             </div>
           </div>
