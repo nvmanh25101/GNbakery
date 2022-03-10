@@ -1,15 +1,8 @@
 <?php
-<<<<<<< HEAD
-session_start();
-if(empty($_SESSION['id'])){
-  header("location:signin.php");
-}
-=======
 // session_start();
 // if(empty($_SESSION['id'])){
 //   header("location:signin.php");
 // }
->>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b
 require_once './database/connect.php';
 
 $id = $_GET['id'];

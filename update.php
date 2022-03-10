@@ -183,7 +183,7 @@
                               </div>
                             <div style="display:flex;">
                                 <button class="btnUpdate" name="btnUpdate" type="submit">Cập nhật</button>
-                                <a href=""><button style="margin-right:50px;" class="btnUpdate">Quay lại</button></a>
+                                <button style="margin-left:300px;" class="btnUpdate"><a style="text-decoration:none;color:#FF1493;" href="user.php">Quay lại</a></button>
                             </div>
                 </div>
         </div>

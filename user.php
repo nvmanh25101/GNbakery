@@ -3,6 +3,12 @@
   if(empty($_SESSION['id'])){
     header("location:signin.php");
   }
+  require './database/connect.php';
+
+  $id = $_SESSION['id'];
+  $sqlUser = "SELECT * FROM customers WHERE id = $id";
+  $resultUser = mysqli_query($connect, $sqlUser);
+  $row = mysqli_fetch_assoc($resultUser);
 ?>
 <!DOCTYPE html>
 <html>
@@ -108,7 +114,7 @@
           </a>
           <a class="item" href="user.html">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
-            Chào , user
+            Chào , <?php echo $row['name'] ?>
           </a>
            <a class="item" href="signout.php">
             <i class="bi bi-box-arrow-right" aria-hidden="true"></i>

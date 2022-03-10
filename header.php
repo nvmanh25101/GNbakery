@@ -104,7 +104,7 @@
               Cửa hàng
             </span>
           </a>
-          <a class="item" href="#">
+          <a class="item" href="signin.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Tài khoản
           </a>
