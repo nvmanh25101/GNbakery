@@ -33,7 +33,7 @@
                         <div class="logo">
                             <h1>
                                 <a href="#" >
-                                    <img style="margin-top:20px;" src="img/loo.jpg" >
+                                    <img style="margin-top:20px;" src="img/logo.png" >
                                 </a>
                             </h1>
                         </div>
