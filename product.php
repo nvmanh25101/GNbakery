@@ -1,8 +1,5 @@
 <?php
-session_start();
-if(empty($_SESSION['id'])){
-  header("location:signin.php");
-}
+
 require_once './database/connect.php';
 
 $id = $_GET['id'];
@@ -216,7 +213,7 @@ $result_category = mysqli_query($connect, $sql);
             <div class="data-one">
               <input type="radio" name="option1" value="19cm" class="input-opt">
               <label for="swatch-19" class="">
-                <?= $each['size'] ?>
+                <?= $each['size'] ?> cm
                 <img class="crossed-out" src="img/pro1.jpg">
                 <img class="img-check" src="img/pro2.jpg">
               </label>

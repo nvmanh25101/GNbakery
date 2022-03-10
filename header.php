@@ -104,7 +104,7 @@
               Cửa hàng
             </span>
           </a>
-          <a class="item" href="#">
+          <a class="item" href="./signin.php">
             <i class="bi bi-people-fill" aria-hidden="true"></i>
             Tài khoản
           </a>
@@ -136,8 +136,8 @@
                 </ul>
             </li>
           <?php } ?>
-        <li><a href="">TIN TỨC</a></li>
-        <li><a href="">KHUYẾN MÃI</a></li>
+        <!-- <li><a href="">TIN TỨC</a></li>
+        <li><a href="">KHUYẾN MÃI</a></li> -->
       </ul>
     </nav>
     </div>
