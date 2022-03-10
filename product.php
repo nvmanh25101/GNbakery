@@ -1,8 +1,6 @@
 <?php
-// session_start();
-// if(empty($_SESSION['id'])){
-//   header("location:signin.php");
-// }
+
+session_start();
 require_once './database/connect.php';
 
 $id = $_GET['id'];
@@ -42,125 +40,7 @@ $result_category = mysqli_query($connect, $sql);
 
 <body>
 
-  <header class="medium-header">
-    <div class="site-header">
-      <div class="header-left">
-
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-          <div class="drawer_header">
-            <a href="#"><img style="width:40%;height: 40%;
-   margin-bottom: 15px;" src="img/logo.png"></a>
-          </div>
-
-          <a href="/">Trang chủ</a>
-
-          <button class="dropdown-btn">Bánh sinh nhật<i class="fa fa-caret-down"></i></button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-
-          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-         
-          <a href="#">Đăng Nhập</a>
-          <a href="#">Đăng Ký</a>
-
-        </div>
-
-        <div id="main">
-
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-        </div>
-
-        <div class="logo">
-          <h1>
-            <a href="#">
-              <img src="img/logo.png">
-            </a>
-          </h1>
-        </div>
-
-        <div class="search">
-          <form action="/search" method="get" class="input-search" role="search">
-            <input type="hidden" name="type" value="product">
-          
-            <span class="input-group-btn">
-              <button type="submit" class="btn icon-fallback-text">
-                <i class="bi bi-search" aria-hidden="true"></i>
-
-              </button>
-
-            </span>
-          </form>
-        </div>
-      </div>
-
-
-      <div class="header-right">
-        <ul class="list-item">
-          <a class="item" href="tel:0333135698">
-            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
-            <span>0333135698</span>
-          </a>
-          <a class="item" href="#">
-            <i class="bi bi-house-fill" aria-hidden="true"></i>
-            <span>
-            90 Nguyễn Tuân Hà Nội
-            </span>
-          </a>
-          <a class="item" href="user.html">
-            <i class="bi bi-people-fill" aria-hidden="true"></i>
-            Chào , user
-          </a>
-          <a class="item" href="#">
-            <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
-            Đăng Xuất
-          </a>
-          <a class="item" href="#">
-            <div class="cart-total-price">
-              <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
-              <span id="CartCount">0</span>
-            </div>
-          </a>
-          <ul>
-
-      </div>
-
-    </div>
-    <nav class="container">
-      <ul id="main-menu">
-        <li><a href="Home-user.html">TRANG CHỦ</a></li>
-        <li>
-          <a href="">BÁNH SINH NHẬT</a>
-          <ul class="sub-menu">
-            <li><a href="">Gateaux Kem Tươi</a></li>
-            <li><a href="">Gateaux Kem Bơ</a></li>
-            
-          </ul>
-        </li>
-        <li>
-          <a href="">BÁNH Mì & BÁNH MẶN</a>
-          <ul class="sub-menu">
-            <li><a href="">Bánh mì</a></li>
-            <li><a href="">Bánh mặn</a></li>
-          </ul>
-        </li>
-       
-      </ul>
-    </nav>
-    </div>
-
-    </div>
-    </div>
-  </header>
+<?php require './header.php'; ?>
   <!--product-->
 
   <div class="hero-image">
