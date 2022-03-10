@@ -120,14 +120,8 @@
                   <?php } ?>
                 </ul>
             </li>
-<<<<<<< HEAD
-          <?php } ?>
-       
-=======
         <?php } ?>
-        <!-- <li><a href="">TIN TỨC</a></li>
-        <li><a href="">KHUYẾN MÃI</a></li> -->
->>>>>>> 18effde46df79b8cc1ce72a27993766abdb16075
+       
       </ul>
     </nav>
 
