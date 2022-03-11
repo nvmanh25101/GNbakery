@@ -16,22 +16,33 @@
           </div>
 
           <a href="/">Trang chủ</a>
-          <button class="dropdown-btn">Bánh sinh nhật<i class="fa fa-caret-down"></i></button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
- 
-          <button class="dropdown-btn">Bánh mì <i class="fa fa-caret-down"></i></button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        
-          <a href="./signin.php">Đăng Nhập</a>
-          <a href="./signup.php">Đăng Ký</a>
+          <?php foreach($categories as $category) { ?>
+            <button class="dropdown-btn"><?= $category['name'] ?><i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-container">
+              <?php  
+                  $sql = "select * from category_detail where category_id = '$category[id]'";
+                  $result_sub = mysqli_query($connect,$sql);
+                  foreach($result_sub as $each_sub) {
+              ?>
+                  <a href="./index.php?category=<?= $each_sub['id'] ?>"><?= $each_sub['name'] ?></a>
+              <?php } ?>
+            </div>
+          <?php } ?>
+          <?php if(empty($_SESSION['id'])) { ?>
+            <a href="./signin.php">
+              <i class="bi bi-people-fill" aria-hidden="true"></i>
+              Tài khoản
+            </a>
+          <?php } else { ?>
+              <a href="user.php">
+              <i class="bi bi-people-fill" aria-hidden="true"></i>
+              Chào , <?= $_SESSION['name'] ?>
+            </a>
+            <a href="signout.php">
+              <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+              Đăng Xuất
+            </a>
+          <?php } ?>
 
         </div>
 
@@ -107,7 +118,7 @@
         <li><a href="./index.php">TRANG CHỦ</a></li>
         <?php foreach($categories as $category) { ?>
             <li>
-                <a href=""><?= $category['name'] ?></a>
+                <a href="#"><?= $category['name'] ?></a>
                 <ul class="sub-menu">
                     <?php  
                         $sql = "select * from category_detail where category_id = '$category[id]'";
