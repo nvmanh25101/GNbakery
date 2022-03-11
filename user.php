@@ -4,6 +4,11 @@
     header("location:signin.php");
   }
   require 'database/connect.php';
+
+  $id = $_SESSION['id'];
+  $sql = "select * from customers where id = '$id'";
+  $result = mysqli_query($connect,$sql);
+  $each = mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,17 +50,12 @@
      </div>
      <div class="content-grid-right">
        <h4 class="h4">Thông Tin Tài Khoản</h4>
-       <h3 class="h4">Ho  va  tên</h3>
+       <h3 class="h4"><?= $each['name'] ?></h3>
        <p>
          <br>
-         <br>
-         <br>
-         <br>
-         70000
-         <br>
-         Viet Nam
-         <br>
-
+          <?= $each['phone'] ?? '' ?>
+          <br>
+          <?= $each['address'] ?? '' ?>
        </p>
        <p class="text-address"><a href="update.php">Sửa thông tin</a></p>
      </div>
