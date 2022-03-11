@@ -114,7 +114,7 @@
                         $result_sub = mysqli_query($connect,$sql);
                         foreach($result_sub as $each_sub) {
                     ?>
-                    <li><a href=""><?= $each_sub['name'] ?></a></li>
+                    <li><a href="./index.php?category=<?= $each_sub['id'] ?>"><?= $each_sub['name'] ?></a></li>
                     <?php } ?>
                 </ul>
             </li>
