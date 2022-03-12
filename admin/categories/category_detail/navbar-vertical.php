@@ -56,14 +56,14 @@
                     </div>
                 </li>
                 <li class="nav-item navbar__item">
-                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../categories">
+                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../../categories">
                         <i class="navbar__link-icon bi bi-slack"></i>
                         <span>Loại Hàng</span> 
                     </a>
                     <div class="sub-navbar">
                         <ul class="list-group">
                             <li class="sub-navbar__item">
-                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories">Loại bánh chính</a>
+                                <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../../categories">Loại bánh chính</a>
                             </li>
                             <li class="sub-navbar__item">
                                 <a class="sub-navbar__link list-group-item-action text-decoration-none" href="./index.php">Loại bánh phụ</a>
@@ -98,58 +98,58 @@
 
         <ul class="nav navbar__list-mobile flex-column">
             <li class="nav-item navbar__item">
-                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'root'?'active':'' ?>" href="../root">
+                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'root'?'active':'' ?>" href="../../root">
                     <i class="navbar__link-icon bi bi-house-fill"></i>
                     <span>Trang chủ</span> 
                 </a>
             </li>
             <li class="nav-item navbar__item">
-                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../playlists">
+                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../../orders">
                     <i class="navbar__link-icon bi bi-cart-dash-fill"></i>
                     <span>Đơn hàng</span> 
                 </a>
             </li>
             <li class="nav-item navbar__item">
-                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'products'?'active':'' ?>" href="../products">
+                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'products'?'active':'' ?>" href="../../products">
                     <i class="navbar__link-icon bi bi-vinyl"></i>
                     <span>Sản phẩm</span> 
                 </a>
                 <div class="sub-navbar">
                     <ul class="list-group">
                         <li class="sub-navbar__item">
-                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../products/form_insert.php">Thêm sản phẩm</a>
+                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../../products/form_insert.php">Thêm sản phẩm</a>
                         </li>
                         <li class="sub-navbar__item">
-                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../products?search_status=1">Đang bán</a>
+                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../../products?search_status=1">Đang bán</a>
                         </li>
                         <li class="sub-navbar__item">
-                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../products?search_status=0">Ngừng bán</a>
+                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../../products?search_status=0">Ngừng bán</a>
                         </li>
                     </ul>
                 </div>
             </li>
             <li class="nav-item navbar__item">
-                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../categories">
+                <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../../categories">
                     <i class="navbar__link-icon bi bi-slack"></i>
                     <span>Loại Hàng</span> 
                 </a>
                 <div class="sub-navbar">
                     <ul class="list-group">
                         <li class="sub-navbar__item">
-                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories">Loại bánh chính</a>
+                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../../categories">Loại bánh chính</a>
                         </li>
                         <li class="sub-navbar__item">
-                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="../categories/category_detail">Loại bánh phụ</a>
+                            <a class="sub-navbar__link list-group-item-action text-decoration-none" href="./index.php">Loại bánh phụ</a>
                         </li>
                     </ul>
                 </div>
             </li>
-            <li class="nav-item navbar__item">
+            <!-- <li class="nav-item navbar__item">
                 <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'employees'?'active':'' ?>" href="../employees">
                     <i class="navbar__link-icon bi bi-person"></i>
                     <span>Nhân viên</span> 
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item navbar__item">
                 <a class="nav-link d-flex align-items-center navbar__link" href="../../signout.php">
                     <i class="navbar__link-icon bi bi-box-arrow-in-right"></i>
