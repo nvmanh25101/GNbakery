@@ -3,24 +3,10 @@
   session_start();
   require './database/connect.php';
   
-  $where = 1;
-  if(isset($_GET['category'])) {
-    $category = $_GET['category'];
-    $where = "category_detail_id = '$category'";
-  }
-
-  $sql = "SELECT products.*, category_detail.name as category_name FROM products
-  join category_detail on category_detail.id = products.category_detail_id
-  where $where
-  order by category_detail_id ASC, products.id desc";
-
+  $sql = "SELECT * FROM products
+  order by category_detail_id ASC, id desc";
   $result = mysqli_query($connect, $sql);
-  if(mysqli_num_rows($result) == 0) {
-    $error = 'Không có sản phẩm nào';
-  }
-  else {
-    $category_name = mysqli_fetch_array($result)['category_name'];
-  }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,7 +73,7 @@
   <!-- product -->
   <div id="intro">
     <div class="headline">
-      <h3><?= $category_name ?? $error ?></h3>
+      <h3>GATEAUX KEM TƯƠI</h3>
 
     </div>
     <ul class="products">
@@ -114,7 +100,6 @@
           </div>
         </li>
       <?php } ?>
-    </ul>
       <!-- <li>
         <div class="product-item">
           <div class="product-top">

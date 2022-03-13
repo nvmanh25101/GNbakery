@@ -1,7 +1,7 @@
 <?php 
-    require_once '../../check_super_admin_signin.php';
+    require_once '../check_super_admin_signin.php';
     $page = 'categories';
-    require_once './navbar-vertical.php';
+    require_once '../navbar-vertical.php';
 
 ?>
     <div class="main__form">
@@ -17,6 +17,11 @@
                             <span id="error" class="error_input"></span>
                         </div>
 
+                        <div class="mb-4 fs-4">
+                            <label class="form-label" for="image">Ảnh</label>
+                            <input type="file" name="image" id="image" accept="image/*" class="form__input form-control"/>
+                        </div>
+
                         <button type="submit" class="form__btn btn btn-dark mb-4">Thêm</button>
                     </form>
                 </div>
@@ -30,12 +35,3 @@
 </body>
 
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    $(document).ready(function() {
-        $('.btn-menu').click(function() {
-            $('.navbar-vertical-mobile').toggle("fast");
-            $('.header__navbar-overlay').toggle("fast");
-        });
-    })
-</script>

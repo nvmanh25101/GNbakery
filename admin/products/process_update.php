@@ -10,7 +10,7 @@ if(empty($_POST['id']) || empty($_POST['admin_id'])) {
 
 if(empty($_POST['name']) || empty($_POST['size']) || empty($_POST['price']) || empty($_POST['category']) || empty($_POST['image_old'])) {
     $_SESSION['error'] = 'Phải điền đầy đủ thông tin';
-    header('location:form_update.php?id=' . $_POST['id'] . '&admin_id=' . $_POST['admin_id']);
+    header('location:form_insert.php?id=' . $_POST['id'] . '&admin_id=' . $_POST['admin_id']);
     exit();
 }
 
