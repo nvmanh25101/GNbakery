@@ -107,8 +107,10 @@
               <div class="product-price-action">
                 <p class="product-price"><?= number_format($each['price'], 0, '.', ',') ?></p>
                 <div class="product-action">
-                  <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
+                  <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
+                  <button type="submit" name="addcart" class="btn-action"><i class="bi bi-cart-fill"></i>
                   </button>
+      </form>
                 </div>
               </div>
             </div>
