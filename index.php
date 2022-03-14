@@ -2,6 +2,7 @@
 
   session_start();
   require './database/connect.php';
+
   
   $where = 1;
   if(isset($_GET['category'])) {
@@ -21,6 +22,7 @@
   else {
     $category_name = mysqli_fetch_array($result)['category_name'];
   }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,15 +108,16 @@
               <div class="product-price-action">
                 <p class="product-price"><?= number_format($each['price'], 0, '.', ',') ?></p>
                 <div class="product-action">
-                  <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
+                  <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
+                  <button type="submit" name="addcart" class="btn-action"><i class="bi bi-cart-fill"></i>
                   </button>
+      </form>
                 </div>
               </div>
             </div>
           </div>
         </li>
       <?php } ?>
-    </ul>
       <!-- <li>
         <div class="product-item">
           <div class="product-top">

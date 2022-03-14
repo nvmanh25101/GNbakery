@@ -21,7 +21,7 @@
     <div class="main__form">
         <div class=" container-fluid px-4">
             <?php include '../../error_success.php' ?>
-          
+
             <div class="row gx-5">
                 <div class="col-12">
                     <form action="process_update.php" method="post" enctype="multipart/form-data">
@@ -49,15 +49,8 @@
                         </div>
 
                         <button type="submit" class="form__btn btn btn-dark mb-4">Sửa</button>
-                    </form>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-   
 </div>
-    
+
 </body>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

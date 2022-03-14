@@ -8,7 +8,7 @@ if(empty($_POST['id'])) {
 }
 
 $id = $_POST['id'];
-if(empty($_POST['name'] || $_POST['category'])) {
+if(empty($_POST['name']) || $_POST['category']) {
     $_SESSION['error'] = 'Phải điền đầy đủ thông tin!';
     header("location:form_update.php?id=$id");
     exit();
@@ -18,6 +18,7 @@ $name = $_POST['name'];
 $category = $_POST['category'];
 
 require_once '../../../database/connect.php';
+
 
 $sql = "update category_detail
 set name = ?,

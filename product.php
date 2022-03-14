@@ -105,9 +105,10 @@ $result_category = mysqli_query($connect, $sql);
       </div>
 
       <div class="product-actions">
-
+      <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
         <button type="submit" name="add" id="AddToCart" class="btnAddtocart">Thêm vào giỏ hàng</button>
-        <button type="button" name="buy" id="buy-now" class="btnBuynow">Mua ngay</button>
+       
+</form>
 
       </div>
     </div>
@@ -128,8 +129,6 @@ $result_category = mysqli_query($connect, $sql);
   
     </div>
   </div>
-
-
 
   <div id="Home-notice">
     <div class="latest-wrap">

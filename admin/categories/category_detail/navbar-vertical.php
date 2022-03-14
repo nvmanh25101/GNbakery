@@ -19,10 +19,8 @@
     <nav class="navbar navbar-vertical position-fixed top-0 start-0 bottom-0 p-0 navbar-collapse hide-on-mobile-tablet">
         <div class="navbar__content">
             <a class="navbar-brand px-5 d-block" href="#">
-                <img class="navbar-brand__img" src="../../../source (1).gif" alt="">
-                <!-- <img src="../../8f554a44aec8cd5a8b4689876d4a4f01.gif" alt="" style="width: 200px; height: 80px;"> -->
+            <img class="navbar-brand__img" src="../../../source (1).gif" alt="">
             </a>
-
             <ul class="nav navbar__list flex-column">
                 <li class="nav-item navbar__item">
                     <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'root'?'active':'' ?>" href="../../root">
@@ -58,7 +56,7 @@
                 <li class="nav-item navbar__item">
                     <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../../categories">
                         <i class="navbar__link-icon bi bi-slack"></i>
-                        <span>Loại Hàng</span> 
+                        <span>Loại bánh</span> 
                     </a>
                     <div class="sub-navbar">
                         <ul class="list-group">
@@ -184,4 +182,3 @@
             </div>
         </div>
     </header>
-

@@ -30,12 +30,12 @@
                         <span>Trang chủ</span> 
                     </a>
                 </li>
-                <!-- <li class="nav-item navbar__item">
-                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../playlists">
+                <li class="nav-item navbar__item">
+                    <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../orders">
                         <i class="navbar__link-icon bi bi-cart-dash-fill"></i>
                         <span>Đơn hàng</span> 
                     </a>
-                </li> -->
+                </li>
                 <li class="nav-item navbar__item">
                     <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'products'?'active':'' ?>" href="../products">
                         <i class="navbar__link-icon bi bi-vinyl"></i>
@@ -58,7 +58,7 @@
                 <li class="nav-item navbar__item">
                     <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'categories'?'active':'' ?>" href="../categories">
                         <i class="navbar__link-icon bi bi-slack"></i>
-                        <span>Loại Hàng</span> 
+                        <span>Loại Bánh</span> 
                     </a>
                     <div class="sub-navbar">
                         <ul class="list-group">
@@ -103,12 +103,12 @@
                     <span>Trang chủ</span> 
                 </a>
             </li>
-            <!-- <li class="nav-item navbar__item">
+            <li class="nav-item navbar__item">
                 <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'orders'?'active':'' ?>" href="../orders">
                     <i class="navbar__link-icon bi bi-cart-dash-fill"></i>
                     <span>Đơn hàng</span> 
                 </a>
-            </li> -->
+            </li>
             <li class="nav-item navbar__item">
                 <a class="nav-link d-flex align-items-center navbar__link <?= $page == 'products'?'active':'' ?>" href="../products">
                     <i class="navbar__link-icon bi bi-vinyl"></i>
