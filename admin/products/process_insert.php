@@ -15,6 +15,17 @@ $description = $_POST['description'];
 $category = $_POST['category'];
 $admin_id = $_POST['admin_id'];
 
+if(!is_int($price)) {
+    $_SESSION['error'] = 'Giá phải là số!'; 
+    header('location:form_insert.php');
+    exit();
+}
+else if($price <= 0) {
+    $_SESSION['error'] = 'Giá phải lớn hơn 0!'; 
+    header('location:form_insert.php');
+    exit();
+}
+
 // Ảnh
 $folder = '../../assets/images/products/';
 $path = $image['name'];
