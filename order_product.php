@@ -1,19 +1,22 @@
-
-
+<?php 
+require './database/connect.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width">
-  <title>GIO HANG - GNBAKERY BANH NGOT HUONG VI PHAP</title>
+  <title>DON HANG - GNBAKERY BANH NGOT HUONG VI PHAP</title>
   <link rel="shortcut icon" type="image" href="img/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="css/cart.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/order.css">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
  
@@ -24,103 +27,81 @@
 </head>
 <body>
 <?php require './header.php'; ?>
-<div class="Pagecart" >
-  <div class="cart-content">
-    <h1>Giỏ Hàng </h1>
-    <form action="" method="post" novalidate="" class="cart table-wrap">
-				<table class="cart-table full ">
+        <div class="order-product">
+        <h2>Thong tin don hàng</h2>
+            <div class="order-product-content">
+               
+                 <div class="order-left">
+                    <h1> Dia chi nhan hang</h1>
+                    <p> Dog Mạnh </p>
+                    <p>0333135698</p>
+                    <p>Dia chi chi tiet: Chung cư HH2-90 Nguyễn Tuân-Thanh Xuân-Hà Nội</p>
+
+                 
+                 </div>
+                  <div class="order-right">
+                    <p class="order-text" >Nguời gửi đang chuẩn bị hàng </p> 
+                 </div>
+             </div>
+
+             <table class="cart-table full ">
 					<thead class="cart__row">
 
 						<tr> <th class="item-img"></th>
-            <th class="item-content-text">Thông tin chi tiết sản phẩm</th>
-						<th class="item-content-price">Đơn giá</th>
-						<th class="item-amount">Số lượng</th>
-						<th class="item-total-price">Tổng giá</th>
-					</tr></thead>
-					<tbody>
-         
-						<?php foreach ($cart as $key => $value):?>
-              <tr class="cart__row table__section">
-             
+                              <th class="item-content-text"></th>
+						      <th class="item-total-price"></th>
+					    </tr></thead>
+
+                   <tbody>
+                       <tr class="order-inner">
 							<td class="item-img" data-label="Sản phẩm">
 								<a href="" class="cart__image">
 									
-									<img src="./assets/images/products/<?php echo $value['image'] ?>">
+									<img src="img/pic1.jpg">
 								</a>
 							</td>
 							<td class="item-content-text">
 								<a href="" class="item-text">
-                GN<?php echo $value['name'] ?>
+                                    CHOCOLATE
 								</a>
 								
 								<br>
-                <div class="cart__remove">
-								<small><?php echo $value['size'] ?>cm</small><br>
-								<a href="view_cart.php?id=<?php echo $value['id']?>&action=delete" >
-                 xoá
+                            <div class="cart__remove">
+								<small>23 cm</small><br>
+								<a href="" >
+                                  X1
 									
 								</a>
-              </div>   
+                             </div>   
 							</td>
-							<td class="item-content-price" data-label="Đơn giá">
-								<span class="item-price">
-								<?php echo $value['price'] ?>
-								</span>
-							</td>
-					  	<td class="item-amount" data-label="Số lượng">
-								
-              <div class="product-quantitys">
-       
-              <div class="buttons_added">
-                <form action="cart.php">
-                <input class="minus is-form" name="action" type="button" value="-">
-                <input aria-label="quantity" class="input-qty" max="30" min="1" name="quantity" type="number" value="<?php echo $value['quantity'] ?>">
-               <input class="plus is-form" name="id" type="button" value="+">
-            </form>
-            
-              </div>
- 
-              </div>
+					
 
-
-		       	 </td>
 							<td class="item-total-price" data-label="Tổng giá" >
 								
 								<span class="item-price">
-                <?php echo number_format($value['price'] * $value['quantity']) ?>
+                                    300000
 								</span>
 								
 							</td>
 						</tr>
-              <?php endforeach ?>
+              
 
 						
 						
 					</tbody>
-				</table>
-			
-					
-				
-				<div class="row-total">
+                 </table>   
+
+                <div class="row-total">
 					<div class="cart-price-right">
 						<p>
-							<span class="cart__subtotal-title">Tổng tiền</span>
-							<span class="cart__subtotal"><?php echo total_price($cart)?></span>
+							<span class="cart__subtotal-title">Tổng tiền</span><br>
+							<span class="cart__subtotal">3000000</span>
 						</p>
-						<div class="btn-payment ">
-
-							<span class="btn-payment-text" href="#">
-								Thanh toán
-							</span>
-
-            </div>
+			
 					</div>
-        </div>
-			</form>
-  </div>
-</div>
-
-<footer>
+                </div>
+            </div>
+            <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
       <div class="wrapper">
@@ -265,7 +246,5 @@
     </div>
 <script src="js/app.js"></script>
   <script src="js/product.js"></script>
-
 </body>
 </html>
-
