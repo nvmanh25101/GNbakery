@@ -104,7 +104,7 @@
                                     </option>
                                 <?php } ?>
                             </select>
-
+                        </div>
                         <button type="submit" class="form__btn btn mt-4 mb-4">Sửa</button>
                     </form>
                 </div>
