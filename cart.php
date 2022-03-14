@@ -1,5 +1,10 @@
 <?php session_start();
-require './database/connect.php'; ?>
+require './database/connect.php';
+
+$cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,30 +43,32 @@ require './database/connect.php'; ?>
 						<th class="item-total-price">Tổng giá</th>
 					</tr></thead>
 					<tbody>
-						
-						<tr class="cart__row table__section">
+						<?php foreach ($cart as $key => $value): ?>
+              <tr class="cart__row table__section">
+             
 							<td class="item-img" data-label="Sản phẩm">
 								<a href="" class="cart__image">
 									
-									<img src="img/pic1.jpg">
+									<img src="./assets/images/products/<?php echo $value['image'] ?>">
 								</a>
 							</td>
 							<td class="item-content-text">
 								<a href="" class="item-text">
-									CARAMEL AND CHOCOLATE CAKE MOUSSE 
+                GN<?php echo $value['name'] ?>
 								</a>
 								
 								<br>
                 <div class="cart__remove">
-								<small>20 x 20 cm</small><br>
-								<a href="" >
-									<small>Xóa</small>
+								<small><?php echo $value['size'] ?>cm</small><br>
+								<a href="view_cart.php" >
+
+									
 								</a>
               </div>   
 							</td>
 							<td class="item-content-price" data-label="Đơn giá">
 								<span class="item-price">
-									330,000₫
+								<?php echo $value['price'] ?>
 								</span>
 							</td>
 					  	<td class="item-amount" data-label="Số lượng">
@@ -70,7 +77,7 @@ require './database/connect.php'; ?>
        
               <div class="buttons_added">
                 <input class="minus is-form" type="button" value="-">
-               <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1">
+                <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="<?php echo $value['quantity'] ?>">
                <input class="plus is-form" type="button" value="+">
              </div>
  
@@ -81,11 +88,14 @@ require './database/connect.php'; ?>
 							<td class="item-total-price" data-label="Tổng giá" >
 								
 								<span class="item-price">
-									330,000₫
+                <?php echo $value['price'] ?>
 								</span>
 								
 							</td>
 						</tr>
+              <?php endforeach ?>
+
+						
 						
 					</tbody>
 				</table>
