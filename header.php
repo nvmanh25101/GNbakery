@@ -62,15 +62,39 @@
         <div class="search">
           <form action="/search" method="get" class="input-search" role="search">
             <input type="hidden" name="type" value="product">
-            <input type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ...">
+            <input id="search" type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ..." autocomplete="off">
             <span class="input-group-btn">
               <button type="submit" class="btn icon-fallback-text">
                 <i class="bi bi-search" aria-hidden="true"></i>
-
               </button>
-
             </span>
           </form>
+          <div class="sub-search">
+            <ul class="sub-search-list">
+              <li class="sub-search-item">
+                <a href="#" class="sub-search-link">
+                  <img class="sub-search-link__img" src="./assets/images/products/cake_1646466680.jpg" alt="">
+                  <h5 class="sub-search-link__name">
+                    TIRAMISU
+                  </h5>
+                  <span class="sub-search-link__price">
+                    200.000đ
+                  </span>
+                </a>
+              </li>
+              <li class="sub-search-item">
+                <a href="#" class="sub-search-link">
+                  <img class="sub-search-link__img" src="./assets/images/products/cake_1646466680.jpg" alt="">
+                  <h5 class="sub-search-link__name">
+                    TIRAMISU
+                  </h5>
+                  <span class="sub-search-link__price">
+                    200.000đ
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -102,7 +126,7 @@
               Đăng Xuất
             </a>
           <?php } ?>
-          <a class="item" href="#">
+          <a class="item" href="./cart.php">
             <div class="cart-total-price">
               <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
               <span id="CartCount">0</span>
