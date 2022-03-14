@@ -104,14 +104,32 @@ var counter = 1;
           $('html, body').animate({scrollTop: 0}, 400);
       });
 
-  $("#search").keydown(function(){
-    let search = $("#search").val();
-    if(search.length > 0){ 
-      $('.sub-search').show();
-    } else {
-      $('.sub-search').hide();
-    }
-  });
+  // $("#search").keydown(function(){
+  //   let search = $("#search").val();
+  //   if(search.length > 0){ 
+  //     $('.sub-search').show();
+  //   } else {
+  //     $('.sub-search').hide();
+  //   }
+  // });
+
+    $("#search").autocomplete({
+      source: "search.php"
+    }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $("<li class='sub-search-item'>")
+        .append(`<a href='./product.php?id=${item.value}' class='sub-search-link'>
+                  <img class='sub-search-link__img' src='./assets/images/products/${item.image}' alt=''>
+                  <h5 class='sub-search-link__name'>
+                    ${item.label}
+                  </h5>
+                  <span class='sub-search-link__price'>
+                  ${item.price}&#8363
+                  </span>
+                </a>`
+                )
+        .appendTo(ul);
+    };
+
 
 });
 
