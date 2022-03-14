@@ -43,11 +43,11 @@
                     <div class="main_content">              
                                 <div class="form_name">
                                     <label for="">Họ và tên</label>
-                                    <input type="text" name = "name" class="form-control" placeholder = "Nhập họ tên" value ="<?php /*echo $row['name'] */?>" required>
+                                    <input type="text" name = "name" class="form-control" placeholder = "" value ="<?php /*echo $row['name'] */?>" required>
                                 </div>
                                 <div class="form_address">
                                     <label for="">Địa chỉ</label>
-                                    <input type="" name = "address" class="form-control" placeholder="Thêm địa chỉ" value = "<?php
+                                    <input type="" name = "address" class="form-control" placeholder="" value = "<?php
                                                                                                             /*    if($row['address']==NULL){
                                                                                                                     echo "";
                                                                                                                 }else{
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="form_phone">
                                       <label for="">Số điện thoại</label>
-                                    <input type="" name = "phone" class="form-control" placeholder="Thêm số điện thoại" value = "<?php
+                                    <input type="" name = "phone" class="form-control" placeholder="" value = "<?php
                                                                                                               /*      if($row['phone']==NULL){
                                                                                                                         echo "";
                                                                                                                     }else{
@@ -74,7 +74,7 @@
       </form>
 
     </div>
-    <footer>
+  <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
       <div class="wrapper">
@@ -204,7 +204,7 @@
       </div>
     </div>
 
-  </footer>
+</footer>
   <div id="hotline">
     <a href="tel:0333135698" id="yBtn">
       <i class="bi bi-telephone-fill"></i>
