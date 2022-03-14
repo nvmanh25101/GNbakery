@@ -1,10 +1,4 @@
-<?php session_start();
-require './database/connect.php';
 
-$cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +22,10 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
 <body>
-<?php require './header.php'; ?>
+<?php
+ require 'header.php'; 
+
+?>
 <div class="Pagecart" >
   <div class="cart-content">
     <h1>Giỏ Hàng </h1>
@@ -43,7 +40,8 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 						<th class="item-total-price">Tổng giá</th>
 					</tr></thead>
 					<tbody>
-						<?php foreach ($cart as $key => $value): ?>
+         
+						<?php foreach ($cart as $key => $value):?>
               <tr class="cart__row table__section">
              
 							<td class="item-img" data-label="Sản phẩm">
@@ -60,7 +58,7 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 								<br>
                 <div class="cart__remove">
 								<small><?php echo $value['size'] ?>cm</small><br>
-								<a href="view_cart.php" >
+								<a href="view_cart.php?id=<?php echo $value['id']?>&action=delete" >
                  xoá
 									
 								</a>
@@ -76,10 +74,13 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
               <div class="product-quantitys">
        
               <div class="buttons_added">
-                <input class="minus is-form" type="button" value="-">
-                <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="<?php echo $value['quantity'] ?>">
-               <input class="plus is-form" type="button" value="+">
-             </div>
+                <form action="increasing_number.php">
+                <input class="minus is-form" name="action" type="button" value="-">
+                <input aria-label="quantity" class="input-qty" max="30" min="1" name="quantity" type="number" value="<?php echo $value['quantity'] ?>">
+               <input class="plus is-form" name="id" type="button" value="+">
+            </form>
+            
+              </div>
  
               </div>
 
@@ -88,7 +89,7 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 							<td class="item-total-price" data-label="Tổng giá" >
 								
 								<span class="item-price">
-                <?php echo $value['price'] ?>
+                <?php echo number_format($value['price'] * $value['quantity']) ?>
 								</span>
 								
 							</td>
@@ -106,7 +107,7 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 					<div class="cart-price-right">
 						<p>
 							<span class="cart__subtotal-title">Tổng tiền</span>
-							<span class="cart__subtotal">660,000₫</span>
+							<span class="cart__subtotal"><?php echo total_price($cart)?></span>
 						</p>
 						<div class="btn-payment ">
 

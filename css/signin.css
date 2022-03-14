@@ -862,7 +862,6 @@ li{
     background-color: #F8F2E8;
    }
 
-
  
  .container #main-menu li ul.sub-menu{
     display: none;
@@ -994,13 +993,10 @@ li{
         font-size: 22px;
         font-family: sans-serif;
      }
-    
+    }
     .ft-copyright{
         margin-left: 30px;
     }
-    
-}
-
 .bi-search{
 
    background: #FF1493;

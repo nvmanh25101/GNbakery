@@ -2,6 +2,7 @@
 
   session_start();
   require './database/connect.php';
+
   
   $where = 1;
   if(isset($_GET['category'])) {
