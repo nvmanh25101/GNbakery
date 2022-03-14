@@ -265,6 +265,7 @@
     </div>
 <script src="js/app.js"></script>
   <script src="js/product.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
 </body>
 </html>

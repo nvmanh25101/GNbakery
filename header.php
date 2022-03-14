@@ -68,8 +68,7 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 
         <div class="search">
           <form action="/search" method="get" class="input-search" role="search">
-            <input type="hidden" name="type" value="product">
-            <input type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ...">
+            <input id="search" type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ..." autocomplete="off">
             <span class="input-group-btn">
               <button type="submit" class="btn icon-fallback-text">
                 <i class="bi bi-search" aria-hidden="true"></i>
@@ -78,6 +77,32 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 
             </span>
           </form>
+          <div class="sub-search">
+            <ul class="sub-search-list">
+              <!-- <li class="sub-search-item">
+                <a href="#" class="sub-search-link">
+                  <img class="sub-search-link__img" src="./assets/images/products/cake_1646466680.jpg" alt="">
+                  <h5 class="sub-search-link__name">
+                    TIRAMISU
+                  </h5>
+                  <span class="sub-search-link__price">
+                    200.000đ
+                  </span>
+                </a>
+              </li>
+              <li class="sub-search-item">
+                <a href="#" class="sub-search-link">
+                  <img class="sub-search-link__img" src="./assets/images/products/cake_1646466680.jpg" alt="">
+                  <h5 class="sub-search-link__name">
+                    TIRAMISU
+                  </h5>
+                  <span class="sub-search-link__price">
+                    200.000đ
+                  </span>
+                </a>
+              </li> -->
+            </ul>
+          </div>
         </div>
       </div>
 

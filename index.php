@@ -508,7 +508,6 @@
 
 
   <script src="js/app.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -516,6 +515,27 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+  $('document').ready( function() {
+    $("#search").autocomplete({
+      source: "search.php"
+    }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $("<li class='sub-search-item'>")
+        .append(`<a href='./product.php?id=${item.value}' class='sub-search-link'>
+                  <img class='sub-search-link__img' src='./assets/images/products/${item.image}' alt=''>
+                  <h5 class='sub-search-link__name'>
+                    ${item.label}
+                  </h5>
+                  <span class='sub-search-link__price'>
+                  ${item.price}&#8363
+                  </span>
+                </a>`
+                )
+        .appendTo(ul);
+    };
+  } );
+  </script>
 </body>
 
 </html>
