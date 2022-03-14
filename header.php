@@ -1,6 +1,11 @@
 <?php 
+session_start();
+require 'cart_function.php';
+require './database/connect.php';
     $sql = "select * from categories";
     $categories = mysqli_query($connect, $sql);
+
+$cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
 ?>
 
   <header class="medium-header">
@@ -102,10 +107,10 @@
               Đăng Xuất
             </a>
           <?php } ?>
-          <a class="item" href="#">
+          <a class="item" href="cart.php">
             <div class="cart-total-price">
               <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
-              <span id="CartCount">0</span>
+              <span id="CartCount"><?php echo total_item($cart) ?></span>
             </div>
           </a>
           <ul>

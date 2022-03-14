@@ -130,8 +130,6 @@ $result_category = mysqli_query($connect, $sql);
     </div>
   </div>
 
-
-
   <div id="Home-notice">
     <div class="latest-wrap">
       <div class="title-notice">

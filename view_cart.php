@@ -33,6 +33,11 @@ else {
   $_SESSION['cart'][$id] = $item;
 }
 }
+if($action == 'delete'){
+  var_dump("ok ");
+  unset($_SESSION['cart'][$id]);
+}
+
 
 header('location:cart.php');
 echo "<pre>";
