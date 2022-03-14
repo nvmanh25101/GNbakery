@@ -1,127 +1,68 @@
-<?php session_start();
-require './database/connect.php';
-
-$cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
-
-
+<?php
+  session_start();
+  if(empty($_SESSION['id'])){
+    header("location:signin.php");
+  }
+  require 'database/connect.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width">
-  <title>GIO HANG - GNBAKERY BANH NGOT HUONG VI PHAP</title>
+  <title>TÀI KHOẢN - GNBAKERY BANH NGOT HUONG VI PHAP</title>
   <link rel="shortcut icon" type="image" href="img/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="css/cart.css">
-  
+   <link rel="stylesheet" type="text/css" href="css/user.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
  
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
 </head>
+
 <body>
+
 <?php require './header.php'; ?>
-<div class="Pagecart" >
-  <div class="cart-content">
-    <h1>Giỏ Hàng </h1>
-    <form action="" method="post" novalidate="" class="cart table-wrap">
-				<table class="cart-table full ">
-					<thead class="cart__row">
+ <section id="page-content">
+   <div class="content-header">
+     <h1 >Tài Khoản Của Bạn</h1>
+     
+   </div>
 
-						<tr> <th class="item-img"></th>
-            <th class="item-content-text">Thông tin chi tiết sản phẩm</th>
-						<th class="item-content-price">Đơn giá</th>
-						<th class="item-amount">Số lượng</th>
-						<th class="item-total-price">Tổng giá</th>
-					</tr></thead>
-					<tbody>
-						<?php foreach ($cart as $key => $value): ?>
-              <tr class="cart__row table__section">
-             
-							<td class="item-img" data-label="Sản phẩm">
-								<a href="" class="cart__image">
-									
-									<img src="./assets/images/products/<?php echo $value['image'] ?>">
-								</a>
-							</td>
-							<td class="item-content-text">
-								<a href="" class="item-text">
-                GN<?php echo $value['name'] ?>
-								</a>
-								
-								<br>
-                <div class="cart__remove">
-								<small><?php echo $value['size'] ?>cm</small><br>
-								<a href="view_cart.php" >
-                 xoá
-									
-								</a>
-              </div>   
-							</td>
-							<td class="item-content-price" data-label="Đơn giá">
-								<span class="item-price">
-								<?php echo $value['price'] ?>
-								</span>
-							</td>
-					  	<td class="item-amount" data-label="Số lượng">
-								
-              <div class="product-quantitys">
-       
-              <div class="buttons_added">
-                <input class="minus is-form" type="button" value="-">
-                <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="<?php echo $value['quantity'] ?>">
-               <input class="plus is-form" type="button" value="+">
-             </div>
- 
-              </div>
+   <div class="content-grid">
+     <div class="content-grid-left">
+       <h2 class="h4">Lịch Sử Giao Dịch</h2>
+       <p>Bạn chưa có lịch sử giao dịch nào</p>
+     </div>
+     <div class="content-grid-right">
+       <h4 class="h4">Thông Tin Tài Khoản</h4>
+       <h3 class="h4">Ho  va  tên</h3>
+       <p>
+         <br>
+         <br>
+         <br>
+         <br>
+         70000
+         <br>
+         Viet Nam
+         <br>
 
+       </p>
+       <p class="text-address"><a href="update.php">Sửa thông tin</a></p>
+     </div>
 
-		       	 </td>
-							<td class="item-total-price" data-label="Tổng giá" >
-								
-								<span class="item-price">
-                <?php echo $value['price'] ?>
-								</span>
-								
-							</td>
-						</tr>
-              <?php endforeach ?>
-
-						
-						
-					</tbody>
-				</table>
-			
-					
-				
-				<div class="row-total">
-					<div class="cart-price-right">
-						<p>
-							<span class="cart__subtotal-title">Tổng tiền</span>
-							<span class="cart__subtotal">660,000₫</span>
-						</p>
-						<div class="btn-payment ">
-
-							<span class="btn-payment-text" href="#">
-								Thanh toán
-							</span>
-
-            </div>
-					</div>
-        </div>
-			</form>
-  </div>
-</div>
-
-<footer>
+   </div>
+ </section>
+  <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
       <div class="wrapper">
@@ -264,9 +205,17 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
     <div id="backtop">
       <i class="bi bi-chevron-compact-up"></i>
     </div>
-<script src="js/app.js"></script>
-  <script src="js/product.js"></script>
 
+    
+  <script src="js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
-</html>
 
+</html>
