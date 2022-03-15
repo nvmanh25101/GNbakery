@@ -3,7 +3,6 @@
   session_start();
   require './database/connect.php';
 
-  
   $where = 1;
   if(isset($_GET['category'])) {
     $category = $_GET['category'];
@@ -109,7 +108,7 @@
                 <p class="product-price"><?= number_format($each['price'], 0, '.', ',') ?></p>
                 <div class="product-action">
                   <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
-                  <button type="submit" name="addcart" class="btn-action"><i class="bi bi-cart-fill"></i>
+                  <button   type="submit" name="addcart" class="btn-action"><i class="bi bi-cart-fill"></i>
                   </button>
       </form>
                 </div>
