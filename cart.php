@@ -71,18 +71,14 @@
               <div class="product-quantitys">
        
                 <form action="view_cart.php" method="get">
+             
                   <input type="hidden" name="action" value="update">
                 <input type="hidden" name="id" value="<?php echo  $value['id']?>">
                 <input type="text"  class="input-qty"  name="quantity"  value="<?php echo $value['quantity'] ?>">
                  <button  type="submit">Cap nhat</button>
             </form>
-            
-            
- 
-              </div>
-
-
-		       	 </td>
+        </div>
+  	 </td>
 							<td class="item-total-price" data-label="Tổng giá" >
 								
 								<span class="item-price">

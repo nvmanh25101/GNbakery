@@ -15,7 +15,9 @@ $action =(isset($_GET['action'])) ? $_GET['action'] : 'add';
 $quantity = (isset($_GET['quantity'])) ? $_GET['quantity'] : 1;
 //session_destroy();
 //die();
-
+if($quantity <= 0){
+  unset($_SESSION['cart'][$id]['quantity']);
+}
 
 $item = [
   'id' =>$each['id'],
@@ -43,6 +45,7 @@ unset($_SESSION['cart'][$id]);
 if($action == 'update'){
 $_SESSION['cart'][$id]['quantity'] = $quantity;
 }
+
 header('location:cart.php');
 echo "<pre>";
 print_r($_SESSION['cart']);

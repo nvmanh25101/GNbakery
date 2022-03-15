@@ -1,9 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['id'])) {
-     echo 'Bạn không đủ quyền để truy cập';
-    header('location:index.php');
-
+    $error = "Vui Lòng Đăng Nhập để thêm bánh ";
+    header("location:signin.php?error=$error");
 
 }?>
 
