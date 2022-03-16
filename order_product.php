@@ -27,8 +27,9 @@ session_start();
 </head>
 <body>
 <?php require './header.php'; ?>
-        <div class="order-product">
+     <div class="order-product">
         <h2>Thong tin don hàng</h2>
+        <hr>
             <div class="order-product-content">
                
                  <div class="order-left">
@@ -43,8 +44,9 @@ session_start();
                     <p class="order-text" >Nguời gửi đang chuẩn bị hàng </p> 
                  </div>
              </div>
+         
 
-             <table class="cart-table full ">
+        <table class="cart-table full ">
 					<thead class="cart__row">
 
 						<tr> <th class="item-img"></th>
@@ -89,9 +91,9 @@ session_start();
 						
 						
 					</tbody>
-                 </table>   
+        </table>   
 
-                <div class="row-total">
+        <div class="row-total">
 					<div class="cart-price-right">
 						<p>
 							<span class="cart__subtotal-title">Tổng tiền</span><br>
@@ -99,9 +101,9 @@ session_start();
 						</p>
 			
 					</div>
-                </div>
-            </div>
-            <footer>
+        </div>
+    </div>
+   <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
       <div class="wrapper">

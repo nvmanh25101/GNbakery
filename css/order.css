@@ -8,18 +8,21 @@ table{
 }
 .order-product h2{
     margin-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-size: 24px;
     color: #FF1493;
+    
 }
-
+hr{
+    
+   margin-bottom: 40px;
+    color: #C4C4C4;
+}
 .order-product-content{
-  
+    flex-wrap: wrap;
     display: flex;
     width: 100%;
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
+    
     height: 234px;
     margin-bottom: 32px;
 }
@@ -27,10 +30,17 @@ h1{
     font-size: 22px;
 }
 .order-left{
+    padding: 15px;
     width: 50%;
+    background-color: white;
+   
+   
 }
 .order-right{
+    padding: 15px;
+   
     width: 50%;
+    background-color: white;
 }
 .order-inner{
     margin-left: 40px;
@@ -60,3 +70,44 @@ h1{
 footer{
     margin-top: 100px;
 }
+
+@media only screen and (max-width: 700px){ 
+    .order-product{
+        margin: 0;
+        width: 100%;
+    }
+    .order-product h2{
+        margin-bottom: 0px;
+        margin-top: 15px;
+       text-align: center;
+        width: 100%;
+        
+    }
+    .order-product-content .order-left{
+       
+        margin: 0px 15px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .order-product-content .order-right{
+        
+        margin: 15px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    table,tbody{
+        margin-top: 20px;
+        display: block;
+    }
+    .item-content-text{
+        width: 55%;
+    }
+    .row-total{
+        margin-right: 10px;
+    }
+}
+   
+   
+  
+ 
+  

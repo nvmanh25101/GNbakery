@@ -320,6 +320,7 @@ table.full {
 .cart__remove small:hover{
     color:#FF1493;
 }
+
 .row-total{
 border-top: 1px solid #e6e6e6;
 margin-top: 30px;
@@ -331,7 +332,7 @@ padding-top: 30px;
    
 }
 .btn-payment{
-    padding: 8px 10px;
+	padding: 8px 10px;
     width: auto;
     margin: 0;
     line-height: 1.42;
@@ -341,9 +342,12 @@ padding-top: 30px;
     vertical-align: middle;
     white-space: nowrap;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid #FF1493;
     border-radius: 3px;
-    background-color: white;
+	background-color: white;
+}
+.btn-payment-text{
+    
     color: #FF1493;
 }
 .cart__subtotal{
@@ -355,8 +359,6 @@ padding-top: 30px;
     border-radius: 10px;
     margin-left: 15px;
     opacity:1;
-    display:inline-block;
-    display:-ms-inline-flexbox;
     display:inline-flex;
     white-space:nowrap;
     vertical-align:top;
@@ -370,6 +372,7 @@ padding-top: 30px;
     padding:0;
     text-shadow:1px 1px 1px #fff;
     border:1px solid #ddd;
+	text-align: center;
 }
 .is-form:focus,.input-text:focus {
     outline:none;
@@ -380,9 +383,10 @@ padding-top: 30px;
 .is-form.plus {
     border-radius:0 4px 4px 0;
 }
-.input-qty {
+.buttons_added .input-qty {
     background-color:#fff;
     height:2.2rem;
+	width: 1.9rem;
     text-align:center;
     font-size:1rem;
     display:inline-block;
@@ -772,161 +776,145 @@ li{
 	border-radius: 3px;
 }
 
-@media only screen and (max-width: 700px){
-	ul.products{
-		justify-content: space-around;
-		margin: 0;
-		padding: 0;
+@media 
+only screen and (max-width: 760px)
+{
+	*{
+		font-family: Playfair Display;
 	}
-   ul.products li{
-
-   	width: 100%;
-   }
-   .product-item{
-   	width: 140px ;
-
-   }
-   .title-text h3{
-   	font-size: 25px;
-   }
-   .title-text h2{
-   	font-size: 15px;
-   }
-
-   .introduce-content{
-   margin-top: 20px;
-   
-   }
-   .introduce-content .image {
-   	width: 100%;
-   	margin: 10px;
-   }
-   .introduce-content .detail{
-   	width: 100%;
-   	margin: 0;
-   }
-.introduce-content .detail .info-text{
-	font-size: 13px;
-}
-.btn-btn{
-	margin-left: 35%;
-}
- footer {
-
- 	width: 100%;
- }
- footer .footer-top{
- 	width: 100%;
- }
-  .menu, .subscribe ,.connect ,.contact-item {
-   padding: 0;
-   margin: 10px;
-  	width: 100%;
-  }
-  .contact-item .ft-contact-logo  {
-
-  	text-align: center;
-  	width: 80%;
-  	margin-left: 30px;
-  }
-  .ft-contact-tel , .ft-contact-email , .ft-contact-address,
-  .menu .ft-menu .list a,
-  .ft-subscribe p{
-  	font-size: 14px;
-  	font-weight: 100;
-  	
-  }
-  .menu{
-  	margin-top: 10px;
-
-  }
-  .menu .ft-menu h4,
-  .subscribe .ft-subscribe-wrapper h4{
-  	font-size: 24px;
-  	font-family: serif;
-  }
-  .connect{
-  	margin-top: 10px;
-  }
- .connect p{
- 	font-weight: bolder;
- 	font-size: 22px;
- 	
- }
-
-.ft-copyright{
-	margin-left: 30px;
-}
-
-/*reponsive product*/
-.zoomContainer{
-	display: none;
-}
-
-.hero-image {
-    width: 100%;
-    height: 250px;
-}
-.hero-text{
-    font-size: 23px;
-}
-.product-content{
-	padding: 0;
-	margin: 0;
-
-}
-	.product{
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	
+	td { 
 		
-		margin: 0px;
-		padding: 0;
-	}
-	.product-content{
-		padding: 0;
-		margin: 0;
-	}
-	.product-content .product-content-left {
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.product-content .product-content-right{
-		width: 100%;
-		margin-top: 15px;
-		margin-left: 0;
-		margin-right: 0;
-
-	}
-	.product-content-right-name h1{
-		font-size: 25px;
-	}
-	.product-actions #AddToCart,
-	.product-actions #buy-now{
-		height: 36px;
-		font-size: 12px;
-		padding: 10px 15px;
-		text-align: center;
-	}
-
-	.tab{
+		border: none;
 		
+		
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		
+	  font-size: 12px;
+		
+		white-space: nowrap;
+		
+	}
+	.item-img{
+		width: 100%;
 		display: flex;
+		margin:0;
+		justify-content: space-between;
+		
+		
+	}
+	.cart__image{
+		
+		width: 240px;
+		
+		margin-left: 20px;
+	}
+    .item-content-text ,
+	.item-content-price,
+	.item-amount ,
+	.item-total-price{
 		width: 100%;
-		height: 100%;
+		display: block;
+		
+		
+		
 	}
-	.tab .tablinkss{
-		font-size: 12px;
-		padding: 10px 15px;
+	.cart-content h1{
+		font-size: 24px;
+		
 	}
-	.tab .tablinks{
-		font-size: 12px;
-		padding: 10px 15px;
+	.item-content-text .item-text{
+		font-size: 14px;
 	}
-	.latest-wrap .title-notice h3{
-		font-size: 20px;
+	.item-content-text .item-text,
+	.item-content-price .item-price,
+	.item-amount .product-quantitys,
+	.item-total-price .item-price{
+		float: right;
 	}
-	.latest-wrap .title-notice h2{
-		font-size: 12px;
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Sản Phẩm";  }
+	td:nth-of-type(2):before { content: "Thông tin chi tiết sản phẩm"; 
+	                           }
+	td:nth-of-type(3):before { content: "Đơn giá"; }
+	td:nth-of-type(4):before { content: "Số lượng"; }
+	td:nth-of-type(5):before { content: "Tổng giá"; }
+	
+    .cart__remove {
+		
+		border-top: 1px solid #ccc ;
 	}
+ 
+ 
+					.cart__row{
+						width: 100%;
+					}
+					.hero-image {
+						width: 100%;
+						height: 250px;
+					}
+					.hero-image .hero-text{
+						font-size: 20px;
+					}
+
+				footer {
+
+					width: 100%;
+				}
+				footer .footer-top{
+					width: 100%;
+				}
+				.menu, .subscribe ,.connect ,.contact-item {
+				padding: 0;
+				margin: 10px;
+					width: 100%;
+				}
+				.contact-item .ft-contact-logo  {
+
+					text-align: center;
+					width: 80%;
+					margin-left: 30px;
+				}
+				.ft-contact-tel , .ft-contact-email , .ft-contact-address,
+				.menu .ft-menu .list a,
+				.ft-subscribe p{
+					font-size: 14px;
+					font-weight: 100;
+					
+				}
+				.menu{
+					margin-top: 10px;
+
+				}
+				.menu .ft-menu h4,
+				.subscribe .ft-subscribe-wrapper h4{
+					font-size: 24px;
+					font-family: serif;
+				}
+				.connect{
+					margin-top: 10px;
+				}
+				.connect p{
+					font-weight: bolder;
+					font-size: 22px;
+					
+				}
+
 
 }
 
@@ -947,4 +935,9 @@ li{
 }
 
 
-
+.cart__remove .btn-text{
+	font-size: 22px;
+}
+.cart__remove .btn-text:hover{
+	color: #FF1493;
+}

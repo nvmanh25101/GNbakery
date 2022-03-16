@@ -14,5 +14,4 @@ if($type === 'decre') {
     $_SESSION['cart'][$id]['quantity']++;
 }
 
-
 header('location:cart.php');
