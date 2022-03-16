@@ -36,8 +36,29 @@
   <div class="Pagecart">
     <div class="cart-content">
       <h1>Giỏ Hàng </h1>
-      <form action="" method="post" novalidate="" class="cart table-wrap">
-        <table class="cart-table ">
+      <!-- css cho Đạt -->
+      <div          <?php  
+                        if(empty($cart)){
+                          echo 'style = "display:block;"';
+                        }
+                        else{
+                          echo 'style = "display:none;"';
+                        }
+                    ?>>
+          <span>Giỏ hàng hiện chưa có bánh</span>
+          <span>Tiếp tục đặt hàng: </span><a href="index.php">Tại đây</a>
+      </div>
+      <!--  -->
+      <form  action="" method="post" novalidate="" class="cart table-wrap"
+                  <?php  
+                        if(empty($cart)){
+                          echo 'style = "display:none;"';
+                        }
+                        else{
+                          echo 'style = "display:block;"';
+                        }
+                  ?>>
+        <table class="cart-table full ">
           <thead class="cart__row">
 
             <tr>

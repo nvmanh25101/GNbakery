@@ -9,6 +9,9 @@
   $sql = "select * from customers where id = '$id'";
   $result = mysqli_query($connect,$sql);
   $each = mysqli_fetch_array($result);
+
+  $sqlOrder = "select * from orders where customer_id = '$id'";
+  $resultOrder = mysqli_query($connect,$sqlOrder);
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,8 +48,44 @@
 
    <div class="content-grid">
      <div class="content-grid-left">
-       <h2 class="h4">Lịch Sử Giao Dịch</h2>
-       <p>Bạn chưa có lịch sử giao dịch nào</p>
+        <h2 class="h4">Lịch Sử Giao Dịch</h2>
+        <p <?php
+            if(mysqli_num_rows($resultOrder)<1){
+              echo 'style = "display:block;"';
+            }else{
+              echo 'style = "display:none;"';
+            }
+          ?>
+          >Bạn chưa có lịch sử giao dịch nào</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Đơn hàng</th>
+              <th>Thời gian đặt</th>
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+              if(mysqli_num_rows($resultOrder) > 0){
+                while($rowOrder = mysqli_fetch_assoc($resultOrder)){
+            ?>
+            <tr>
+              <td>GN<?php echo $rowOrder['id'] ?>BKR</td>
+              <td><?php 
+                      echo ($rowOrder['created_at']);
+                    ?></td>
+              <td><?php echo $rowOrder['total_price'] ?></td>
+              <td></td>
+              <td><a href="order_product.php?id=<?php echo $rowOrder['id'] ?>">Chi tiết</a></td>
+            </tr>
+            <?php
+                }
+              }                   
+            ?>
+          </tbody>
+        </table>
      </div>
      <div class="content-grid-right">
        <h4 class="h4">Thông Tin Tài Khoản</h4>
