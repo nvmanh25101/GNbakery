@@ -44,4 +44,5 @@ foreach($cart as $product_id => $each){
 mysqli_close($connect);
 unset($_SESSION['cart']);
 
+$_SESSION['success'] = 'Đặt hàng thành công';
 header('location:./index.php');
