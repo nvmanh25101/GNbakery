@@ -50,69 +50,73 @@ $result_category = mysqli_query($connect, $sql);
 
     </div>
   </div>
-
+  <form action="view_cart.php" method="GET">
   <div class="product">
     <div class="product-content">
-      <div class="product-content-left">
-        <img class="image-img" style="width:100%;" src="./assets/images/products/<?= $each['image'] ?>" data-zoom-image="./assets/images/products/<?= $each['image'] ?>" />
-      </div>
+    
+       <div class="product-content-left">
+                <img class="image-img" style="width:100%;" src="./assets/images/products/<?= $each['image'] ?>" data-zoom-image="./assets/images/products/<?= $each['image'] ?>" />
+       </div>
 
-      <div class="product-content-right">
-        <div class="product-content-right-name">
-          <h1><?= $each['name'] ?></h1>
-          <p>Mã sản phẩm: GN<?= $each['id'] ?></p>
+        <div class="product-content-right">
+                <div class="product-content-right-name">
+                  <h1><?= $each['name'] ?></h1>
+                  <p>Mã sản phẩm: GN<?= $each['id'] ?></p>
 
-        </div>
-        <hr>
-        <div class="product-price">
+                </div>
+                <hr>
+                <div class="product-price">
 
-          <p class="line-price">
-            <span class="">Giá</span>
-            <span class="ProductPrice" itemprop="price" content="220000">
-              <?= number_format($each['price'], 0, '.', ' ') ?>&#8363
-            </span>/
+                  <p class="line-price">
+                    <span class="">Giá</span>
+                    <span class="ProductPrice" itemprop="price" content="220000">
+                      <?= number_format($each['price'], 0, '.', ' ') ?>&#8363
+                    </span>/
 
-          </p>
+                  </p>
 
-        </div>
+                </div>
 
-        <div class="product-select-swatch">
-          <div class="product-select-swatch-text">
-            <p>Kích Thước:</p>
-          </div>
-          <div class="select-swap">
-            <div class="data-one">
-              <input type="radio" name="option1" value="<?= $each['size'] ?>" class="input-opt">
-              <label for="swatch-19" class="">
-                <?= $each['size'] ?> cm
-                <img class="crossed-out" src="img/pro1.jpg">
-                <img class="img-check" src="img/pro2.jpg">
-              </label>
+                <div class="product-select-swatch">
+                  <div class="product-select-swatch-text">
+                    <p>Kích Thước:</p>
+                  </div>
+                  <div class="select-swap">
+                    <div class="data-one">
+                      <input type="radio" name="option1" value="<?= $each['size'] ?>" class="input-opt">
+                      <label for="swatch-19" class="">
+                        <?= $each['size'] ?> cm
+                        <img class="crossed-out" src="img/pro1.jpg">
+                        <img class="img-check" src="img/pro2.jpg">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+              <div class="product-quantity">
+                <div class="text">
+                  <p>Số lượng:</p>
+                </div>
+                <div class="buttons_added">
+                <input type = "number" name="quantity" value = "1">
+                <input type="hidden" name="id" value="<?php echo $each['id'] ?>" max="30" min="1">
+                </div>
+                
+              </div>
+
+              <div class="product-actions">
+                
+              
+                <button type="submit" name="add" id="AddToCart" class="btnAddtocart">Thêm vào giỏ hàng</button>
+              
+
+
+              </div>
             </div>
-          </div>
-        </div>
-        
-      <div class="product-quantity">
-        <div class="text">
-          <p>Số lượng:</p>
-        </div>
-        <div class="buttons_added">
-          <input class="minus is-form" type="button" value="-">
-          <input aria-label="quantity" class="input-qty" max="30" min="1" name="" type="number" value="1">
-          <input class="plus is-form" type="button" value="+">
-        </div>
-
-      </div>
-
-      <div class="product-actions">
-      <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
-        <button type="submit" name="add" id="AddToCart" class="btnAddtocart">Thêm vào giỏ hàng</button>
-       
-</form>
-
-      </div>
-    </div>
+  
+   </div>
   </div>
+  </form>
 
   <div class="product-tab">
     <div class="tab">
@@ -153,8 +157,10 @@ $result_category = mysqli_query($connect, $sql);
               <div class="product-price-action">
                 <p class="product-price"><?= number_format($category_product['price'], 0, '.', ',') ?></p>
                 <div class="product-action">
-                  <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
+                <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
+                  <button type="submit" name="addcart" class="btn-action"><i class="bi bi-cart-fill"></i>
                   </button>
+        </form>
                 </div>
               </div>
             </div>
