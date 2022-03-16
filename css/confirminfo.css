@@ -39,29 +39,25 @@ body, html {
     font-weight: 700;
 }
 .page_container{
-    margin-left: 395px;
     height: 410px;
     width: max-content;
 }
 .form_name{
     margin-top: 64px;
-    width: 58% !important;
     font-family: Roboto;
     font-size: 16px;
 }
 .form_address{
     margin-top: 38px;
-    width: 58% !important;
     font-family: Roboto;
     font-size: 16px;
 }
 .form_phone{
     margin-top: 41px;
-    width: 58% !important;
     font-family: Roboto;
     font-size: 16px;
 }
-.btnUpdatet{
+.btnReturn{
     background-color: white;
     height: 45px;
     width: 163px;
