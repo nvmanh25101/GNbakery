@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 16, 2022 at 03:35 AM
+-- Generation Time: Mar 16, 2022 at 09:57 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -137,7 +137,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `name_receiver`, `address_receiver`, `phone_receiver`, `status`, `total_price`, `created_at`) VALUES
-(1, 1, 'Nguyen Manh', 'Nguyễn Tuân- Thanh Xuân- Hà Nội', '0123456789', 0, 980000, '2022-03-16 03:00:36');
+(1, 1, 'Nguyen Manh', 'Nguyễn Tuân- Thanh Xuân- Hà Nội', '0123456789', 0, 980000, '2022-03-16 03:00:36'),
+(2, 1, 'Nguyen Manh', 'Nguyễn Tuân - Thanh Xuân - Hà Nội', '0123456789', 0, 220000, '2022-03-16 04:23:35');
 
 -- --------------------------------------------------------
 
@@ -156,8 +157,9 @@ CREATE TABLE `order_product` (
 --
 
 INSERT INTO `order_product` (`order_id`, `product_id`, `quantity`) VALUES
+(1, 18, 1),
 (1, 19, 2),
-(1, 18, 1);
+(2, 20, 1);
 
 -- --------------------------------------------------------
 
@@ -243,7 +245,7 @@ ALTER TABLE `orders`
 -- Indexes for table `order_product`
 --
 ALTER TABLE `order_product`
-  ADD KEY `order_id` (`order_id`),
+  ADD PRIMARY KEY (`order_id`,`product_id`),
   ADD KEY `product_id` (`product_id`);
 
 --
@@ -286,7 +288,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `products`

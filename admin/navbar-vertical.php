@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/css/admin.css">
     <link rel="stylesheet" href="../../assets/css/responsive_admin.css">
+    <link rel="stylesheet" href="../../assets/css/detail_orders.css">
     <title>ADMIN-GN Bakery</title>
 </head>
 <body>
