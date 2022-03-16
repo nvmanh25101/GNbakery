@@ -13,6 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="css/cart.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -24,6 +25,14 @@
 
 <body>
   <?php require './header.php'; ?>
+  <div class="hero-image">
+    <div>
+
+      <p class="hero-text">Giỏ Hàng của bạn</p><br>
+     
+
+    </div>
+  </div>
   <div class="Pagecart">
     <div class="cart-content">
       <h1>Giỏ Hàng </h1>
@@ -66,20 +75,20 @@
               <tr class="cart__row table__section">
 
                 <td class="item-img" data-label="Sản phẩm">
-                  <a href="" class="cart__image">
+                  <a href="./product.php?id=<?= $value['id'] ?>" class="cart__image">
 
                     <img src="./assets/images/products/<?php echo $value['image'] ?>">
                   </a>
                 </td>
                 <td class="item-content-text">
-                  <a href="" class="item-text">
+                  <a href="./product.php?id=<?= $value['id'] ?>" class="item-text">
                     GN<?php echo $value['name'] ?>
                   </a>
 
-                  <br>
+                  
                   <div class="cart__remove">
                     <small><?php echo $value['size'] ?>cm</small><br>
-                    <a href="view_cart.php?id=<?php echo $value['id'] ?>&action=delete">
+                    <a class="btn-text" href="view_cart.php?id=<?php echo $value['id'] ?>&action=delete">
                       xoá
 
                     </a>
@@ -87,18 +96,20 @@
                 </td>
                 <td class="item-content-price" data-label="Đơn giá">
                   <span class="item-price">
-                    <?php echo $value['price'] ?>
+                    <?php echo number_format( $value['price']) ?>
                   </span>
                 </td>
                 <td class="item-amount" data-label="Số lượng">
                   <div class="product-quantitys">
-                    <a href="update_quantity_in_cart.php?id=<?= $key ?>&type=decre">
+                  <div class="buttons_added">
+                    <a class="minus is-form" href="update_quantity_in_cart.php?id=<?= $key ?>&type=decre">
                         -
                     </a>
-                    <?php echo  $value['quantity'] ?>
-                    <a href="update_quantity_in_cart.php?id=<?= $key ?>&type=incre">
+                   <a  class="input-qty"  ><?php echo  $value['quantity']  ?> </a>
+                    <a class="plus is-form" href="update_quantity_in_cart.php?id=<?= $key ?>&type=incre">
                         +
                     </a>
+                    </div>
                   </div>
                 </td>
                 <td class="item-total-price" data-label="Tổng giá">

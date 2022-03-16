@@ -12,6 +12,8 @@ $each = mysqli_fetch_array($result);
 $action =(isset($_GET['action'])) ? $_GET['action'] : 'add';
 
 
+
+
 $quantity = (isset($_GET['quantity'])) ? $_GET['quantity'] : 1;
 //session_destroy();
 //die();
