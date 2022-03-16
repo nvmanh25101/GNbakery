@@ -10,7 +10,7 @@
   $result = mysqli_query($connect,$sql);
   $each = mysqli_fetch_array($result);
 
-  $sqlOrder = "select * from orders where customer_id = '$id'";
+  $sqlOrder = "select id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, total_price from orders where customer_id = '$id'";
   $resultOrder = mysqli_query($connect,$sqlOrder);
 ?>
 <!DOCTYPE html>
@@ -57,11 +57,11 @@
             }
           ?>
           >Bạn chưa có lịch sử giao dịch nào</p>
-        <table <?php
+        <table class="table table-borderless" <?php
                 if(mysqli_num_rows($resultOrder)<1){
                   echo 'style = "display:none;"';
                 }else{
-                  echo 'style = "display:block;"';
+                  echo 'style = "display:table;"';
                 }
               ?>>
           <thead class="table-shopping">
@@ -70,6 +70,7 @@
               <th scope="col" class="time-shopping">Thời gian đặt</th>
               <th scope="col" class="total-shopping">Tổng tiền</th>
               <th scope="col" class="stt-shopping">Trạng thái</th>
+              <th scope="col" >Xem chi tiết</th>
             </tr>
           </thead>
           <tbody>
@@ -77,14 +78,26 @@
               if(mysqli_num_rows($resultOrder) > 0){
                 while($rowOrder = mysqli_fetch_assoc($resultOrder)){
             ?>
-            <tr class="col">
-              <td class="txt-order-shopping">GN<?php echo $rowOrder['id'] ?>BKR</td>
+            <tr >
+              <th scope="row" class="txt-order-shopping">GN<?php echo $rowOrder['id'] ?>BKR</th>
               <td class="txt-time-shopping"><?php 
                       echo ($rowOrder['created_at']);
                     ?></td>
-              <td class="txt-total-shopping"><?php echo $rowOrder['total_price'] ?></td>
+              <td class="txt-total-shopping"><?= number_format($rowOrder['total_price'], 0, '.', ' ') ?>&#8363</td>
+              <td ><?php switch ($rowOrder['status']) {
+                                            case 0:
+                                                echo "Mới đặt";
+                                                break;
+                                            case 1:
+                                                echo "Đã duyệt";
+                                                break;
+                                            case 2:
+                                                echo "Đã huỷ";
+                                                break;
+                                        }
+                                        ?></td>
    
-              <td class="txt-stt-shopping"><a class="detail-txt" href="order_product.php?order_id=<?php echo $rowOrder['id'] ?>">Chi tiết</a></td>
+              <td class="txt-stt-shopping"><a class="detail-txt" href="order_product.php?order_id=<?php echo $rowOrder['id'] ?>&status=<?= $rowOrder['status'] ?>">Chi tiết</a></td>
             </tr>
             <?php
                 }
@@ -95,8 +108,7 @@
      </div>
      <div class="content-grid-right">
        <h4 class="h4">Thông Tin Tài Khoản</h4>
-       <h3 class="h4">Họ và tên: </h3>
-       <h3><?= $each['name'] ?? '' ?></h3>
+       <h3 class="h4">Họ và tên: <?= $each['name'] ?? '' ?></h3>
        <p>
         <br>
         Số điện thoại: <?= $each['phone'] ?? '' ?>

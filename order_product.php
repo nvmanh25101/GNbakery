@@ -4,9 +4,10 @@ session_start();
 if(empty($_SESSION['id'])){
   header("location:signin.php");
 }
+$status = $_GET['status'];
 $idCus = $_SESSION['id'];
 $idOrder = $_GET['order_id'];
-$sqlTtin = "SELECT * FROM orders WHERE id = $idOrder and customer_id = $idCus";
+$sqlTtin = "SELECT id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, total_price FROM orders WHERE id = $idOrder and customer_id = $idCus";
 $resultTtin = mysqli_query($connect,$sqlTtin);
 $rowTtin = mysqli_fetch_assoc($resultTtin);
 
@@ -53,7 +54,18 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
                     <h1>Thông tin sản phẩm:</h1>
                  </div>
                   <div class="order-right">
-                    <p class="order-text" >Trạng thái: Nguời gửi đang chuẩn bị hàng </p> 
+                    <p class="order-text" >Trạng thái: <?php switch ($status) {
+                                            case 0:
+                                                echo "Đơn hàng chưa được duyệt";
+                                                break;
+                                            case 1:
+                                                echo "Nguời gửi đang chuẩn bị hàng";
+                                                break;
+                                            case 2:
+                                                echo "Đơn hàng đã bị huỷ";
+                                                break;
+                                        }
+                                        ?> </p> 
                  </div>
              </div>
 
@@ -90,7 +102,7 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
                 </td>
                 <td class="item-contentt-price" data-label="Đơn giá">
                   <span class="item-price">
-                    <?php echo $rowBanh['price'] ?>
+                  <?= number_format($rowBanh['price'], 0, '.', ' ') ?>&#8363g
                   </span>
                 </td>
                 <td class="item-amountt" data-label="Số lượng">
@@ -120,7 +132,7 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
 					<div class="cart-price-right">
 						<p>
 							<span class="cart__subtotal-title">Tổng tiền</span><br>
-							<span class="cart__subtotal"><?php echo $rowTtin['total_price'] ?></span>
+							<span class="cart__subtotal"><?= number_format($rowTtin['total_price'], 0, '.', ' ') ?>&#8363</span>
 						</p>
 			
 					</div>
