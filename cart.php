@@ -37,7 +37,7 @@
     <div class="cart-content">
       <h1>Giỏ Hàng </h1>
       <!-- css cho Đạt -->
-      <div          <?php  
+      <div class="Empty_cart"         <?php  
                         if(empty($cart)){
                           echo 'style = "display:block;"';
                         }
@@ -45,8 +45,8 @@
                           echo 'style = "display:none;"';
                         }
                     ?>>
-          <span>Giỏ hàng hiện chưa có bánh</span>
-          <span>Tiếp tục đặt hàng: </span><a href="index.php">Tại đây</a>
+          <span class="cart-txt">Giỏ  hàng trống</span><br><br>
+          <span  class="cart-txt">Tiếp tục đặt hàng: </span><a class="cart-txt-he" href="index.php">Tại đây</a>
       </div>
       <!--  -->
       <form  action="" method="post" novalidate="" class="cart table-wrap"

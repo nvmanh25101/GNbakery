@@ -41,7 +41,7 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
               Tài khoản
             </a>
           <?php } else { ?>
-              <a href="user.php">
+              <a href="./user.php?id=<?= $each['id'] ?>">
               <i class="bi bi-people-fill" aria-hidden="true"></i>
               Chào , <?= $_SESSION['name'] ?>
             </a>

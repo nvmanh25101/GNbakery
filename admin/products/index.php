@@ -62,7 +62,7 @@
             <div class="row gx-5">
                 <div class="col-12">
                     <div class="table-responsive-sm">
-                        <table class="product__table table table-sm table-light table-bordered table-hover align-middle">
+                        <table class="product__table table table-sm table-light table-bordered  align-middle">
 
                             <?php require_once '../error_success.php' ?>
                             <thead>

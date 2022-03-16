@@ -236,6 +236,19 @@ b {
     padding: 20px;
     margin: 20px;
 }
+.Empty_cart .cart-txt {
+	font-size: 20px;
+	font-weight: 200;
+	font-family: "UTMAvo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cart-txt-he{
+	font-size: 14px;
+    
+font-family: "UTMAvo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cart-txt-he:hover{
+	color: #EE9595;
+}
 td {
     display: table-cell;
     vertical-align: inherit;
@@ -247,8 +260,9 @@ table {
 }
 
 .cart-content h1{
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 3em;
+
+    font-weight: 300;
     padding: 0px 0px 15px 0px;
     margin: 0px 0px 15px 0px;
    

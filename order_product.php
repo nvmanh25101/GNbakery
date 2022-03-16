@@ -28,7 +28,7 @@ session_start();
 <body>
 <?php require './header.php'; ?>
      <div class="order-product">
-        <h2>Thong tin don hàng</h2>
+        <h2>Thong tin đơn hàng</h2>
         <hr>
             <div class="order-product-content">
                
