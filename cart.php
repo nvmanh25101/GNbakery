@@ -1,3 +1,4 @@
+<?php require 'check_user_cart.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,19 +70,15 @@
 								
               <div class="product-quantitys">
        
-              <div class="buttons_added">
-                <form action="cart.php">
-                <input class="minus is-form" name="action" type="button" value="-">
-                <input aria-label="quantity" class="input-qty" max="30" min="1" name="quantity" type="number" value="<?php echo $value['quantity'] ?>">
-               <input class="plus is-form" name="id" type="button" value="+">
+                <form action="view_cart.php" method="get">
+             
+                  <input type="hidden" name="action" value="update">
+                <input type="hidden" name="id" value="<?php echo  $value['id']?>">
+                <input type="text"  class="input-qty"  name="quantity"  value="<?php echo $value['quantity'] ?>">
+                 <button  type="submit">Cap nhat</button>
             </form>
-            
-              </div>
- 
-              </div>
-
-
-		       	 </td>
+        </div>
+  	 </td>
 							<td class="item-total-price" data-label="Tổng giá" >
 								
 								<span class="item-price">
@@ -103,13 +100,13 @@
 					<div class="cart-price-right">
 						<p>
 							<span class="cart__subtotal-title">Tổng tiền</span>
-							<span class="cart__subtotal"><?php echo total_price($cart)?></span>
+							<span class="cart__subtotal"><?php echo number_format(total_price($cart))?></span>
 						</p>
 						<div class="btn-payment ">
 
-							<span class="btn-payment-text" href="#">
-								Thanh toán
-							</span>
+							<a class="btn-payment-text" href="./confirminfo.php">
+								Đặt hàng
+							</a>
 
             </div>
 					</div>
