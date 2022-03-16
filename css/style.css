@@ -1108,8 +1108,8 @@ li{
  	width: 100%;
  }
   .menu, .subscribe ,.connect ,.contact-item {
-   padding: 0;
-   margin: 10px;
+   padding: 10px;
+   margin: 0;
   	width: 100%;
   }
   .contact-item .ft-contact-logo  {

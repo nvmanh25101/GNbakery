@@ -40,7 +40,7 @@ $each = mysqli_fetch_array($result);
       <p class="hero-text"></p>
     </div>
   </div>
-  <div class="main-container">
+  <div class="main-container-header">
     <div class="confirm-container">
       <div class="confirm-box">
         <div class="confirm-text">
@@ -49,7 +49,7 @@ $each = mysqli_fetch_array($result);
         <hr>
       </div>
     </div>
-    <form action="./process_checkout.php" method="post">
+    <form class="form-page" action="./process_checkout.php" method="post">
       <div class="page_container">
         <div class="main_content">
           <div class="form_name">

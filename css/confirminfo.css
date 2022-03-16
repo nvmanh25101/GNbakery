@@ -24,11 +24,16 @@ body, html {
     
   }
  /* MAIN */
- .main-container{
+ .main-container-header{
      width: 100%;
  }
  .confirm-box{
      margin: 50px 160px 10px 160px;
+ }
+ .form-page {
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
  }
 .confirm-text{
     font-family: Playfair Display;
@@ -39,8 +44,13 @@ body, html {
     font-weight: 700;
 }
 .page_container{
+    justify-content: center;
     height: 410px;
     width: max-content;
+    margin-left: 100px;
+}
+.main-container{
+    margin-left: 300px;
 }
 .form_name{
     margin-top: 64px;

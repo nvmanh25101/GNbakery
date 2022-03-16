@@ -57,13 +57,19 @@
             }
           ?>
           >Bạn chưa có lịch sử giao dịch nào</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Đơn hàng</th>
-              <th>Thời gian đặt</th>
-              <th>Tổng tiền</th>
-              <th>Trạng thái</th>
+        <table <?php
+                if(mysqli_num_rows($resultOrder)<1){
+                  echo 'style = "display:none;"';
+                }else{
+                  echo 'style = "display:block;"';
+                }
+              ?>>
+          <thead class="table-shopping">
+            <tr class="col">
+              <th scope="col" class="order-shopping">Đơn hàng</th>
+              <th scope="col" class="time-shopping">Thời gian đặt</th>
+              <th scope="col" class="total-shopping">Tổng tiền</th>
+              <th scope="col" class="stt-shopping">Trạng thái</th>
             </tr>
           </thead>
           <tbody>
@@ -71,14 +77,14 @@
               if(mysqli_num_rows($resultOrder) > 0){
                 while($rowOrder = mysqli_fetch_assoc($resultOrder)){
             ?>
-            <tr>
-              <td>GN<?php echo $rowOrder['id'] ?>BKR</td>
-              <td><?php 
+            <tr class="col">
+              <td class="txt-order-shopping">GN<?php echo $rowOrder['id'] ?>BKR</td>
+              <td class="txt-time-shopping"><?php 
                       echo ($rowOrder['created_at']);
                     ?></td>
-              <td><?php echo $rowOrder['total_price'] ?></td>
-              <td></td>
-              <td><a href="order_product.php?id=<?php echo $rowOrder['id'] ?>">Chi tiết</a></td>
+              <td class="txt-total-shopping"><?php echo $rowOrder['total_price'] ?></td>
+   
+              <td class="txt-stt-shopping"><a class="detail-txt" href="order_product.php?order_id=<?php echo $rowOrder['id'] ?>">Chi tiết</a></td>
             </tr>
             <?php
                 }
