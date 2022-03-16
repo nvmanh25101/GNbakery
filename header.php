@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 require 'cart_function.php';
 require './database/connect.php';
 
@@ -134,7 +134,7 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
               Đăng Xuất
             </a>
           <?php } ?>
-          <a class="item" href="card.php">
+          <a class="item" href="cart.php">
             <div class="cart-total-price">
               <i class="bi bi-cart-dash-fill" aria-hidden="true"></i>
               <span id="CartCount"><?php echo total_item($cart) ?></span>
