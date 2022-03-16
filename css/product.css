@@ -57,7 +57,7 @@ body, html {
 }
 .product-content-right{
     
-    padding: 20px;
+    padding: 37px;
     margin-left: 50px;
     background: #fff;
     border-radius: 10px;
@@ -69,6 +69,9 @@ body, html {
     color: #3d1a1a;
     margin: 0;
     font-weight: bolder;
+}
+.product-content-right-name p{
+    margin-top: 23px;
 }
 .product-content-right hr {
 
@@ -83,15 +86,18 @@ body, html {
     font-weight: bolder;
 }
 .product-select-swatch{
-    margin-top: 25px;
+    margin-top: 50px;
 }
 .product-select-swatch-text p{
     margin: 0;
     font-weight: bold;
     margin-bottom: 5px;
     display: inline-block;
-    
+    font-size: 17px;
     position: relative;
+}
+.text p{
+    font-size: 17px;
 }
 .select-swap{
     display: flex;
@@ -151,7 +157,7 @@ body, html {
   vertical-align: middle; }
 
 .product-quantity{
-    margin-top: 25px;
+    margin-top: 50px;
     display: flex;
 
 
@@ -208,7 +214,7 @@ body, html {
     margin:0;
 }
 .product-actions {
-    margin-top: 15px;
+    margin-top: 50px;
 }
 
 
@@ -325,6 +331,13 @@ ul.productss li:hover img{
 	transform: scale(1.1);
 	transition: all 0.3s;
 
+}
+.product-price .line-price{
+    margin-top: 25px;
+}
+.product-price .line-price span{
+    margin-right: 10px;
+    font-size: 17px;
 }
 ul.productss li:hover .product-info a{
 	color: #c0c906;
