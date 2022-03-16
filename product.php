@@ -98,8 +98,8 @@ $result_category = mysqli_query($connect, $sql);
                   <p>Số lượng:</p>
                 </div>
                 <div class="buttons_added">
-                <input type = "number" name="quantity" value = "1">
-                <input type="hidden" name="id" value="<?php echo $each['id'] ?>" max="30" min="1">
+                <input type = "number" name="quantity" value = "1" max="30" min="1">
+                <input type="hidden" name="id" value="<?php echo $each['id'] ?>" >
                 </div>
                 
               </div>
