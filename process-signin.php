@@ -3,10 +3,8 @@
     if(isset($_POST['btnSignin'])){
         $email = $_POST['email'];
         $pass = $_POST['password']; 
-        $connect = mysqli_connect('localhost','root','','GNbakery');
-        if(!$connect){
-            die("Kết nốt thất bại. Vui lòng kiểm tra lại các thông tin máy chủ.");
-        };
+        require './database/connect.php';
+
         $sql = "SELECT * FROM customers where email = '$email'";
         $result = mysqli_query($connect,$sql);
         if(mysqli_num_rows($result) > 0){
@@ -17,7 +15,7 @@
             if(password_verify($pass,$pass_hash)){
                 $_SESSION['id'] = $id;
                 $_SESSION['name'] = $name;
-                header("location:Home-user.php");
+                header("location:index.php");
             }else{
                 $error = "Incorrect account or password ";
                 header("location:signin.php?error=$error");

@@ -21,14 +21,13 @@
                 $_SESSION['image'] = $image;
                 header("location:./products/index.php");
             }else{
-                
-                $error = "Sai tài khoản hoặc mật khẩu";
-                header("location:index.php?error=$error");
+                $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
+                header("location:index.php");
             }
         }
         else{
-            $error = "Sai tài khoản hoặc mật khẩu";
-            header("location:index.php?error=$error");
+            $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";
+            header("location:index.php");
         }
     }else{
         header("location:index.php");

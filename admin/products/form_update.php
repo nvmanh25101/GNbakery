@@ -48,6 +48,7 @@
 
                      <form action="process_update.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $each['id'] ?>">
+                        <input type="hidden" name="admin_id" value="<?= $each['admin_id'] ?>">
                         <div class="mb-4 fs-4">
                             <label class="form-label" for="name">Tên</label>
                             <input type="text" name="name" value="<?= $each['name'] ?>" id="name" class="form__input form-control" autocomplete="off"/>
@@ -103,7 +104,7 @@
                                     </option>
                                 <?php } ?>
                             </select>
-
+                        </div>
                         <button type="submit" class="form__btn btn mt-4 mb-4">Sửa</button>
                     </form>
                 </div>

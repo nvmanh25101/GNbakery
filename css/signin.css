@@ -861,10 +861,6 @@ li{
    body{
     background-color: #F8F2E8;
    }
-  footer{
-    display: none;
-
-  }
 
  
  .container #main-menu li ul.sub-menu{
@@ -955,8 +951,52 @@ li{
       #backtop{
         display: none;
       }
-}
+      footer {
 
+        width: 100%;
+     }
+     footer .footer-top{
+        width: 100%;
+     }
+      .menu, .subscribe ,.connect ,.contact-item {
+       padding: 0;
+       margin: 10px;
+        width: 100%;
+      }
+      .contact-item .ft-contact-logo  {
+    
+        text-align: center;
+        width: 80%;
+        margin-left: 30px;
+      }
+      .ft-contact-tel , .ft-contact-email , .ft-contact-address,
+      .menu .ft-menu .list a,
+      .ft-subscribe p{
+        font-size: 14px;
+        font-weight: 100;
+        font-family: sans-serif;
+      }
+      .menu{
+        margin-top: 10px;
+    
+      }
+      .menu .ft-menu h4,
+      .subscribe .ft-subscribe-wrapper h4{
+        font-size: 24px;
+        font-family: serif;
+      }
+      .connect{
+        margin-top: 10px;
+      }
+     .connect p{
+        font-weight: bolder;
+        font-size: 22px;
+        font-family: sans-serif;
+     }
+    }
+    .ft-copyright{
+        margin-left: 30px;
+    }
 .bi-search{
 
    background: #FF1493;
@@ -966,21 +1006,13 @@ li{
     font-size: 1.4rem;
     width: 100%;
     border-radius: 3px;
-    padding: 0 10px;
+    padding: 3px 10px;
 }
 
 .bi {
     display: inline-block;
 }
-=======
-    background: #FF1493;
-    font-weight: 900;
-    color: white;
-    text-align: center;
-    width: 36px;
-    height: 39px;
-    border-radius: 3px;
-}
+
 
 
 
@@ -1072,12 +1104,6 @@ li{
 .ft-copyright{
     margin-left: 30px;
 }
-<<<<<<< HEAD
-}
-
-
-
-=======
 
 /*reponsive product*/
 .hero-image {
@@ -1142,7 +1168,6 @@ li{
     }
 
 }
->>>>>>> 35f34e2b7173f54882a19d220d6f4817ea19c46b
 
 .ft-copyright{
     margin-left: 30px;

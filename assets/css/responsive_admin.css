@@ -46,6 +46,11 @@
         font-size: 2.8rem;
     }
 
+    .image-img-mobile {
+        display: block;
+    }
+
+    .zoomContainer {
+        display: none;
+    }
 }
-
-

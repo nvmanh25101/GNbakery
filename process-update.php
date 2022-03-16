@@ -5,10 +5,8 @@
     $pass = $_POST['password'];
     $address = $_POST['address'];
     $phone = $_POST['phone'];
-    $connect = mysqli_connect('localhost','root','','GNbakery');
-        if(!$connect){
-            die("Kết nốt thất bại. Vui lòng kiểm tra lại các thông tin máy chủ.");
-        };
+    require './database/connect.php';
+
     if($pass==""){
         $sql = "UPDATE customers SET address = '$address',phone = '$phone' WHERE id = '$id'";
         $result = mysqli_query($connect,$sql);

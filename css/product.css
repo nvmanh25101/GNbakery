@@ -3,7 +3,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    
+    font-family:David Libre;
   }
   
   .hero-image {
@@ -244,21 +244,7 @@ body, html {
 }
 
 /* Style the buttons inside the tab */
-.tablinks{
-    border: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
 
-  font-weight: bolder;
-  padding: 10px 35px;
-    
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background: white;
-    color: black;
-}
 .tablinkss {
     background: #3d1a1a;
     color: #c0c906;

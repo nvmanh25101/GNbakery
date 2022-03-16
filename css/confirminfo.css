@@ -1,0 +1,89 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cover1.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+  }
+  
+  .hero-text {
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+  }
+ /* MAIN */
+ .main-container{
+     width: 100%;
+ }
+ .confirm-box{
+     margin: 50px 160px 10px 160px;
+ }
+.confirm-text{
+    font-family: Playfair Display;
+    font-size: 24px;
+    text-align: left;    
+    color: #FF1493;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.page_container{
+    height: 410px;
+    width: max-content;
+}
+.form_name{
+    margin-top: 64px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.form_address{
+    margin-top: 38px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.form_phone{
+    margin-top: 41px;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.btnReturn{
+    background-color: white;
+    height: 45px;
+    width: 163px;
+    border-radius: 5px;
+    border: 1px solid #FF1493;
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FF1493;
+    margin-top: 45px;
+	
+}
+.btnConfirm{
+	background-color: white;
+    height: 45px;
+    width: 163px;
+    border-radius: 5px;
+    border: 1px solid #FF1493;
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FF1493;
+    margin-top: 45px;
+	margin-left: 320px;
+}
+.btnup{
+	display: flex;
+	
+}

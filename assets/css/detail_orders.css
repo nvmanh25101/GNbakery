@@ -1,0 +1,53 @@
+.main-form{
+    margin: 30px 30px 0 270px;
+}
+#container_box{
+    margin-left: 267px;   
+    width: 81%;
+
+}
+#container_box th{
+    background-color: white;
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-weight: 400;
+    border: 0.3px solid #c9c9c9;
+    color: #333;
+    align-items: center;
+}
+.name-product{
+    width: 362px;
+}
+.pic-product{
+    width: 254px;
+}
+.price-product{
+    width: 165px;
+}
+.amount-product{
+    width: 137px;
+}
+.img_prd{
+    width: 240px;
+}
+.detail_name_product>a {
+   text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+}
+.total-payments{
+    text-align: right;
+}
+#container_box .total-payments span{
+}
+.t-pay{
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-weight: 400;
+}
+.t-money{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 600; 
+    margin-left: 100px;
+}

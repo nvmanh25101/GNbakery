@@ -1,13 +1,53 @@
 <?php
-  require './header.php';
 
-  $sql = "SELECT * FROM products
-  order by category_detail_id ASC, id desc";
+  session_start();
+  require './database/connect.php';
+
+  $where = 1;
+  if(isset($_GET['category'])) {
+    $category = $_GET['category'];
+    $where = "category_detail_id = '$category'";
+  }
+
+  $sql = "SELECT products.*, category_detail.name as category_name FROM products
+  join category_detail on category_detail.id = products.category_detail_id
+  where $where
+  order by category_detail_id ASC, products.id desc";
+
   $result = mysqli_query($connect, $sql);
+  if(mysqli_num_rows($result) == 0) {
+    $error = 'Không có sản phẩm nào';
+  }
+  else {
+    $category_name = mysqli_fetch_array($result)['category_name'];
+  }
 
 ?>
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width">
+  <title>GNBAKERY - BANH NGOT HUONG VI PHAP</title>
+  <link rel="shortcut icon" type="image" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
+</head>
+
+<body>
+  <?php require './header.php'; ?>
   <!-- image slider start -->
   <div class="slideshow-container">
 
@@ -48,7 +88,7 @@
   <!-- product -->
   <div id="intro">
     <div class="headline">
-      <h3>GATEAUX KEM TƯƠI</h3>
+      <h3><?= $category_name ?? $error ?></h3>
 
     </div>
     <ul class="products">
@@ -67,8 +107,10 @@
               <div class="product-price-action">
                 <p class="product-price"><?= number_format($each['price'], 0, '.', ',') ?></p>
                 <div class="product-action">
-                  <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
+                  <form action="view_cart.php?id=<?= $each['id'] ?>" method="POST">
+                  <button   type="submit" name="addcart" class="btn-action"><i class="bi bi-cart-fill"></i>
                   </button>
+      </form>
                 </div>
               </div>
             </div>
@@ -81,495 +123,13 @@
             <a href="product.html" class="product-thumb">
               <img src="img/pic2.jpg" alt="">
 
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="product.html" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic3.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic4.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic5.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic6.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic7.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic8.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic9.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic10.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic11.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic12.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic13.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic14.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic15.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic16.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic17.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic18.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic19.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic20.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic21.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic22.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic23.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="product-item">
-          <div class="product-top">
-            <a href="" class="product-thumb">
-              <img src="img/pic24.jpg" alt="">
-
-            </a>
-          </div>
-          <div class="product-info">
-            <a href="" class="product-cat">FRUIT CAKE</a>
-            <p class="product-name">KT017</p>
-            <div class="product-price-action">
-              <p class="product-price">220,000</p>
-              <div class="product-action">
-                <button type="button" class="btn-action"><i class="bi bi-cart-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li> -->
-
-
-
-
-    </ul>
     <div class="btn-contentmore">
       <a href="" class="btn-more">Xem Them</a>
-    </div>
+    </div> -->
   </div>
 
   <!-- new/notice -->
-  <div id="Home-notice">
+  <!-- <div id="Home-notice">
     <div class="latest-wrap">
       <div class="title-notice">
         <h3>TIN TỨC</h3>
@@ -768,7 +328,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <section class="about-introduce clearfix">
     <div class="title-text">
@@ -863,36 +423,16 @@
                     <input name="utf8" type="hidden" value="✓">
 
                     <div class="input-group-intro">
-                      <input type="email" required="" value="" placeholder="Nhập email của bạn..." name="contact[email]"
-                        id="your-Email" class="input-group-field" aria-label="email@example.com">
+                     
                       <input type="hidden" name="contact[tags]" value="newsletter">
-                      <span class="input-group-intro-btn">
-                        <button type="submit" name="subscribe" id="subscribe-btn" value="GỬI"><i
-                            class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                      </span>
+                      
                     </div>
 
                   </form>
 
                 </div>
               </div>
-              <div class="ft-social-network">
-
-                <a href="" target="_blank"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-twitter" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-google" aria-hidden="true"></i></a>
-
-
-                <a href="" target="_blank"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-
-              </div>
+           
             </div>
 
             <div class="connect">
@@ -967,7 +507,6 @@
 
 
   <script src="js/app.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -975,6 +514,30 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/notify.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+  $('document').ready( function() {
+    $("#search").autocomplete({
+      source: "search.php"
+    }).autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $("<li class='sub-search-item'>")
+        .append(`<a href='./product.php?id=${item.value}' class='sub-search-link'>
+                  <img class='sub-search-link__img' src='./assets/images/products/${item.image}' alt=''>
+                  <h5 class='sub-search-link__name'>
+                    ${item.label}
+                  </h5>
+                  <span class='sub-search-link__price'>
+                  ${item.price}&#8363
+                  </span>
+                </a>`
+                )
+        .appendTo(ul);
+    };
+
+    $.notify("<?php echo $_SESSION['success']; unset($_SESSION['success']); ?>", "success");
+  } );
+  </script>
 </body>
 
 </html>
