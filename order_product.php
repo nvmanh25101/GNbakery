@@ -1,6 +1,19 @@
 <?php 
 require './database/connect.php';
 session_start();
+if(empty($_SESSION['id'])){
+  header("location:signin.php");
+}
+$idCus = $_SESSION['id'];
+$idOrder = $_GET['order_id'];
+$sqlTtin = "SELECT * FROM orders WHERE id = $idOrder and customer_id = $idCus";
+$resultTtin = mysqli_query($connect,$sqlTtin);
+$rowTtin = mysqli_fetch_assoc($resultTtin);
+
+$sqlBanh = "SELECT * FROM products,order_product WHERE order_id = $idOrder and order_product.product_id = products.id";
+$resultBanh = mysqli_query($connect,$sqlBanh);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,83 +40,93 @@ session_start();
 </head>
 <body>
 <?php require './header.php'; ?>
-     <div class="order-product">
-        <h2>Thong tin don hàng</h2>
-        <hr>
+        <div class="order-product">
+        <h2>Thông tin đơn hàng</h2>
             <div class="order-product-content">
                
                  <div class="order-left">
-                    <h1> Dia chi nhan hang</h1>
-                    <p> Dog Mạnh </p>
-                    <p>0333135698</p>
-                    <p>Dia chi chi tiet: Chung cư HH2-90 Nguyễn Tuân-Thanh Xuân-Hà Nội</p>
-
-                 
+                    <h1>Mã đơn hàng: GN<?php echo $rowTtin['id']  ?>BKR</h1>
+                    <p class="mt-3">Tên người đặt: <?php echo $rowTtin['name_receiver']  ?></p>
+                    <p>Thời gian đặt hàng: <?php echo $rowTtin['created_at']  ?></p>
+                    <p>Số điện thoại: <?php echo $rowTtin['phone_receiver']  ?></p>
+                    <p>Địa chỉ giao hàng: <?php echo $rowTtin['address_receiver']  ?></p>
+                    <h1>Thông tin sản phẩm:</h1>
                  </div>
                   <div class="order-right">
-                    <p class="order-text" >Nguời gửi đang chuẩn bị hàng </p> 
+                    <p class="order-text" >Trạng thái: Nguời gửi đang chuẩn bị hàng </p> 
                  </div>
              </div>
-         
 
-        <table class="cart-table full ">
-					<thead class="cart__row">
+             <table class="cart-table full ">
+          <thead class="cart__row">
 
-						<tr> <th class="item-img"></th>
-                              <th class="item-content-text"></th>
-						      <th class="item-total-price"></th>
-					    </tr></thead>
+            <tr>
+              <th>Ảnh </th>
+              <th>Chi tiết sản phẩm</th>
+              <th>Đơn giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
 
-                   <tbody>
-                       <tr class="order-inner">
-							<td class="item-img" data-label="Sản phẩm">
-								<a href="" class="cart__image">
-									
-									<img src="img/pic1.jpg">
-								</a>
-							</td>
-							<td class="item-content-text">
-								<a href="" class="item-text">
-                                    CHOCOLATE
-								</a>
-								
-								<br>
-                            <div class="cart__remove">
-								<small>23 cm</small><br>
-								<a href="" >
-                                  X1
-									
-								</a>
-                             </div>   
-							</td>
-					
+            <?php 
+              if(mysqli_num_rows($resultBanh) > 0){
+                while($rowBanh = mysqli_fetch_assoc($resultBanh)){
+            ?>
+              <tr class="cart__row table__section">
 
-							<td class="item-total-price" data-label="Tổng giá" >
-								
-								<span class="item-price">
-                                    300000
-								</span>
-								
-							</td>
-						</tr>
-              
+                <td class="item-img" data-label="Sản phẩm">
+                  <a href="" class="cart__image">
+                    <img src="./assets/images/products/<?php echo $rowBanh['image'] ?>">
+                  </a>
+                </td>
+                <td class="item-content-text">
+                  GN<?php echo $rowBanh['name'] ?>
+                <br>
+                  <div class="cart__remove">
+                    <small>Kích thước: <?php echo $rowBanh['size'] ?> cm</small><br>
+                  </div>
+                </td>
+                <td class="item-content-price" data-label="Đơn giá">
+                  <span class="item-price">
+                    <?php echo $rowBanh['price'] ?>
+                  </span>
+                </td>
+                <td class="item-amount" data-label="Số lượng">
+                  <div class="product-quantitys">     
+                    <?php echo  $rowBanh['quantity'] ?>   
+                  </div>
+                </td>
+                <td class="item-total-price" data-label="Tổng giá">
 
-						
-						
-					</tbody>
+                  <span class="item-price">
+                    <?php echo number_format($rowBanh['price'] * $rowBanh['quantity']) ?>
+                  </span>
+
+                </td>
+              </tr>
+            <?php
+                }
+              }                   
+            ?>
+
+
+
+          </tbody>
         </table>   
 
-        <div class="row-total">
+                <div class="row-total">
 					<div class="cart-price-right">
 						<p>
 							<span class="cart__subtotal-title">Tổng tiền</span><br>
-							<span class="cart__subtotal">3000000</span>
+							<span class="cart__subtotal"><?php echo $rowTtin['total_price'] ?></span>
 						</p>
 			
 					</div>
-        </div>
-    </div>
-   <footer>
+                </div>
+            </div>
+            <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
       <div class="wrapper">

@@ -57,7 +57,13 @@
             }
           ?>
           >Bạn chưa có lịch sử giao dịch nào</p>
-        <table>
+        <table <?php
+                if(mysqli_num_rows($resultOrder)<1){
+                  echo 'style = "display:none;"';
+                }else{
+                  echo 'style = "display:block;"';
+                }
+              ?>>
           <thead>
             <tr>
               <th>Đơn hàng</th>
@@ -78,7 +84,7 @@
                     ?></td>
               <td><?php echo $rowOrder['total_price'] ?></td>
               <td></td>
-              <td><a href="order_product.php?id=<?php echo $rowOrder['id'] ?>">Chi tiết</a></td>
+              <td><a href="order_product.php?order_id=<?php echo $rowOrder['id'] ?>">Chi tiết</a></td>
             </tr>
             <?php
                 }
