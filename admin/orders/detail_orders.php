@@ -1,8 +1,8 @@
 <?php 
-    //require_once '../check_admin_signin.php';
+    require_once '../check_admin_signin.php';
+    $page = "orders";
     require_once '../navbar-vertical.php';
-   // require_once '../../database/connect.php';
-
+    require_once '../../database/connect.php';
 ?>
     <div class="main__form">
         <div class="main-container-text d-flex align-items-center">

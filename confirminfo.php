@@ -1,8 +1,21 @@
+<?php
+session_start();
+if (empty($_SESSION['id'])) {
+  header('location:./signin.php');
+  exit();
+}
 
+$id = $_SESSION['id'];
+require './database/connect.php';
+$sql = "select * from customers where id = '$id'";
+$result = mysqli_query($connect, $sql);
+$each = mysqli_fetch_array($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CONFIRM-GNBAKERY</title>
   <link rel="shortcut icon" type="image" href="img/logo.png">
@@ -19,58 +32,47 @@
   <script src="js/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
+
 <body>
   <?php require './header.php'; ?>
-    <div class="hero-image">
-      <div>
-        <p class="hero-text"></p>
+  <div class="hero-image">
+    <div>
+      <p class="hero-text"></p>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="confirm-container">
+      <div class="confirm-box">
+        <div class="confirm-text">
+          <p>Thông tin người nhận</p>
+        </div>
+        <hr>
       </div>
     </div>
-    <div class="main-container">
-      <div class="confirm-container">
-        <div class="confirm-box">
-          <div class="confirm-text">
-            <p >Thông tin người nhận</p>
+    <form action="./process_checkout.php" method="post">
+      <div class="page_container">
+        <div class="main_content">
+          <div class="form_name">
+            <label for="">Họ và tên</label>
+            <input type="text" name="name_receiver" class="form-control" value="<?= $each['name'] ?>" required>
           </div>
-          <hr>
+          <div class="form_address">
+            <label for="">Địa chỉ</label>
+            <input type="" name="address_receiver" class="form-control" value="<?= $each['address'] ?>" required>
+          </div>
+          <div class="form_phone">
+            <label for="">Số điện thoại</label>
+            <input type="" name="phone_receiver" class="form-control" value="<?= $each['phone'] ?>" required>
+          </div>
+          <div class="btnup">
+            <a class="btnReturn" href="./cart.php">Quay lại</a>
+            <button class="btnConfirm">Xác nhận</button>
+          </div>
         </div>
       </div>
-      <form action="#no" method = "post">
-            <div class="page_container">
-                    <div class="main_content">              
-                                <div class="form_name">
-                                    <label for="">Họ và tên</label>
-                                    <input type="text" name = "name" class="form-control" placeholder = "" value ="<?php /*echo $row['name'] */?>" required>
-                                </div>
-                                <div class="form_address">
-                                    <label for="">Địa chỉ</label>
-                                    <input type="" name = "address" class="form-control" placeholder="" value = "<?php
-                                                                                                            /*    if($row['address']==NULL){
-                                                                                                                    echo "";
-                                                                                                                }else{
-                                                                                                                    echo $row['address'];
-                                                                                                                }
-                                                                                                              */ ?>">
-                                </div>
-                                <div class="form_phone">
-                                      <label for="">Số điện thoại</label>
-                                    <input type="" name = "phone" class="form-control" placeholder="" value = "<?php
-                                                                                                              /*      if($row['phone']==NULL){
-                                                                                                                        echo "";
-                                                                                                                    }else{
-                                                                                                                        echo $row['phone'];
-                                                                                                                    }
-                                                                                                        */       ?>">
-                                </div>
-                                <div class="btnup">
-                                    <button class="btnUpdatet" name="" type="submit">Quay lại</button>
-                                    <a href=""><button  class="btnConfirm">Xác nhận</button></a>
-                                </div>
-                    </div>
-            </div>
-      </form>
+    </form>
 
-    </div>
+  </div>
   <footer>
     <div class="footer-top">
       <div class="footer-top-overlay"></div>
@@ -134,9 +136,9 @@
 
 
                     <div class="input-group-intro">
-                     
+
                       <input type="hidden" name="contact[tags]" value="newsletter">
-                     
+
                     </div>
 
                   </form>
@@ -145,7 +147,7 @@
 
                 </div>
               </div>
-            
+
             </div>
 
             <div class="connect">
@@ -201,7 +203,7 @@
       </div>
     </div>
 
-</footer>
+  </footer>
   <div id="hotline">
     <a href="tel:0333135698" id="yBtn">
       <i class="bi bi-telephone-fill"></i>
@@ -215,14 +217,15 @@
     <i class="bi bi-chevron-compact-up"></i>
   </div>
 
-    <script src="js/app.js"></script>
-    <script src="js/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
 
-  
-  
-  </body>
+
+
+</body>
+
 </html>

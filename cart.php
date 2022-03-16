@@ -104,9 +104,9 @@
 						</p>
 						<div class="btn-payment ">
 
-							<span class="btn-payment-text" href="#">
-								Thanh toán
-							</span>
+							<a class="btn-payment-text" href="./confirminfo.php">
+								Đặt hàng
+							</a>
 
             </div>
 					</div>

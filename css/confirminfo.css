@@ -40,8 +40,8 @@ body, html {
 }
 .page_container{
     margin-left: 395px;
-  width: 1114px;
-  height: 410px;
+    height: 410px;
+    width: max-content;
 }
 .form_name{
     margin-top: 64px;
