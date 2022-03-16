@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../assets/css/admin.css">
     <link rel="stylesheet" href="../../assets/css/responsive_admin.css">
     <link rel="stylesheet" href="../../assets/css/detail_orders.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/admin_order.css">
     <title>ADMIN-GN Bakery</title>
 </head>
 <body>

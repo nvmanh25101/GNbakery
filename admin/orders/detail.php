@@ -4,11 +4,12 @@ $page = "orders";
 require_once '../navbar-vertical.php';
 require_once '../../database/connect.php';
 
-// $id = $_GET['id'];
-// $sql = "SELECT * FROM order_detail WHERE order_id = '$id'";
-// $result = mysqli_query($connect, $sql);
-// $each = mysqli_fetch_array($result);
-
+$id = $_GET['id'];
+$sql = "SELECT * FROM order_product
+join products on order_product.product_id = products.id
+WHERE order_id = '$id'";
+$result = mysqli_query($connect, $sql);
+$sum = 0;
 ?>
 <div class="main__container">
     <div class="main-container-text d-flex align-items-center">
@@ -32,32 +33,27 @@ require_once '../../database/connect.php';
                             </tr>
                         </thead>
                         <tbody style="text-align:center;">
-                            <tr>
-                                <th class="detail_product-item" scope="col">
-                                    Chocolate cake mousee
-                                </th>
-                                <th class="detail_product-item" scope="col">
-                                    <img class="img_prd" src="../../assets/images/products/cake_1646490220.jpg" alt="">
-                                </th>
-                                <th class="detail_product-item" style="font-weight:600; font-family: Roboto;" scope="col">
-                                    300000đ
-                                </th>
-                                <th class="detail_product-item" scope="col">x1</th>
-                                <th class="detail_product-item" scope="col" style="font-weight:600; font-family: Roboto;">300000đ</th>
-                            </tr>
-                            <tr>
-                                <th class="detail_name_product" scope="col">
-                                    <a href="">Chocolate cake mousee </a>
-                                </th>
-                                <th scope="col">
-                                    <img class="img_prd" src="../../assets/images/products/cake_1646490220.jpg" alt="">
-                                </th>
-                                <th style="font-weight:600; font-family: Roboto;" scope="col">
-                                    300000đ
-                                </th>
-                                <th scope="col">x1</th>
-                                <th scope="col" style="font-weight:600; font-family: Roboto;">300000đ</th>
-                            </tr>
+                            <?php foreach($result as $each) { ?>
+                                <tr>
+                                    <th class="detail_product-item" scope="col">
+                                        <?= $each['name'] ?>
+                                    </th>
+                                    <th class="detail_product-item" scope="col">
+                                        <img class="img_prd" src="../../assets/images/products/<?= $each['image'] ?>" alt="">
+                                    </th>
+                                    <th class="detail_product-item" style="font-weight:600; font-family: Roboto;" scope="col">
+                                    <?= number_format($each['price'], 0, '.', ' ') ?>&#8363
+                                    </th>
+                                    <th class="detail_product-item" scope="col">x<?= $each['quantity'] ?></th>
+                                    <th class="detail_product-item" scope="col" style="font-weight:600; font-family: Roboto;">
+                                    <?php 
+                                        $result = $each['price'] * $each['quantity'];
+                                        $sum += $result;
+                                        echo number_format($result, 0, '.', ' ');
+                                    ?>&#8363
+                                    </th>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -66,7 +62,7 @@ require_once '../../database/connect.php';
         </div>
         <div class="total-payments">
             <span class="t-pay">Tổng tiền Thanh Toán </span>
-            <span class="t-money">300000đ</span>
+            <span class="t-money"><?= number_format($sum, 0, '.', ' ') ?>&#8363</span>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
     width: 81%;
 
 }
-#container_box th{
+.order_table th{
     background-color: #F4EBEB;
     font-family: Playfair Display;
     font-size: 15px;
@@ -15,29 +15,33 @@
     color: #333;
     align-items: center;
 }
-.id-product{
+.recipient-product{
+    width: 25%;
+}
+/* .id-product{
     width: 3%;
 }
 .orderer-product{
     width: 17%;
 }
-.recipient-product{
-    width: 23%;
-}
+
 .time-product{
     width: 11%;
 }
 .status-order{
     width: 22%;
-}
+} */
 .nameofyou{
     font-family: Playfair Display;
     font-size: 15px;
     font-weight: 700;
 }
 
+.two_buttons {
+    /* display: flex; */
+}
 
-.two_buttons button{
+.two_buttons a {
     border: 1px solid #FF1493;
     background-color: white;
     height: 40px;
@@ -45,7 +49,12 @@
     border-radius: 5px;
     font-family: Playfair Display;
     font-size: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    line-height: 4.0rem;
 }
 .btnBrowser{
-    margin-right: 43px;
+    margin-right: 12px;
 }
