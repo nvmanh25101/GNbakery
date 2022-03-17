@@ -31,14 +31,14 @@
     $num_page = ceil($num_product / $num_product_per_page);
     $skip_page = $num_product_per_page * ($page_current - 1);
 
-    $sql = "select products.*, category_detail.name as category_name, admin.name as admin_name, products.admin_id
+    $sql = "select products.*, category_detail.name as category_name, users.name as admin_name, products.user_id
     from products
     join category_detail
     on category_detail.id = products.category_detail_id
-    join admin
-    on admin.id = products.admin_id
+    join users
+    on users.id = products.user_id
     where $where
-    order by products.status desc, products.id desc
+    ORDER BY status asc,id DESC
     limit $num_product_per_page offset $skip_page
     ";
     
@@ -104,18 +104,18 @@
                                         <td><?= $each['admin_name'] ?></td>
                                         <?php if($each['status'] === '1') { ?>
                                             <td>
-                                                <a href="form_update.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                                <a href="form_update.php?id=<?= $each['id'] ?>&admin_id=<?= $each['user_id'] ?>">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </a>
                                             </td>
                                             <td>
-                                                <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                                <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['user_id'] ?>">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </a>
                                             </td>
                                         <?php } else { ?>
                                             <td colspan="2">
-                                                <a href="update_status.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>">
+                                                <a href="update_status.php?id=<?= $each['id'] ?>&admin_id=<?= $each['user_id'] ?>">
                                                     Mở bán
                                                 </a>
                                             </td>

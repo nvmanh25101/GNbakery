@@ -28,7 +28,7 @@ $status = 0;
 
 require './database/connect.php';
 
-$sql = "insert into orders(customer_id, name_receiver, address_receiver, phone_receiver, status, total_price) 
+$sql = "insert into orders(user_id, name_receiver, address_receiver, phone_receiver, status, total_price) 
 values('$id', '$name_receiver', '$address_receiver', '$phone_receiver', '$status', '$total_price')";
 
 mysqli_query($connect, $sql);

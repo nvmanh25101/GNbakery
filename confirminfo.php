@@ -7,7 +7,7 @@ if (empty($_SESSION['id'])) {
 
 $id = $_SESSION['id'];
 require './database/connect.php';
-$sql = "select * from customers where id = '$id'";
+$sql = "select * from users where id = '$id'";
 $result = mysqli_query($connect, $sql);
 $each = mysqli_fetch_array($result);
 ?>

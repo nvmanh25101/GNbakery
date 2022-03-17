@@ -7,7 +7,7 @@ if(empty($_SESSION['id'])){
 $status = $_GET['status'];
 $idCus = $_SESSION['id'];
 $idOrder = $_GET['order_id'];
-$sqlTtin = "SELECT id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, total_price FROM orders WHERE id = $idOrder and customer_id = $idCus";
+$sqlTtin = "SELECT id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, total_price FROM orders WHERE id = $idOrder and user_id = $idCus";
 $resultTtin = mysqli_query($connect,$sqlTtin);
 $rowTtin = mysqli_fetch_assoc($resultTtin);
 

@@ -20,10 +20,10 @@ require_once '../../database/connect.php';
 $sql_num_product = "select * from order_product where id = '$id'";
 $result_num_product = mysqli_query($connect, $sql);
 if(mysqli_num_rows($result_num_product) == 0) {
-    $sql = "delete from products where id = '$id' and admin_id = '$admin_id'";
+    $sql = "delete from products where id = '$id' and user_id = '$admin_id'";
 }
 else {
-    $sql = "update products set status = 0 where id = '$id' and admin_id = '$admin_id'";
+    $sql = "update products set status = 0 where id = '$id' and user_id = '$admin_id'";
 }
 
 mysqli_query($connect, $sql);

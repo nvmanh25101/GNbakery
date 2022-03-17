@@ -19,7 +19,7 @@ require_once '../../database/connect.php';
 
 $sql = "update products
 set status = 1
-where id = '$id' and admin_id = '$admin_id'";
+where id = '$id' and user_id = '$admin_id'";
 
 mysqli_query($connect, $sql);
 

@@ -3,9 +3,25 @@
     $page = "orders";
     require_once '../navbar-vertical.php';
     require_once '../../database/connect.php';
-    $sql = "SELECT orders.id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, customers.name 
+
+    $page_current = 1;
+    if(isset($_GET['page'])) {
+        $page_current = $_GET['page'];
+    }
+
+    $sql_num_order = "select count(*) from orders";
+    $arr_num_order = mysqli_query($connect, $sql_num_order);
+    $result_num_order = mysqli_fetch_array($arr_num_order);
+    $num_order = $result_num_order['count(*)'];
+
+    $num_order_per_page = 10;
+
+    $num_page = ceil($num_order / $num_order_per_page);
+    $skip_page = $num_order_per_page * ($page_current - 1);
+    $sql = "SELECT orders.id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, users.name 
     from orders
-    join customers on orders.customer_id = customers.id";
+    join users on orders.user_id = users.id
+    limit $num_order_per_page offset $skip_page";
     $result = mysqli_query($connect, $sql);
 ?>
 <div class="main__container">
@@ -80,7 +96,4 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-</body>
-</html>
+<?php require '../footer.php' ?>

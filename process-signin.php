@@ -5,7 +5,7 @@
         $pass = $_POST['password']; 
         require './database/connect.php';
 
-        $sql = "SELECT * FROM customers where email = '$email'";
+        $sql = "SELECT * FROM users where email = '$email'";
         $result = mysqli_query($connect,$sql);
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result);
