@@ -65,12 +65,12 @@
                 }
               ?>>
           <thead class="table-shopping">
-            <tr class="col">
+            <tr >
               <th scope="col" class="order-shopping">Đơn hàng</th>
               <th scope="col" class="time-shopping">Thời gian đặt</th>
               <th scope="col" class="total-shopping">Tổng tiền</th>
               <th scope="col" class="stt-shopping">Trạng thái</th>
-              <th scope="col" >Xem chi tiết</th>
+              <th scope="col" class="sttt-shopping" >Xem chi tiết</th>
             </tr>
           </thead>
           <tbody>
@@ -79,12 +79,12 @@
                 while($rowOrder = mysqli_fetch_assoc($resultOrder)){
             ?>
             <tr >
-              <th scope="row" class="txt-order-shopping">GN<?php echo $rowOrder['id'] ?>BKR</th>
-              <td class="txt-time-shopping"><?php 
+              <td  class="order-shopping">GN<?php echo $rowOrder['id'] ?>BKR</th>
+              <td class="time-shopping" ><?php 
                       echo ($rowOrder['created_at']);
                     ?></td>
-              <td class="txt-total-shopping"><?= number_format($rowOrder['total_price'], 0, '.', ' ') ?>&#8363</td>
-              <td ><?php switch ($rowOrder['status']) {
+              <td class="total-shopping"><?= number_format($rowOrder['total_price'], 0, '.', ' ') ?>&#8363</td>
+              <td class="stt-shopping" ><?php switch ($rowOrder['status']) {
                                             case 0:
                                                 echo "Mới đặt";
                                                 break;
@@ -97,7 +97,7 @@
                                         }
                                         ?></td>
    
-              <td class="txt-stt-shopping"><a class="detail-txt" href="order_product.php?order_id=<?php echo $rowOrder['id'] ?>&status=<?= $rowOrder['status'] ?>">Chi tiết</a></td>
+              <td class="sttt-shopping"><a class="detail-txt" href="order_product.php?order_id=<?php echo $rowOrder['id'] ?>&status=<?= $rowOrder['status'] ?>">Chi tiết</a></td>
             </tr>
             <?php
                 }

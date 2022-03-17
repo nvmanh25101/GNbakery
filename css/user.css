@@ -56,7 +56,7 @@
 
 
 
-	@media only screen and (max-width: 700px){
+	@media only screen and (max-width: 450px){
 		.content-header h1{
 			font-size: 24px;
 		}
@@ -67,27 +67,35 @@
 			margin-top: 30px;
 			width: 100%;
 		}
-	}
-	@media only screen and (max-width: 470px){
 		#page-content{
-	padding:17px;
-}
-		.content-header h1{
-			font-size: 24px;
+	     padding:17px;
+         }
+        thead tr { 
+			
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+         }
+		 table td:before {
+			padding-right: 40px;
+			top: 0;
+			white-space: nowrap;
 		}
-		.content-grid-left{
-			width: 100%;
-		}
-		.content-grid-right{
-			margin-top: 30px;
-			width: 100%;
-		}
+		
+		 td:nth-of-type(1):before { content: "Đơn hàng"; font-size: 17px;font-weight: bold;  }
+	td:nth-of-type(2):before { content: "Thời gian đặt hàng";  font-size: 17px;font-weight: bold;
+	                           }
+	td:nth-of-type(3):before { content: "Tổng tiền";  font-size: 17px;font-weight: bold;}
+	td:nth-of-type(4):before { content: "Trạng thái"; font-size: 17px;font-weight: bold; }
+	td:nth-of-type(5):before { content: "Xem chi tiết";  font-size: 17px;font-weight: bold;}
+
+		
 		.table>:not(caption)>*>* {
 			font-size: 14px;
 		}
-		
+		table ,tbody ,thead,tr,td,th
+		{display: block;}
 	}
-
 .table-sm>:not(caption)>*>* {
 	padding: 14px;
 	font-size: 19px;
