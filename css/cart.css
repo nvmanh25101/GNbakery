@@ -348,7 +348,8 @@ padding-top: 30px;
     clear: both;
    
 }
-.btn-payment{
+/* .btn-payment, */
+.btn-payment-text{
 	padding: 8px 10px;
     width: auto;
     margin: 0;

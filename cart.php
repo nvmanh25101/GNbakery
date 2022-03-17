@@ -96,7 +96,7 @@
                 </td>
                 <td class="item-content-price" data-label="Đơn giá">
                   <span class="item-price">
-                    <?php echo number_format( $value['price']) ?>
+                    <?php echo number_format( $value['price']) ?>&#8363
                   </span>
                 </td>
                 <td class="item-amount" data-label="Số lượng">
@@ -115,7 +115,7 @@
                 <td class="item-total-price" data-label="Tổng giá">
 
                   <span class="item-price">
-                    <?php echo number_format($value['price'] * $value['quantity']) ?>
+                    <?php echo number_format($value['price'] * $value['quantity']) ?>&#8363
                   </span>
 
                 </td>
@@ -133,15 +133,13 @@
           <div class="cart-price-right">
             <p>
               <span class="cartt__subtotal-title">Tổng tiền</span>
-              <span class="cartt__subtotal"><?php echo number_format(total_price($cart)) ?></span>
+              <span class="cartt__subtotal"><?php echo number_format(total_price($cart)) ?>&#8363</span>
             </p>
-            <div class="btn-payment ">
 
               <a class="btn-payment-text" href="./confirminfo.php">
                 Đặt hàng
               </a>
 
-            </div>
           </div>
         </div>
       </form>
