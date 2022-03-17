@@ -67,8 +67,8 @@ $cart = (isset($_SESSION['cart']))? $_SESSION['cart'] : [];
         </div>
 
         <div class="search">
-          <form action="/search" method="get" class="input-search" role="search">
-            <input id="search" type="search" name="q" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ..." autocomplete="off">
+          <form action="./index.php" method="post" class="input-search" role="search">
+            <input id="search" type="search" name="search" value placeholder="Tim kiem..." class="input-field" aria-label="Tim kiem ..." autocomplete="off">
             <span class="input-group-btn">
               <button type="submit" class="btn icon-fallback-text">
                 <i class="bi bi-search" aria-hidden="true"></i>
