@@ -364,10 +364,7 @@ padding-top: 30px;
     border-radius: 3px;
 	background-color: white;
 }
-.btn-payment-text{
-    
-    color: #FF1493;
-}
+
 .cart__subtotal{
     font-size: 22px;
 }
@@ -973,6 +970,7 @@ only screen and (max-width: 760px)
 }
 .btn-payment-text{
 	font-size: 20px;
+	color: #FF1493;
 }
 .btn-payment-text:hover{
 	color: #EE9595;

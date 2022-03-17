@@ -25,8 +25,6 @@ $each = mysqli_fetch_array($result);
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/confirminfo.css">
   <script src="js/app.js"></script>
@@ -153,12 +151,6 @@ $each = mysqli_fetch_array($result);
             <div class="connect">
               <h4>Mỗi tháng chúng tôi đều có những đợt giảm giá dịch vụ và sản phẩm nhằm tri ân khách hàng. Để có thể cập nhật kịp thời những đợt giảm giá này, vui lòng nhập địa chỉ email của bạn vào ô dưới đây</h4>
               <div id="owl-home-main-banners-slider-ft" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-
-
-
-
-
-
                 <div class="owl-wrapper-outer">
                   <div class="owl-wrapper" style="width: 424px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
                     <div class="owl-item" style="width: 212px;">
@@ -168,8 +160,6 @@ $each = mysqli_fetch_array($result);
                     </div>
                   </div>
                 </div>
-
-
                 <div class="owl-controls clickable" style="display: none;">
                   <div class="owl-pagination">
                     <div class="owl-page active"><span class=""></span></div>
@@ -188,8 +178,6 @@ $each = mysqli_fetch_array($result);
             <div class="grid__item ">
               <div class="ft-copyright-menu text-right">
                 <ul class="no-bullets">
-
-
                 </ul>
               </div>
             </div>
