@@ -9,6 +9,12 @@
     $where = "category_detail_id = '$category'";
   }
 
+  $search = '';
+  if(isset($_POST['search'])) {
+      $search = htmlspecialchars($_POST['search'], ENT_QUOTES);
+      $where = "products.name like '%$search%'";
+  }
+
   $sql = "SELECT products.*, category_detail.name as category_name FROM products
   join category_detail on category_detail.id = products.category_detail_id
   where $where
