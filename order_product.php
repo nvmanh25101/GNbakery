@@ -94,7 +94,7 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
                   </a>
                 </td>
                 <td class="item-contentt-text">
-                  GN<?php echo $rowBanh['name'] ?>
+                 <a class="item-txt"> GN<?php echo $rowBanh['name'] ?></a>
                 <br>
                   <div class="cart__remove">
                     <small>Kích thước: <?php echo $rowBanh['size'] ?> cm</small><br>
@@ -113,7 +113,7 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
                 <td class="item-totall-price" data-label="Tổng giá">
 
                   <span class="item-price">
-                    <?php echo number_format($rowBanh['price'] * $rowBanh['quantity']) ?>
+                    <?php echo number_format($rowBanh['price'] * $rowBanh['quantity']) ?>&#8363
                   </span>
 
                 </td>

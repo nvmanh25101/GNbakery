@@ -1,5 +1,5 @@
 body{
-    font-size: 14px;
+    font-size: 17px;
     font-family: Playfair Display;
 	background-color: #f8f2e8;
 }
@@ -104,10 +104,13 @@ input{
 	
 
 }
+small{
+	font-size: 20px;
+}
 .list-item a{
 	color: white;
-	font-weight: bolder;
-	font-size: 14px;
+	
+	font-size: 17px;
 	margin-right: 16px;
 
 
@@ -123,7 +126,7 @@ input{
 		text-align: center;
 		font-size: 16px;
 		margin-right: 7px; 
-		
+		font-family: 'Roboto Condensed', sans-serif;
 
 	}
 	
@@ -219,7 +222,7 @@ b {
 
 }
 #main-menu>li.has-child::after{
-	
+	font-family: "Font Awesome 5 Free"; 
 	font-weight: 900; 
 	content: "\f107";
 	color: black;
@@ -239,12 +242,12 @@ b {
 .Empty_cart .cart-txt {
 	font-size: 20px;
 	font-weight: 200;
-	
+	font-family: "UTMAvo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .cart-txt-he{
 	font-size: 14px;
     
-
+font-family: "UTMAvo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .cart-txt-he:hover{
 	color: #EE9595;
@@ -261,7 +264,7 @@ table {
 
 .cart-content h1{
     font-size: 3em;
-    color: #FF1493;
+
     font-weight: 300;
     padding: 0px 0px 15px 0px;
     margin: 0px 0px 15px 0px;
@@ -364,10 +367,9 @@ padding-top: 30px;
     
     color: #FF1493;
 }
-.btn-payment-text:hover{
-	color:#FFBFBF;
+.cart__subtotal{
+    font-size: 22px;
 }
-
 /*soluong*/
 
 .buttons_added {
@@ -847,7 +849,8 @@ only screen and (max-width: 760px)
 		
 	}
 	.cart-content h1{
-		font-size: 24px;
+		font-size: 25px;
+		color: #FF1493;
 		
 	}
 	.item-content-text .item-text{
@@ -863,12 +866,12 @@ only screen and (max-width: 760px)
 	/*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "Sản Phẩm";  }
-	td:nth-of-type(2):before { content: "Thông tin chi tiết sản phẩm"; 
+	td:nth-of-type(1):before { content: "Sản Phẩm"; font-size: 17px;  }
+	td:nth-of-type(2):before { content: "Thông tin chi tiết sản phẩm";  font-size: 17px;
 	                           }
-	td:nth-of-type(3):before { content: "Đơn giá"; }
-	td:nth-of-type(4):before { content: "Số lượng"; }
-	td:nth-of-type(5):before { content: "Tổng giá"; }
+	td:nth-of-type(3):before { content: "Đơn giá";  font-size: 17px;}
+	td:nth-of-type(4):before { content: "Số lượng"; font-size: 17px; }
+	td:nth-of-type(5):before { content: "Tổng giá";  font-size: 17px;}
 	
     .cart__remove {
 		
@@ -947,21 +950,29 @@ only screen and (max-width: 760px)
 	
     padding-right: 38px;
 }
+.btn-payment-text{
+	font-size: 17px;
+}
 }
 
 
 .cart__remove .btn-text{
-	font-size: 22px;
+	font-size: 25px;
 }
 .cart__remove .btn-text:hover{
 	color: #FF1493;
 }
-.cart-price-right  .subtotal .cartt__subtotal-title{
-  
-	font-size: 25px;
+.cartt__subtotal-title{
+	font-size: 20px;
 }
 .cartt__subtotal{
-	font-size: 25px;
-	padding-left: 15px;
+	padding-left: 10px;
+	font-size: 24px;
 	font-weight: bolder;
+}
+.btn-payment-text{
+	font-size: 20px;
+}
+.btn-payment-text:hover{
+	color: #EE9595;
 }

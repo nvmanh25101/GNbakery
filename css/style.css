@@ -1,7 +1,7 @@
 
 body{
 	line-height: normal !important;
-	font-size: 14px;
+	font-size: 17px;
  font-family: David Libre;
 	color: black;
 	background: #f8f2e8;
@@ -170,7 +170,7 @@ input{
 .list-item a{
 	color: white;
 	font-weight: bolder;
-	font-size: 14px;
+	font-size: 17px;
 	margin-right: 16px;
 
 
@@ -1062,6 +1062,7 @@ li{
 }
 
 @media only screen and (max-width: 700px){
+
 	ul.products{
 		justify-content: space-around;
 		margin: 0;

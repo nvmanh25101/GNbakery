@@ -4,6 +4,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family:David Libre;
+    font-size: 17px;
   }
   
   .hero-image {
@@ -65,13 +66,14 @@ body, html {
     width: 50%;
 }
 .product-content-right-name h1{
-    font-size: 22px;
+    font-size: 28px;
     color: #3d1a1a;
     margin: 0;
     font-weight: bolder;
 }
 .product-content-right-name p{
     margin-top: 23px;
+    font-size: 20px;
 }
 .product-content-right hr {
 
