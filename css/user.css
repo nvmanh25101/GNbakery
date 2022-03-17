@@ -83,18 +83,18 @@
 		}
 	}
   
-	.table-shopping{
-		width: 100%;
+	/*.table-shopping{
+		/* width: 100%;
 		display: block;
-		margin-top: 15px;
-	}
+		margin-top: 15px; */
+	
 	
 
 .table-sm>:not(caption)>*>* {
 	padding: 10px;
 }
 	
-	.order-shopping{
+	/* .order-shopping{
 		width: 30%;
 	}
 	.time-shopping{
@@ -120,7 +120,7 @@
 	.txt-stt-shopping{
 		
 		width: 32%;
-	}
+	} */
 	.detail-txt{
 	    padding-left: 1.3px;
 		color: #FF1493;
