@@ -102,7 +102,7 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
                 </td>
                 <td class="item-contentt-price" data-label="Đơn giá">
                   <span class="item-price">
-                  <?= number_format($rowBanh['price'], 0, '.', ' ') ?>&#8363g
+                  <?= number_format($rowBanh['price'], 0, '.', ' ') ?>&#8363
                   </span>
                 </td>
                 <td class="item-amountt" data-label="Số lượng">
