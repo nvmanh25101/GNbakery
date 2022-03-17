@@ -38,10 +38,13 @@ body, html {
 .confirm-text{
     font-family: Playfair Display;
     font-size: 24px;
-    text-align: left;    
+    text-align: center;    
     color: #FF1493;
     text-transform: uppercase;
     font-weight: 700;
+}
+.confirm-text p{
+    text-align: center;
 }
 .page_container{
     justify-content: center;
@@ -78,6 +81,7 @@ body, html {
     font-weight: 400;
     color: #FF1493;
     margin-top: 45px;
+    text-align: center;
 	
 }
 .btnConfirm{
@@ -92,6 +96,9 @@ body, html {
     color: #FF1493;
     margin-top: 45px;
 	margin-left: 320px;
+}
+.btnup a{
+    padding-top: 4px;
 }
 .btnup{
 	display: flex;

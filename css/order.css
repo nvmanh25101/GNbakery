@@ -9,6 +9,8 @@
     margin-bottom: 30px;
     font-size: 24px;
     color: #FF1493;
+    font-size: 30px;
+    font-weight: bolder;
     
 }
 hr{
@@ -107,6 +109,7 @@ footer{
         margin-top: 15px;
        text-align: center;
         width: 100%;
+       
         
     }
     .order-product-content .order-left{
