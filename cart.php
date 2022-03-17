@@ -131,8 +131,8 @@
 
         <div class="row-total">
           <div class="cart-price-right">
-            <p clas="subtotal">
-              <span class="cartt__subtotal-title">Tổng tiền:</span>
+            <p>
+              <span class="cartt__subtotal-title">Tổng tiền</span>
               <span class="cartt__subtotal"><?php echo number_format(total_price($cart)) ?></span>
             </p>
             <div class="btn-payment ">

@@ -27,6 +27,7 @@ hr{
     margin-bottom: 32px;
 }
 h1{
+    font-weight: bolder;
     font-size: 22px;
 }
 .order-left{
@@ -49,14 +50,27 @@ h1{
 .item-amount,
 .item-total-price{
     color: #FF1493;
-    font-size: 15px;
+    font-size: 17px;
 
 }
+small{
+    
+    font-size: 19px;
+}
+.product-quantitys{
+    text-align: center;
+    font-size: 19px;
+}
+.item-txt{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
 .item-img{
+    font-size: 17px;
     width: 25%;
     text-align: center;
     color: #FF1493;
-    font-size: 15px;
+
 }
 .cart__image img{
     width: 100%;
@@ -69,7 +83,7 @@ h1{
     color: #FF1493;
     width: 40%;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
 }
 .item-contentt-text{
    
@@ -83,7 +97,7 @@ h1{
 }
 .item-price{
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 19px;
 }
 .cart__subtotal-title{
     color: #FF1493;
@@ -92,6 +106,7 @@ h1{
     font-size: 23px;
 }
 .cart__subtotal{
+    padding-top: 10px;
     margin-left: 30px;
     font-size: 18px;
 }
@@ -168,13 +183,13 @@ footer{
 	/*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "Sản Phẩm"; 
+	td:nth-of-type(1):before { content: "Ảnh"; 
     font-size: 15px; }
-	td:nth-of-type(2):before { content: "Thông tin chi tiết sản phẩm"; 
+	td:nth-of-type(2):before { content: "Chi tiết sản phẩm"; 
         font-size: 15px; }
 	td:nth-of-type(3):before { content: "Đơn giá";font-size: 15px; }
 	td:nth-of-type(4):before { content: "Số lượng";font-size: 15px; }
-	td:nth-of-type(5):before { content: "Tổng giá";font-size: 15px; }
+	td:nth-of-type(5):before { content: "Thành Tiền";font-size: 15px; }
 	
     .cart__remove {
 		margin-top: 10px;

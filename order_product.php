@@ -113,7 +113,7 @@ $resultBanh = mysqli_query($connect,$sqlBanh);
                 <td class="item-totall-price" data-label="Tổng giá">
 
                   <span class="item-price">
-                    <?php echo number_format($rowBanh['price'] * $rowBanh['quantity']) ?>
+                    <?php echo number_format($rowBanh['price'] * $rowBanh['quantity']) ?>&#8363
                   </span>
 
                 </td>
