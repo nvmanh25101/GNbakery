@@ -6,7 +6,7 @@
   
   $id = $_SESSION['id'];
   require './database/connect.php';
-  $sql = "SELECT * FROM customers WHERE (id = '$id')" ;
+  $sql = "SELECT * FROM users WHERE (id = '$id')" ;
   $result = mysqli_query($connect,$sql);
   $row = mysqli_fetch_assoc($result);
 ?>

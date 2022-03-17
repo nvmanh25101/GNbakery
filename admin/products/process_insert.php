@@ -50,7 +50,7 @@ move_uploaded_file($image['tmp_name'], $path_file);
 
 require_once '../../database/connect.php';
 
-$sql = "insert into products(name, image, size, price, description, category_detail_id, admin_id)
+$sql = "insert into products(name, image, size, price, description, category_detail_id, user_id)
 values(?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = mysqli_prepare($connect, $sql);

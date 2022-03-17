@@ -46,7 +46,7 @@ size = ?,
 price = ?,
 description = ?,
 category_detail_id = ?
-where id = '$id' and admin_id = '$admin_id'";
+where id = '$id' and user_id = '$admin_id'";
 
 $stmt = mysqli_prepare($connect, $sql);
 if($stmt) {

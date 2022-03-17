@@ -5,20 +5,19 @@
         $pass = $_POST['password']; 
         
         require '../database/connect.php';
-        $sql = "SELECT * FROM admin where email = '$email'";
+        $sql = "SELECT * FROM users where email = '$email'";
         $result = mysqli_query($connect,$sql);
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result);
             $id = $row['id'];
             $name = $row['name'];
-            $image = $row['image'];
             $level = $row['level'];
             $pass_hash = $row['password'];
             if(password_verify($pass,$pass_hash)){
                 $_SESSION['id'] = $id;
                 $_SESSION['name'] = $name;
                 $_SESSION['level'] = $level;
-                $_SESSION['image'] = $image;
+                $_SESSION['image'] = 'adminvjppro.jpg';
                 header("location:./products/index.php");
             }else{
                 $_SESSION['error'] = "Sai tài khoản hoặc mật khẩu";

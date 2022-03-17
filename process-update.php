@@ -8,7 +8,7 @@
     require './database/connect.php';
 
     if($pass==""){
-        $sql = "UPDATE customers SET address = '$address',phone = '$phone' WHERE id = '$id'";
+        $sql = "UPDATE users SET address = '$address',phone = '$phone' WHERE id = '$id'";
         $result = mysqli_query($connect,$sql);
         $error = "Update successful !";
         header("location: update.php?error=$error");
@@ -18,7 +18,7 @@
             header("location:update.php?errorpass=$errorpass");
         }else{
             $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
-            $sql = "UPDATE customers SET address = '$address',phone = '$phone',password = '$pass_hash' WHERE id = '$id'";
+            $sql = "UPDATE users SET address = '$address',phone = '$phone',password = '$pass_hash' WHERE id = '$id'";
     
             $result = mysqli_query($connect,$sql);
             if(isset($result) > 0){

@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="product-actions">
-                    <a href="form_update.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>" id="AddToCart" class="btnAddtocart">Sửa</a>
-                    <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['admin_id'] ?>" id="buy-now" class="btnBuynow">
+                    <a href="form_update.php?id=<?= $each['id'] ?>&admin_id=<?= $each['user_id'] ?>" id="AddToCart" class="btnAddtocart">Sửa</a>
+                    <a onclick="return confirm('Bạn chắc chắn muốn xóa?')" href="delete.php?id=<?= $each['id'] ?>&admin_id=<?= $each['user_id'] ?>" id="buy-now" class="btnBuynow">
                     Xóa
                 </a>
                 </div>

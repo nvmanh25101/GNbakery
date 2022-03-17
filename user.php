@@ -6,11 +6,11 @@
   require 'database/connect.php';
 
   $id = $_SESSION['id'];
-  $sql = "select * from customers where id = '$id'";
+  $sql = "select * from users where id = '$id'";
   $result = mysqli_query($connect,$sql);
   $each = mysqli_fetch_array($result);
 
-  $sqlOrder = "select id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, total_price from orders where customer_id = '$id'";
+  $sqlOrder = "select id, name_receiver, address_receiver, phone_receiver, DATE_FORMAT(created_at, '%d/%m/%Y %T') as created_at, status, total_price from orders where user_id = '$id'";
   $resultOrder = mysqli_query($connect,$sqlOrder);
 ?>
 <!DOCTYPE html>
